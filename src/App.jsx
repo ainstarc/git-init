@@ -17,7 +17,7 @@ const fuse = new Fuse(gitCommands, {
     { name: "command", weight: 1 },
     { name: "description", weight: 0.7 },
     { name: "keywords", weight: 0.9 },
-    { name: "category", weight: 0.5 }
+    { name: "category", weight: 0.5 },
   ],
   threshold: 0.4, // Slightly more lenient threshold for better matches
   includeScore: true,
@@ -29,9 +29,9 @@ export default function App() {
   const [copiedCommand, setCopiedCommand] = useState(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [activeCategory, setActiveCategory] = useState("all");
-  
+
   // Get theme from context
-  const { theme } = useThemeContext();
+  useThemeContext();
 
   // Categories for filtering
   const categories = [
@@ -40,34 +40,39 @@ export default function App() {
     { id: "branching", name: "Branching" },
     { id: "remote", name: "Remote" },
     { id: "history", name: "History" },
-    { id: "advanced", name: "Advanced" }
+    { id: "advanced", name: "Advanced" },
   ];
 
   useEffect(() => {
     let filteredResults;
-    
+
     // First filter by category if needed
     if (activeCategory === "all") {
       filteredResults = gitCommands;
     } else {
-      filteredResults = gitCommands.filter(cmd => cmd.category === activeCategory);
+      filteredResults = gitCommands.filter(
+        (cmd) => cmd.category === activeCategory
+      );
     }
-    
+
     // Then apply search if there's a query
     if (!query) {
       setResults(filteredResults);
     } else {
       // Use Fuse to search with the query
       const searchResults = fuse.search(query);
-      
+
       // Filter search results by active category if needed
       const finalResults = searchResults
-        .filter(result => activeCategory === "all" || result.item.category === activeCategory)
-        .map(result => result.item);
-      
+        .filter(
+          (result) =>
+            activeCategory === "all" || result.item.category === activeCategory
+        )
+        .map((result) => result.item);
+
       setResults(finalResults);
     }
-    
+
     setFocusedIndex(-1);
   }, [query, activeCategory]);
 
@@ -97,41 +102,40 @@ export default function App() {
         <h1>git-init</h1>
         <ThemeSelector />
       </header>
-      
+
       <p className="app-description">
-        Search for Git commands using natural language - try "start a repo", "undo commit", or "switch branch"
+        Search for Git commands using natural language - try "start a repo",
+        "undo commit", or "switch branch"
       </p>
-      
-      <SearchBar
-        query={query}
-        setQuery={setQuery}
-        onKeyDown={handleKeyDown}
-      />
-      
+
+      <SearchBar query={query} setQuery={setQuery} onKeyDown={handleKeyDown} />
+
       {/* Category filters */}
       <div className="category-filters">
-        {categories.map(category => (
+        {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            className={`category-button ${activeCategory === category.id ? 'active' : ''}`}
+            className={`category-button ${
+              activeCategory === category.id ? "active" : ""
+            }`}
           >
             {category.name}
           </button>
         ))}
       </div>
-      
+
       <CommandList
         results={results}
         focusedIndex={focusedIndex}
         onCopy={copyToClipboard}
         copiedCommand={copiedCommand}
       />
-      
+
       <footer className="app-footer">
         <p>Find the perfect Git command for any task</p>
       </footer>
-      
+
       <UpdateNotification />
     </div>
   );
