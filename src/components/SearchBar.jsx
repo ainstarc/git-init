@@ -11,7 +11,7 @@ export default function SearchBar({ query, setQuery, onKeyDown, darkMode }) {
         color: darkMode ? "#777" : "#999",
         fontSize: "1.2rem"
       }}>
-        🔍
+        <span role="img" aria-label="search">🔍</span>
       </div>
       
       <input
