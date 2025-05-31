@@ -2,34 +2,37 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.1] - 2024-05-31
+## [1.1.0] - 2023-05-31
+
+### Added
+
+- ThemeSelector component for users to select their preferred theme
+- Multiple themes: light, dark, sepia, nord, and solarized-light
+- Theme persistence across sessions using localStorage
+- System theme detection for automatic light/dark mode
+- UpdateNotification component to inform users of available updates
+- Service worker for offline capabilities and update handling
+- PWA support for installable web app experience
 
 ### Changed
 
-- Updated application logo with official Git logo
-- Fixed Node.js v20 compatibility issues
-- Updated manifest.json with proper application information
-- Improved documentation with local development instructions
+- Refactored App component to utilize ThemeContext
+- Enhanced CommandItem and CommandList components with new styles
+- Updated SearchBar component with improved styling and structure
+- Separated CSS into component-specific files for better maintainability
+- Improved accessibility for theme selector and other components
+
+### Fixed
+
+- CSS styling issues with proper theme variable implementation
+- Mobile responsiveness improvements
 
 ## [1.0.0] - 2024-05-30
 
 ### Added
 
-- Initial release of Git-Init
-- Natural language search functionality using Fuse.js
-- 20 common Git commands with descriptions and examples
-- Keyword matching for intuitive command discovery
-- Category filtering (basics, branching, remote, history, advanced)
-- Dark mode support with system preference detection
-- Responsive design for mobile and desktop
-- Keyboard navigation with arrow keys
+- Initial release with basic Git command search functionality
+- Fuzzy search using Fuse.js
+- Command categories for filtering
 - Copy to clipboard functionality
-- Command categorization
-
-### Technical
-
-- Built with React 19
-- Implemented fuzzy search with Fuse.js
-- Added GitHub Pages deployment
-- Created responsive UI with CSS
-- Added system-based dark mode preference detection
+- Keyboard navigation support

@@ -8,8 +8,11 @@ Git-Init is a user-friendly tool that helps you find the right Git command for a
 - **Keyword Matching**: Search for commands using alternative terms and concepts
 - **Command Categories**: Browse commands by category (basics, branching, remote, etc.)
 - **Copy to Clipboard**: Easily copy commands with a single click
-- **Dark Mode**: Toggle between light and dark themes for comfortable viewing
+- **Multiple Themes**: Choose from light, dark, sepia, nord, and solarized-light themes
+- **Theme Persistence**: Your selected theme is remembered across sessions
 - **Keyboard Navigation**: Use arrow keys to navigate through results
+- **Offline Support**: Works even without an internet connection
+- **Auto Updates**: Automatically notifies you when a new version is available
 
 ## How to Use
 
@@ -17,6 +20,7 @@ Git-Init is a user-friendly tool that helps you find the right Git command for a
 2. Browse the matching Git commands
 3. Click "Copy" to copy the command to your clipboard
 4. Use the category filters to narrow down results
+5. Select your preferred theme from the dropdown in the header
 
 ## Examples of Natural Language Queries
 
@@ -32,24 +36,27 @@ Git-Init is a user-friendly tool that helps you find the right Git command for a
 To run this project locally:
 
 1. Clone the repository:
+
    ```
-   git clone https://github.com/yourusername/git-init.git
+   git clone https://github.com/ainstarc/git-init.git
    cd git-init
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
 
 3. Start the development server:
+
    ```
    # For Node.js v17 or higher, use:
    set NODE_OPTIONS=--openssl-legacy-provider && npm start
-   
+
    # For Linux/Mac:
    # export NODE_OPTIONS=--openssl-legacy-provider && npm start
-   
+
    # For older Node.js versions:
    # npm start
    ```
@@ -68,10 +75,12 @@ To run this project locally:
 - React 19
 - Fuse.js for fuzzy searching
 - GitHub Pages for deployment
+- Service Workers for offline functionality and updates
 
 ## Browser Compatibility
 
 Git-Init works with all modern browsers:
+
 - Chrome
 - Firefox
 - Safari
@@ -80,6 +89,7 @@ Git-Init works with all modern browsers:
 ## Node.js Compatibility
 
 This project is compatible with:
+
 - Node.js v16+ (recommended)
 - Node.js v17+ and v20+ (requires OpenSSL legacy provider flag as noted in the running instructions)
 

@@ -1,0 +1,114 @@
+:root {
+  /* Default Light Theme */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --text-color: #212529;
+  --text-secondary-color: #6c757d;
+  --border-color: #dee2e6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-color: #f0f0f0;
+  --active-color: #e0e0e0;
+  
+  /* Component specific */
+  --button-bg: #f5f5f5;
+  --button-text: #333;
+  --button-active-bg: #e0e0e0;
+  --button-hover-bg: #ebebeb;
+  --search-bar-bg: #ffffff;
+  --search-bar-border: #ced4da;
+  --command-item-hover: #f8f9fa;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #4dabf7;
+  --secondary-color: #adb5bd;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-color: #e9ecef;
+  --text-secondary-color: #adb5bd;
+  --border-color: #343a40;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --hover-color: #2d2d2d;
+  --active-color: #4d4d4d;
+  
+  /* Component specific */
+  --button-bg: #2d2d2d;
+  --button-text: #eee;
+  --button-active-bg: #4d4d4d;
+  --button-hover-bg: #3d3d3d;
+  --search-bar-bg: #2d2d2d;
+  --search-bar-border: #404040;
+  --command-item-hover: #2d2d2d;
+}
+
+/* Sepia Theme */
+[data-theme="sepia"] {
+  --primary-color: #8b4513;
+  --secondary-color: #6b4423;
+  --background-color: #f4ecd8;
+  --surface-color: #e8dcc5;
+  --text-color: #5c4033;
+  --text-secondary-color: #8b7355;
+  --border-color: #d4c4a8;
+  --shadow-color: rgba(139, 69, 19, 0.1);
+  --hover-color: #e8dcc5;
+  --active-color: #d4c4a8;
+  
+  /* Component specific */
+  --button-bg: #e8dcc5;
+  --button-text: #5c4033;
+  --button-active-bg: #d4c4a8;
+  --button-hover-bg: #e0d4bd;
+  --search-bar-bg: #f4ecd8;
+  --search-bar-border: #d4c4a8;
+  --command-item-hover: #e8dcc5;
+}
+
+/* Nord Theme */
+[data-theme="nord"] {
+  --primary-color: #88c0d0;
+  --secondary-color: #81a1c1;
+  --background-color: #2e3440;
+  --surface-color: #3b4252;
+  --text-color: #eceff4;
+  --text-secondary-color: #d8dee9;
+  --border-color: #4c566a;
+  --shadow-color: rgba(46, 52, 64, 0.3);
+  --hover-color: #434c5e;
+  --active-color: #4c566a;
+  
+  /* Component specific */
+  --button-bg: #3b4252;
+  --button-text: #eceff4;
+  --button-active-bg: #4c566a;
+  --button-hover-bg: #434c5e;
+  --search-bar-bg: #3b4252;
+  --search-bar-border: #4c566a;
+  --command-item-hover: #434c5e;
+}
+
+/* Solarized Light Theme */
+[data-theme="solarized-light"] {
+  --primary-color: #268bd2;
+  --secondary-color: #586e75;
+  --background-color: #fdf6e3;
+  --surface-color: #eee8d5;
+  --text-color: #073642;
+  --text-secondary-color: #586e75;
+  --border-color: #93a1a1;
+  --shadow-color: rgba(147, 161, 161, 0.1);
+  --hover-color: #eee8d5;
+  --active-color: #e0dbcd;
+  
+  /* Component specific */
+  --button-bg: #eee8d5;
+  --button-text: #073642;
+  --button-active-bg: #e0dbcd;
+  --button-hover-bg: #e6e0cd;
+  --search-bar-bg: #fdf6e3;
+  --search-bar-border: #93a1a1;
+  --command-item-hover: #eee8d5;
+}
