@@ -20,7 +20,9 @@ export default function DarkModeToggle({ darkMode, toggleDarkMode }) {
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
       title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {darkMode ? "☀️" : "🌙"}
+      <span role="img" aria-label={darkMode ? "light mode" : "dark mode"}>
+        {darkMode ? "☀️" : "🌙"}
+      </span>
     </button>
   );
 }
