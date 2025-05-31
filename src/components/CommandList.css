@@ -1,0 +1,30 @@
+.command-list {
+  margin-top: 1.5rem;
+}
+
+.results-count {
+  margin-bottom: 1rem;
+  color: var(--text-secondary-color);
+  font-size: 0.9rem;
+}
+
+.command-list-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-secondary-color);
+}
+
+.no-results-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-results-subtitle {
+  font-size: 0.9rem;
+}

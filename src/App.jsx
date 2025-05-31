@@ -3,9 +3,13 @@ import Fuse from "fuse.js";
 
 import SearchBar from "./components/SearchBar";
 import CommandList from "./components/CommandList";
-import DarkModeToggle from "./components/DarkModeToggle";
+import ThemeSelector from "./components/ThemeSelector";
+import UpdateNotification from "./components/UpdateNotification";
+import { useThemeContext } from "./context/ThemeContext";
 
 import gitCommands from "./data/gitCommands";
+import "./styles/themes.css";
+import "./App.css";
 
 // Configure Fuse.js for advanced searching
 const fuse = new Fuse(gitCommands, {
@@ -24,8 +28,10 @@ export default function App() {
   const [results, setResults] = useState(gitCommands);
   const [copiedCommand, setCopiedCommand] = useState(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
-  const [darkMode, setDarkMode] = useState(false);
   const [activeCategory, setActiveCategory] = useState("all");
+  
+  // Get theme from context
+  const { theme } = useThemeContext();
 
   // Categories for filtering
   const categories = [
@@ -86,39 +92,13 @@ export default function App() {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: 800,
-        margin: "2rem auto",
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: darkMode ? "#121212" : "#fff",
-        color: darkMode ? "#eee" : "#000",
-        minHeight: "100vh",
-        padding: "1rem",
-        borderRadius: "8px",
-        boxShadow: darkMode
-          ? "0 0 10px rgba(255, 255, 255, 0.1)"
-          : "0 0 10px rgba(0, 0, 0, 0.1)",
-        transition: "all 0.3s ease",
-      }}
-    >
-      <header style={{ 
-        display: "flex", 
-        justifyContent: "space-between", 
-        alignItems: "center",
-        marginBottom: "1rem"
-      }}>
-        <h1 style={{ margin: 0 }}>git-init</h1>
-        <DarkModeToggle
-          darkMode={darkMode}
-          toggleDarkMode={() => setDarkMode(!darkMode)}
-        />
+    <div className="app-container">
+      <header className="app-header">
+        <h1>git-init</h1>
+        <ThemeSelector />
       </header>
       
-      <p style={{ 
-        marginBottom: "1.5rem", 
-        color: darkMode ? "#aaa" : "#666" 
-      }}>
+      <p className="app-description">
         Search for Git commands using natural language - try "start a repo", "undo commit", or "switch branch"
       </p>
       
@@ -126,32 +106,15 @@ export default function App() {
         query={query}
         setQuery={setQuery}
         onKeyDown={handleKeyDown}
-        darkMode={darkMode}
       />
       
       {/* Category filters */}
-      <div style={{ 
-        display: "flex", 
-        flexWrap: "wrap", 
-        gap: "0.5rem",
-        marginBottom: "1rem" 
-      }}>
+      <div className="category-filters">
         {categories.map(category => (
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            style={{
-              padding: "0.4rem 0.8rem",
-              backgroundColor: activeCategory === category.id 
-                ? (darkMode ? "#4d4d4d" : "#e0e0e0") 
-                : (darkMode ? "#2d2d2d" : "#f5f5f5"),
-              border: "none",
-              borderRadius: "4px",
-              color: darkMode ? "#eee" : "#333",
-              cursor: "pointer",
-              fontSize: "0.9rem",
-              fontWeight: activeCategory === category.id ? "bold" : "normal",
-            }}
+            className={`category-button ${activeCategory === category.id ? 'active' : ''}`}
           >
             {category.name}
           </button>
@@ -163,17 +126,13 @@ export default function App() {
         focusedIndex={focusedIndex}
         onCopy={copyToClipboard}
         copiedCommand={copiedCommand}
-        darkMode={darkMode}
       />
       
-      <footer style={{ 
-        marginTop: "2rem", 
-        textAlign: "center",
-        fontSize: "0.9rem",
-        color: darkMode ? "#888" : "#666"
-      }}>
+      <footer className="app-footer">
         <p>Find the perfect Git command for any task</p>
       </footer>
+      
+      <UpdateNotification />
     </div>
   );
 }
