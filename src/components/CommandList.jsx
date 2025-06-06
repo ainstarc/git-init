@@ -1,6 +1,6 @@
 import React from "react";
 import CommandItem from "./CommandItem";
-import "./CommandList.css";
+import "../styles/CommandList.css";
 
 export default function CommandList({
   results,

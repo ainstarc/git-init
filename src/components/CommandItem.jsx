@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommandItem.css";
+import "../styles/CommandItem.css";
 
 export default function CommandItem({
   command,

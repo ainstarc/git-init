@@ -1,7 +1,7 @@
 import React from 'react';
 import { AVAILABLE_THEMES } from '../constants/themes';
 import { useThemeContext } from '../context/ThemeContext';
-import './ThemeSelector.css';
+import '../styles/ThemeSelector.css';
 
 const ThemeSelector = () => {
   const { theme, setTheme } = useThemeContext();
