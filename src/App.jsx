@@ -19,10 +19,9 @@ export default function App() {
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // Get theme from context
   useThemeContext();
 
-  // Categories for filtering
+  // Define all categories
   const categories = [
     { id: "all", name: "All Commands" },
     { id: "coreConfig", name: "Core Config" },
@@ -35,9 +34,10 @@ export default function App() {
     { id: "inspection", name: "Inspection" },
     { id: "workingTree", name: "Working Tree" },
     { id: "advancedTools", name: "Advanced Tools" },
-    { id: "phrases", name: "Phrases" }, // if phrases is command category or maybe info/help
+    { id: "phrases", name: "Phrases" },
   ];
 
+  // Flatten commands + their variations for search
   const flatCommands = useMemo(() => {
     const flattenVariations = (cmd, parentCommand = null) => {
       const base = {
@@ -45,15 +45,15 @@ export default function App() {
         isVariation: !!parentCommand,
         parentCommand: parentCommand || null,
       };
-      const nestedVariations = (cmd.variations || []).flatMap((variation) =>
+      const nested = (cmd.variations || []).flatMap((variation) =>
         flattenVariations(variation, base.command)
       );
-      return [base, ...nestedVariations];
+      return [base, ...nested];
     };
-
     return gitCommands.flatMap((cmd) => flattenVariations(cmd));
   }, []);
 
+  // Initialize Fuse with full command list
   const fuse = useMemo(() => {
     return new Fuse(flatCommands, {
       keys: [
@@ -67,42 +67,28 @@ export default function App() {
     });
   }, [flatCommands]);
 
+  // Perform search and filter by category
   useEffect(() => {
-  // Filter commands by active category
-  const filteredCommands =
-    activeCategory === "all"
-      ? flatCommands
-      : flatCommands.filter((cmd) => cmd.category === activeCategory);
+    if (!query) {
+      setResults(
+        activeCategory === "all"
+          ? flatCommands
+          : flatCommands.filter((cmd) => cmd.category === activeCategory)
+      );
+      return;
+    }
 
-  if (!query) {
-    // If no search query, show all filtered commands
-    setResults(filteredCommands);
-    return;
-  }
+    const searchResults = fuse.search(query);
+    const filtered =
+      activeCategory === "all"
+        ? searchResults
+        : searchResults.filter((res) => res.item.category === activeCategory);
 
-  // Create a new Fuse instance on filtered commands only
-  const fuseByCategory = new Fuse(filteredCommands, {
-    keys: [
-      { name: "command", weight: 2 },
-      { name: "description", weight: 0.7 },
-      { name: "keywords", weight: 0.9 },
-      { name: "category", weight: 0.5 },
-    ],
-    threshold: 0.4,
-    includeScore: true,
-  });
+    setResults(filtered.map((res) => res.item));
+    setFocusedIndex(-1);
+  }, [query, activeCategory, fuse, flatCommands]);
 
-  // Perform fuzzy search on filtered commands
-  const searchResults = fuseByCategory.search(query);
-
-  // Map results to commands
-  setResults(searchResults.map((res) => res.item));
-
-  // Reset focused index
-  setFocusedIndex(-1);
-}, [query, activeCategory, flatCommands]);
-
-
+  // Clipboard copy logic
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
       setCopiedCommand(text);
@@ -110,6 +96,7 @@ export default function App() {
     });
   };
 
+  // Keyboard navigation
   const handleKeyDown = (e) => {
     if (e.key === "ArrowDown") {
       e.preventDefault();
@@ -126,27 +113,26 @@ export default function App() {
   return (
     <div className="app-container">
       <FaviconSwitcher />
+
       <header className="app-header">
         <h1>git-init</h1>
         <ThemeSelector />
       </header>
 
       <p className="app-description">
-        Search for Git commands using natural language - try "start a repo",
-        "undo commit", or "switch branch"
+        Search for Git commands using natural language – try "start a repo", "undo commit", or "switch branch"
       </p>
 
       <SearchBar query={query} setQuery={setQuery} onKeyDown={handleKeyDown} />
 
-      {/* Category filters */}
-      <div className="category-filters">
+      <div className="category-filters" role="tablist" aria-label="Command categories">
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            className={`category-button ${
-              activeCategory === category.id ? "active" : ""
-            }`}
+            className={`category-button ${activeCategory === category.id ? "active" : ""}`}
+            aria-pressed={activeCategory === category.id}
+            aria-label={`Filter by ${category.name}`}
           >
             {category.name}
           </button>
@@ -162,6 +148,7 @@ export default function App() {
 
       <footer className="app-footer">
         <p>Find the perfect Git command for any task</p>
+        <p className="keyboard-hint">Use ↑ ↓ and Enter to copy quickly</p>
       </footer>
 
       <UpdateNotification />
