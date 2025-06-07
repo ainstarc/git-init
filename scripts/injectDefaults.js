@@ -3,17 +3,6 @@ const path = require("path");
 
 const commandsDir = path.resolve(__dirname, "../src/data/gitCommands");
 
-const expectedFields = {
-  description: "",
-  category: "",
-  keywords: [],
-  level: "",
-  example: null, // fallback to command
-  related: [],
-  variations: [],
-  id: "", // will be set later
-};
-
 function countAllCommands(commands) {
   let count = 0;
   function countRecursive(cmdList) {
@@ -28,62 +17,43 @@ function countAllCommands(commands) {
   return count;
 }
 
-function applyDefaults(command, index, filename, parentId = null) {
-  if (!command.command) {
-    throw new Error(`Missing 'command' in ${filename} at index ${index}`);
-  }
-
-  // Generate a unique id: filename-index[-parentId]
-  let id = `${filename}-${index + 1}`;
-  if (parentId) id = `${id}-varof-${parentId}`;
-
-  const injected = { command: command.command };
-
-  // Copy all keys except category and example with default fallback
-  for (const key in expectedFields) {
-    if (key === "category") continue;
-    if (key === "example") {
-      injected[key] = command[key] ?? command.command;
-      continue;
-    }
-    injected[key] = command[key] ?? expectedFields[key];
-  }
-
-  // Overwrite category unconditionally
-  injected.category = filename;
-
-  // Set unique id
-  injected.id = id;
-
-  // Recursively inject variations with parent id
-  if (Array.isArray(command.variations)) {
-    injected.variations = command.variations.map((variation, vIndex) =>
-      applyDefaults(variation, vIndex, filename, id)
+// Helper to deeply enrich all commands and their variations
+function enrichCommand(cmd, fileName, parentId = null, index = 0) {
+  // Ensure all required fields
+  const enriched = {
+    ...cmd,
+    description: cmd.description || "No description provided.",
+    category: fileName,
+    keywords: Array.isArray(cmd.keywords) ? cmd.keywords : [],
+    level: cmd.level || "basic",
+    example: cmd.example || cmd.command,
+    related: Array.isArray(cmd.related) ? cmd.related : [],
+    id: parentId ? `${parentId}-var${index + 1}` : `${fileName}-${index + 1}`,
+    variations: [],
+  };
+  // Recursively enrich variations
+  if (Array.isArray(cmd.variations) && cmd.variations.length > 0) {
+    enriched.variations = cmd.variations.map((v, i) =>
+      enrichCommand(v, fileName, enriched.id, i)
     );
   }
-
-  return injected;
+  return enriched;
 }
 
 let grandTotal = 0;
 
 function injectDefaultsToFile(filePath) {
   const fileName = path.basename(filePath, ".json");
-
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8").trim();
-
     if (!fileContent) {
-      console.warn(`⚠️ Skipping empty file: ${fileName}.json`);
+      console.warn(`⚠️ Skipping empty file: ${fileName}`);
       return;
     }
-
     const commands = JSON.parse(fileContent);
-    const updated = commands.map((cmd, i) => applyDefaults(cmd, i, fileName));
+    const updated = commands.map((cmd, i) => enrichCommand(cmd, fileName, null, i));
     const totalCount = countAllCommands(updated);
-
     grandTotal += totalCount;
-
     fs.writeFileSync(filePath, JSON.stringify(updated, null, 2));
     console.log(`✅ Updated: ${fileName}.json — Commands (with variations): ${totalCount}`);
   } catch (error) {

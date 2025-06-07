@@ -10,15 +10,17 @@ function collectCommands(commands, sourceFile, parentId = null) {
   for (const cmd of commands) {
     const cmdStr = cmd.command.trim();
     const location = `${sourceFile} → ${cmd.id || "(no id)"}`;
-
-    if (seen.has(cmdStr)) {
+    // Use id for uniqueness if available, else fallback to command string
+    const key = cmd.id || cmdStr;
+    if (seen.has(key)) {
       duplicates.push({
         command: cmdStr,
-        firstSeen: seen.get(cmdStr),
+        id: key,
+        firstSeen: seen.get(key),
         duplicateAt: location,
       });
     } else {
-      seen.set(cmdStr, location);
+      seen.set(key, location);
     }
 
     if (Array.isArray(cmd.variations)) {

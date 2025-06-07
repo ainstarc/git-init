@@ -20,13 +20,13 @@ export default function CommandItem({
   function highlightText(text) {
     if (!highlight.length) return text;
     let parts = [text];
-    highlight.forEach((term) => {
+    highlight.forEach((term, termIdx) => {
       const regex = new RegExp(`(${term})`, "gi");
-      parts = parts.flatMap((part) =>
+      parts = parts.flatMap((part, partIdx) =>
         typeof part === "string" && regex.test(part)
           ? part.split(regex).map((p, i) =>
               regex.test(p)
-                ? <mark key={i} className="highlight">{p}</mark>
+                ? <mark key={`h-${termIdx}-${partIdx}-${i}`}>{p}</mark>
                 : p
             )
           : [part]

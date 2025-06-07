@@ -138,10 +138,17 @@ function expandWithSynonyms(query) {
 function findPhraseMatches(query) {
   const cleaned = cleanQuery(query);
   if (!cleaned) return [];
-  // Simple: match if query contains phrase or any keyword (case-insensitive, partial ok)
+  const queryTokens = new Set(cleaned.split(/\s+/));
   return phrases.filter((phraseObj) => {
-    const allPhrases = [phraseObj.phrase, ...phraseObj.keywords];
-    return allPhrases.some((p) => cleaned.includes(p.toLowerCase()));
+    // Tokenize phrase and keywords
+    const phraseTokens = phraseObj.phrase.toLowerCase().split(/\s+/);
+    const keywordTokens = (phraseObj.keywords || []).flatMap((k) =>
+      k.toLowerCase().split(/\s+/)
+    );
+    // If any phrase/keyword token is in the query, consider it a match
+    return [...phraseTokens, ...keywordTokens].some((token) =>
+      queryTokens.has(token)
+    );
   });
 }
 
