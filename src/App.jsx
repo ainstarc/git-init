@@ -48,7 +48,7 @@ export default function App() {
       }));
       return [base, ...variations];
     });
-  }, [gitCommands]);
+  }, []);
 
   const fuse = useMemo(() => {
     return new Fuse(flatCommands, {
@@ -61,7 +61,7 @@ export default function App() {
       threshold: 0.4,
       includeScore: true,
     });
-  }, [flatCommands]);
+  }, [flatCommands]); 
 
   useEffect(() => {
     let filteredResults;
@@ -114,7 +114,7 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <FaviconSwitcher /> 
+      <FaviconSwitcher />
       <header className="app-header">
         <h1>git-init</h1>
         <ThemeSelector />
