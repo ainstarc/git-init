@@ -6,6 +6,7 @@ import CommandList from "./components/CommandList";
 import ThemeSelector from "./components/ThemeSelector";
 import UpdateNotification from "./components/UpdateNotification";
 import { useThemeContext } from "./context/ThemeContext";
+import FaviconSwitcher from "./components/FaviconSwitcher";
 
 import gitCommands from "./data/gitCommands";
 import "./styles/themes.css";
@@ -113,6 +114,7 @@ export default function App() {
 
   return (
     <div className="app-container">
+      <FaviconSwitcher /> 
       <header className="app-header">
         <h1>git-init</h1>
         <ThemeSelector />
