@@ -221,24 +221,6 @@
     "category": "inspection"
   },
   {
-    "command": "git diff",
-    "description": "Show changes between working directory and index or commits",
-    "keywords": [
-      "diff",
-      "changes",
-      "compare"
-    ],
-    "level": "beginner",
-    "example": "git diff",
-    "related": [
-      "git diff --cached",
-      "git diff HEAD"
-    ],
-    "variations": [],
-    "id": "inspection-2",
-    "category": "inspection"
-  },
-  {
     "command": "git status",
     "description": "Show the working tree status",
     "keywords": [],
@@ -254,7 +236,7 @@
         "example": "git status -s",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v1",
+        "id": "inspection-2-v1",
         "category": "inspection"
       },
       {
@@ -265,7 +247,7 @@
         "example": "git status --short",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v2",
+        "id": "inspection-2-v2",
         "category": "inspection"
       },
       {
@@ -276,7 +258,7 @@
         "example": "git status -b",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v3",
+        "id": "inspection-2-v3",
         "category": "inspection"
       },
       {
@@ -287,7 +269,7 @@
         "example": "git status --branch",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v4",
+        "id": "inspection-2-v4",
         "category": "inspection"
       },
       {
@@ -298,7 +280,7 @@
         "example": "git status --show-stash",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v5",
+        "id": "inspection-2-v5",
         "category": "inspection"
       },
       {
@@ -309,7 +291,7 @@
         "example": "git status --ignored",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v6",
+        "id": "inspection-2-v6",
         "category": "inspection"
       },
       {
@@ -320,7 +302,7 @@
         "example": "git status --untracked-files",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v7",
+        "id": "inspection-2-v7",
         "category": "inspection"
       },
       {
@@ -331,11 +313,11 @@
         "example": "git status --no-renames",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v8",
+        "id": "inspection-2-v8",
         "category": "inspection"
       }
     ],
-    "id": "inspection-3",
+    "id": "inspection-2",
     "category": "inspection"
   },
   {
@@ -354,7 +336,7 @@
         "example": "git diff --cached",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v1",
+        "id": "inspection-3-v1",
         "category": "inspection"
       },
       {
@@ -365,7 +347,7 @@
         "example": "git diff --merge-base <commit>",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v2",
+        "id": "inspection-3-v2",
         "category": "inspection"
       },
       {
@@ -376,7 +358,7 @@
         "example": "git diff <commit>",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v3",
+        "id": "inspection-3-v3",
         "category": "inspection"
       },
       {
@@ -387,7 +369,7 @@
         "example": "git diff <commit1> <commit2>",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v4",
+        "id": "inspection-3-v4",
         "category": "inspection"
       },
       {
@@ -398,7 +380,7 @@
         "example": "git diff <blob1> <blob2>",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v5",
+        "id": "inspection-3-v5",
         "category": "inspection"
       },
       {
@@ -409,11 +391,11 @@
         "example": "git diff --no-index <path1> <path2>",
         "related": [],
         "variations": [],
-        "id": "inspection-4-v6",
+        "id": "inspection-3-v6",
         "category": "inspection"
       }
     ],
-    "id": "inspection-4",
+    "id": "inspection-3",
     "category": "inspection"
   }
 ]

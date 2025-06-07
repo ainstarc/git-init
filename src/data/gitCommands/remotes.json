@@ -149,17 +149,6 @@
     ],
     "variations": [
       {
-        "command": "git pull",
-        "description": "Pull from the default remote and branch",
-        "keywords": [],
-        "level": "",
-        "example": "git pull",
-        "related": [],
-        "variations": [],
-        "id": "remotes-2-v1",
-        "category": "remotes"
-      },
-      {
         "command": "git pull <repository>",
         "description": "Pull from a specific remote",
         "keywords": [],
@@ -167,7 +156,7 @@
         "example": "git pull <repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v2",
+        "id": "remotes-2-v1",
         "category": "remotes"
       },
       {
@@ -178,7 +167,7 @@
         "example": "git pull <repository> <refspec>",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v3",
+        "id": "remotes-2-v2",
         "category": "remotes"
       },
       {
@@ -189,7 +178,7 @@
         "example": "git pull --rebase",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v4",
+        "id": "remotes-2-v3",
         "category": "remotes"
       },
       {
@@ -200,7 +189,7 @@
         "example": "git pull --no-rebase",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v5",
+        "id": "remotes-2-v4",
         "category": "remotes"
       },
       {
@@ -211,7 +200,7 @@
         "example": "git pull --ff-only",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v6",
+        "id": "remotes-2-v5",
         "category": "remotes"
       },
       {
@@ -222,7 +211,7 @@
         "example": "git pull --no-commit",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v7",
+        "id": "remotes-2-v6",
         "category": "remotes"
       },
       {
@@ -233,7 +222,7 @@
         "example": "git pull --squash",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v8",
+        "id": "remotes-2-v7",
         "category": "remotes"
       },
       {
@@ -244,7 +233,7 @@
         "example": "git pull --allow-unrelated-histories",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v9",
+        "id": "remotes-2-v8",
         "category": "remotes"
       },
       {
@@ -267,7 +256,7 @@
             "id": "remotes-2-v1"
           }
         ],
-        "id": "remotes-2-v10",
+        "id": "remotes-2-v9",
         "category": "remotes"
       },
       {
@@ -278,7 +267,7 @@
         "example": "git pull --no-tags",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v11",
+        "id": "remotes-2-v10",
         "category": "remotes"
       },
       {
@@ -289,7 +278,7 @@
         "example": "git pull --verbose",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v12",
+        "id": "remotes-2-v11",
         "category": "remotes"
       },
       {
@@ -300,7 +289,7 @@
         "example": "git pull --quiet",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v13",
+        "id": "remotes-2-v12",
         "category": "remotes"
       }
     ],
@@ -326,17 +315,6 @@
     ],
     "variations": [
       {
-        "command": "git push",
-        "description": "Push current branch to the configured upstream remote",
-        "keywords": [],
-        "level": "",
-        "example": "git push",
-        "related": [],
-        "variations": [],
-        "id": "remotes-3-v1",
-        "category": "remotes"
-      },
-      {
         "command": "git push <repository>",
         "description": "Push to a specific remote repository",
         "keywords": [],
@@ -344,7 +322,7 @@
         "example": "git push <repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v2",
+        "id": "remotes-3-v1",
         "category": "remotes"
       },
       {
@@ -355,7 +333,7 @@
         "example": "git push <repository> <refspec>…​",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v3",
+        "id": "remotes-3-v2",
         "category": "remotes"
       },
       {
@@ -366,7 +344,7 @@
         "example": "git push --all",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v4",
+        "id": "remotes-3-v3",
         "category": "remotes"
       },
       {
@@ -377,7 +355,7 @@
         "example": "git push --branches",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v5",
+        "id": "remotes-3-v4",
         "category": "remotes"
       },
       {
@@ -388,7 +366,7 @@
         "example": "git push --mirror",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v6",
+        "id": "remotes-3-v5",
         "category": "remotes"
       },
       {
@@ -399,7 +377,7 @@
         "example": "git push --tags",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v7",
+        "id": "remotes-3-v6",
         "category": "remotes"
       },
       {
@@ -410,7 +388,7 @@
         "example": "git push --follow-tags",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v8",
+        "id": "remotes-3-v7",
         "category": "remotes"
       },
       {
@@ -421,7 +399,7 @@
         "example": "git push --atomic",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v9",
+        "id": "remotes-3-v8",
         "category": "remotes"
       },
       {
@@ -432,7 +410,7 @@
         "example": "git push --dry-run",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v10",
+        "id": "remotes-3-v9",
         "category": "remotes"
       },
       {
@@ -443,7 +421,7 @@
         "example": "git push --receive-pack=<git-receive-pack>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v11",
+        "id": "remotes-3-v10",
         "category": "remotes"
       },
       {
@@ -454,7 +432,7 @@
         "example": "git push --repo=<repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v12",
+        "id": "remotes-3-v11",
         "category": "remotes"
       },
       {
@@ -499,7 +477,7 @@
             "id": "remotes-3-v3"
           }
         ],
-        "id": "remotes-3-v13",
+        "id": "remotes-3-v12",
         "category": "remotes"
       },
       {
@@ -510,7 +488,7 @@
         "example": "git push --delete <branch>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v14",
+        "id": "remotes-3-v13",
         "category": "remotes"
       },
       {
@@ -521,7 +499,7 @@
         "example": "git push --prune",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v15",
+        "id": "remotes-3-v14",
         "category": "remotes"
       },
       {
@@ -532,7 +510,7 @@
         "example": "git push --quiet",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v16",
+        "id": "remotes-3-v15",
         "category": "remotes"
       },
       {
@@ -543,7 +521,7 @@
         "example": "git push --verbose",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v17",
+        "id": "remotes-3-v16",
         "category": "remotes"
       },
       {
@@ -554,7 +532,7 @@
         "example": "git push --set-upstream",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v18",
+        "id": "remotes-3-v17",
         "category": "remotes"
       },
       {
@@ -565,7 +543,7 @@
         "example": "git push --push-option=<string>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v19",
+        "id": "remotes-3-v18",
         "category": "remotes"
       },
       {
@@ -610,7 +588,7 @@
             "id": "remotes-3-v3"
           }
         ],
-        "id": "remotes-3-v20",
+        "id": "remotes-3-v19",
         "category": "remotes"
       },
       {
@@ -621,7 +599,7 @@
         "example": "git push --no-verify",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v21",
+        "id": "remotes-3-v20",
         "category": "remotes"
       }
     ],
