@@ -1,20 +1,406 @@
 [
   {
     "command": "git init",
-    "description": "Create a new Git repository",
+    "description": "Create an empty Git repository or reinitialize an existing one",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git init",
+    "related": [],
+    "variations": [
+      {
+        "command": "git init -q",
+        "description": "Initialize repository quietly",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init -q",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v1"
+      },
+      {
+        "command": "git init --quiet",
+        "description": "Initialize repository quietly",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --quiet",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v2"
+      },
+      {
+        "command": "git init --bare",
+        "description": "Create a bare repository",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --bare",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v3"
+      },
+      {
+        "command": "git init --template=<template-directory>",
+        "description": "Specify template directory",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --template=<template-directory>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v4"
+      },
+      {
+        "command": "git init --separate-git-dir <git-dir>",
+        "description": "Separate git directory from working tree",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --separate-git-dir <git-dir>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v5"
+      },
+      {
+        "command": "git init --object-format=<format>",
+        "description": "Specify object format",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --object-format=<format>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v6"
+      },
+      {
+        "command": "git init --ref-format=<format>",
+        "description": "Specify ref format",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --ref-format=<format>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v7"
+      },
+      {
+        "command": "git init -b <branch-name>",
+        "description": "Create initial branch with specified name",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init -b <branch-name>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v8"
+      },
+      {
+        "command": "git init --initial-branch=<branch-name>",
+        "description": "Create initial branch with specified name",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --initial-branch=<branch-name>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v9"
+      },
+      {
+        "command": "git init --shared",
+        "description": "Specify repository is shared",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --shared",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v10"
+      },
+      {
+        "command": "git init --shared=<permissions>",
+        "description": "Specify shared repository with permissions",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init --shared=<permissions>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v11"
+      },
+      {
+        "command": "git init <directory>",
+        "description": "Initialize repository in specified directory",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git init <directory>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-1-v12"
+      }
+    ],
+    "id": "coreConfig-1"
+  },
+  {
+    "command": "git clone <repository>",
+    "description": "Clone a repository",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git clone <repository>",
+    "related": [],
+    "variations": [
+      {
+        "command": "git clone --depth <depth> <repository>",
+        "description": "Create a shallow clone with specified depth",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git clone --depth <depth> <repository>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-2-v1"
+      },
+      {
+        "command": "git clone --single-branch <repository>",
+        "description": "Clone only one branch",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git clone --single-branch <repository>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-2-v2"
+      },
+      {
+        "command": "git clone --quiet <repository>",
+        "description": "Suppress output during clone",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git clone --quiet <repository>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-2-v3"
+      },
+      {
+        "command": "git clone --mirror <repository>",
+        "description": "Set up a mirror of the remote repository",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git clone --mirror <repository>",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-2-v4"
+      }
+    ],
+    "id": "coreConfig-2"
+  },
+  {
+    "command": "git --version",
+    "description": "Show the installed Git version",
     "category": "coreConfig",
     "keywords": [
-      "init",
-      "create",
-      "repository",
-      "new"
+      "version",
+      "check git",
+      "git info",
+      "installed version"
     ],
-    "level": "beginner",
-    "example": "git init",
+    "level": "",
+    "example": "git --version",
     "related": [
-      "git clone <repository-url>"
+      "git --v"
     ],
+    "variations": [
+      {
+        "command": "git --v",
+        "description": "check git version",
+        "category": "coreConfig",
+        "keywords": [
+          "version",
+          "check git",
+          "git info",
+          "installed version"
+        ],
+        "level": "",
+        "example": "git --v",
+        "related": [
+          "git --version"
+        ],
+        "variations": [],
+        "id": "coreConfig-3-v1"
+      }
+    ],
+    "id": "coreConfig-3"
+  },
+  {
+    "command": "git --help",
+    "description": "Show help information for Git and its subcommands",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git --help",
+    "related": [],
+    "variations": [
+      {
+        "command": "git -h",
+        "description": "Shorthand to display help information",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git -h",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-4-v1"
+      }
+    ],
+    "id": "coreConfig-4"
+  },
+  {
+    "command": "git -C <path>",
+    "description": "Run Git commands as if the working directory were at the given path",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git -C <path>",
+    "related": [],
     "variations": [],
-    "id": "coreConfig-1"
+    "id": "coreConfig-5"
+  },
+  {
+    "command": "git -c <name>=<value>",
+    "description": "Set a configuration value for the duration of a single Git command",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git -c <name>=<value>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-6"
+  },
+  {
+    "command": "git --exec-path[=<path>]",
+    "description": "Show or set the path to Git’s executable files",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git --exec-path[=<path>]",
+    "related": [],
+    "variations": [
+      {
+        "command": "git --exec-path",
+        "description": "Display the current path to Git executables",
+        "category": "coreConfig",
+        "keywords": [],
+        "level": "",
+        "example": "git --exec-path",
+        "related": [],
+        "variations": [],
+        "id": "coreConfig-7-v1"
+      }
+    ],
+    "id": "coreConfig-7"
+  },
+  {
+    "command": "git --config-env=<name>=<envvar>",
+    "description": "Set an environment variable for Git configuration",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git --config-env=<name>=<envvar>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-8"
+  },
+  {
+    "command": "git config list [<file-option>] [<display-option>] [--includes]",
+    "description": "List all Git configuration settings",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config list [<file-option>] [<display-option>] [--includes]",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-9"
+  },
+  {
+    "command": "git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>",
+    "description": "Get a Git configuration value",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-10"
+  },
+  {
+    "command": "git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>",
+    "description": "Set a Git configuration value",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-11"
+  },
+  {
+    "command": "git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name>",
+    "description": "Unset a Git configuration value",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-12"
+  },
+  {
+    "command": "git config rename-section [<file-option>] <old-name> <new-name>",
+    "description": "Rename a section in Git configuration",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config rename-section [<file-option>] <old-name> <new-name>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-13"
+  },
+  {
+    "command": "git config remove-section [<file-option>] <name>",
+    "description": "Remove a section from Git configuration",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config remove-section [<file-option>] <name>",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-14"
+  },
+  {
+    "command": "git config edit [<file-option>]",
+    "description": "Edit Git configuration file",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config edit [<file-option>]",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-15"
+  },
+  {
+    "command": "git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]",
+    "description": "Get a boolean color configuration",
+    "category": "coreConfig",
+    "keywords": [],
+    "level": "",
+    "example": "git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]",
+    "related": [],
+    "variations": [],
+    "id": "coreConfig-16"
   }
 ]

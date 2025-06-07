@@ -24,11 +24,11 @@ export default function CommandItem({
             {command}
           </code>
 
-          {isVariation && (
+          {/* {isVariation && (
             <span className="variation-badge">
               variation
             </span>
-          )}
+          )} */}
 
           <span className="command-category">
             {category}

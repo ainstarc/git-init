@@ -1,20 +1,146 @@
 [
   {
-    "command": "git commit -m \"message\"",
-    "description": "Record changes to the repository with a message",
+    "command": "git commit",
+    "description": "Record changes to the repository",
     "category": "commits",
-    "keywords": [
-      "commit",
-      "save",
-      "message"
+    "keywords": [],
+    "level": "",
+    "example": "git commit",
+    "related": [],
+    "variations": [
+      {
+        "command": "git commit -a",
+        "description": "Commit all changed files (tracked files)",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit -a",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v1"
+      },
+      {
+        "command": "git commit --interactive",
+        "description": "Interactively choose hunks to commit",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --interactive",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v2"
+      },
+      {
+        "command": "git commit --patch",
+        "description": "Select portions of files to commit",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --patch",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v3"
+      },
+      {
+        "command": "git commit -s",
+        "description": "Add Signed-off-by line",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit -s",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v4"
+      },
+      {
+        "command": "git commit --amend",
+        "description": "Modify the most recent commit",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --amend",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v5"
+      },
+      {
+        "command": "git commit --dry-run",
+        "description": "Show what would be committed without making a commit",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --dry-run",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v6"
+      },
+      {
+        "command": "git commit -m <msg>",
+        "description": "Commit with a message",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit -m <msg>",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v7"
+      },
+      {
+        "command": "git commit -F <file>",
+        "description": "Commit using message from file",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit -F <file>",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v8"
+      },
+      {
+        "command": "git commit --allow-empty",
+        "description": "Create a commit with no changes",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --allow-empty",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v9"
+      },
+      {
+        "command": "git commit --no-verify",
+        "description": "Bypass pre-commit and commit-msg hooks",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --no-verify",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v10"
+      },
+      {
+        "command": "git commit --author=<author>",
+        "description": "Specify an explicit author",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --author=<author>",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v11"
+      },
+      {
+        "command": "git commit --date=<date>",
+        "description": "Override the author date",
+        "category": "commits",
+        "keywords": [],
+        "level": "",
+        "example": "git commit --date=<date>",
+        "related": [],
+        "variations": [],
+        "id": "commits-1-v12"
+      }
     ],
-    "level": "intermediate",
-    "example": "git commit -m \"Add feature X\"",
-    "related": [
-      "git commit -a -m \"message\"",
-      "git commit --amend"
-    ],
-    "variations": [],
     "id": "commits-1"
   }
 ]

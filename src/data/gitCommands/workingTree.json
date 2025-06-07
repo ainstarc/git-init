@@ -1,20 +1,80 @@
 [
   {
-    "command": "git restore <file>",
-    "description": "Discard changes in the working directory",
+    "command": "git restore",
+    "description": "Restore working tree files",
     "category": "workingTree",
-    "keywords": [
-      "restore",
-      "undo",
-      "discard"
+    "keywords": [],
+    "level": "",
+    "example": "git restore",
+    "related": [],
+    "variations": [
+      {
+        "command": "git restore [<options>] <pathspec>",
+        "description": "Restore files from the index or another tree",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore [<options>] <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v1"
+      },
+      {
+        "command": "git restore --source=<tree> <pathspec>",
+        "description": "Restore files from a specific tree",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --source=<tree> <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v2"
+      },
+      {
+        "command": "git restore --staged <pathspec>",
+        "description": "Restore files in the index (unstage changes)",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --staged <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v3"
+      },
+      {
+        "command": "git restore --worktree <pathspec>",
+        "description": "Restore files in the working directory",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --worktree <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v4"
+      },
+      {
+        "command": "git restore --pathspec-from-file=<file>",
+        "description": "Read pathspec from a file",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --pathspec-from-file=<file>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v5"
+      },
+      {
+        "command": "git restore --patch <pathspec>",
+        "description": "Interactively select hunks of changes to restore",
+        "category": "workingTree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --patch <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v6"
+      }
     ],
-    "level": "beginner",
-    "example": "git restore README.md",
-    "related": [
-      "git checkout -- <file>",
-      "git reset HEAD <file>"
-    ],
-    "variations": [],
     "id": "workingTree-1"
   }
 ]

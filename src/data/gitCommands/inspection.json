@@ -3,19 +3,34 @@
     "command": "git log",
     "description": "Show commit logs to see project history",
     "category": "inspection",
-    "keywords": ["log", "history", "commits"],
+    "keywords": [
+      "log",
+      "history",
+      "commits"
+    ],
     "level": "beginner",
     "example": "git log --oneline",
-    "related": ["git log --graph", "git log --stat"],
+    "related": [
+      "git log --graph",
+      "git log --stat"
+    ],
     "variations": [
       {
         "command": "git log --oneline",
         "description": "Show commit logs in a condensed format with one line per commit",
         "category": "inspection",
-        "keywords": ["log", "history", "commits", "oneline"],
+        "keywords": [
+          "log",
+          "history",
+          "commits",
+          "oneline"
+        ],
         "level": "beginner",
         "example": "git log --oneline",
-        "related": ["git log --oneline --graph", "git log --oneline --stat"],
+        "related": [
+          "git log --oneline --graph",
+          "git log --oneline --stat"
+        ],
         "variations": [],
         "id": "inspection-1-v1"
       }
@@ -26,10 +41,17 @@
     "command": "git diff",
     "description": "Show changes between working directory and index or commits",
     "category": "inspection",
-    "keywords": ["diff", "changes", "compare"],
+    "keywords": [
+      "diff",
+      "changes",
+      "compare"
+    ],
     "level": "beginner",
     "example": "git diff",
-    "related": ["git diff --cached", "git diff HEAD"],
+    "related": [
+      "git diff --cached",
+      "git diff HEAD"
+    ],
     "variations": [],
     "id": "inspection-2"
   },
@@ -37,11 +59,178 @@
     "command": "git status",
     "description": "Show the working tree status",
     "category": "inspection",
-    "keywords": ["status", "working tree", "changes"],
-    "level": "beginner",
+    "keywords": [],
+    "level": "",
     "example": "git status",
-    "related": ["git status -s", "git status --short"],
-    "variations": [],
+    "related": [],
+    "variations": [
+      {
+        "command": "git status -s",
+        "description": "Show status in short format",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status -s",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v1"
+      },
+      {
+        "command": "git status --short",
+        "description": "Show status in short format",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --short",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v2"
+      },
+      {
+        "command": "git status -b",
+        "description": "Show branch information",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status -b",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v3"
+      },
+      {
+        "command": "git status --branch",
+        "description": "Show branch information",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --branch",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v4"
+      },
+      {
+        "command": "git status --show-stash",
+        "description": "Show stash information",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --show-stash",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v5"
+      },
+      {
+        "command": "git status --ignored",
+        "description": "Show ignored files",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --ignored",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v6"
+      },
+      {
+        "command": "git status --untracked-files",
+        "description": "Show untracked files",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --untracked-files",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v7"
+      },
+      {
+        "command": "git status --no-renames",
+        "description": "Disable rename detection",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git status --no-renames",
+        "related": [],
+        "variations": [],
+        "id": "inspection-3-v8"
+      }
+    ],
     "id": "inspection-3"
+  },
+  {
+    "command": "git diff",
+    "description": "Show changes between commits, commit and working tree, etc.",
+    "category": "inspection",
+    "keywords": [],
+    "level": "",
+    "example": "git diff",
+    "related": [],
+    "variations": [
+      {
+        "command": "git diff --cached",
+        "description": "Show changes staged for commit (index vs HEAD)",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff --cached",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v1"
+      },
+      {
+        "command": "git diff --merge-base <commit>",
+        "description": "Show diff between merge base and given commit",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff --merge-base <commit>",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v2"
+      },
+      {
+        "command": "git diff <commit>",
+        "description": "Show changes between working tree and given commit",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff <commit>",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v3"
+      },
+      {
+        "command": "git diff <commit1> <commit2>",
+        "description": "Show changes between two commits",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff <commit1> <commit2>",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v4"
+      },
+      {
+        "command": "git diff <blob1> <blob2>",
+        "description": "Show changes between two blobs",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff <blob1> <blob2>",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v5"
+      },
+      {
+        "command": "git diff --no-index <path1> <path2>",
+        "description": "Compare two files outside a git repository",
+        "category": "inspection",
+        "keywords": [],
+        "level": "",
+        "example": "git diff --no-index <path1> <path2>",
+        "related": [],
+        "variations": [],
+        "id": "inspection-4-v6"
+      }
+    ],
+    "id": "inspection-4"
   }
 ]

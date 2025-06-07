@@ -39,15 +39,19 @@ export default function App() {
   ];
 
   const flatCommands = useMemo(() => {
-    return gitCommands.flatMap((cmd) => {
-      const base = { ...cmd, isVariation: false };
-      const variations = (cmd.variations || []).map((variation) => ({
-        ...variation,
-        parentCommand: cmd.command,
-        isVariation: true,
-      }));
-      return [base, ...variations];
-    });
+    const flattenVariations = (cmd, parentCommand = null) => {
+      const base = {
+        ...cmd,
+        isVariation: !!parentCommand,
+        parentCommand: parentCommand || null,
+      };
+      const nestedVariations = (cmd.variations || []).flatMap((variation) =>
+        flattenVariations(variation, base.command)
+      );
+      return [base, ...nestedVariations];
+    };
+    
+    return gitCommands.flatMap((cmd) => flattenVariations(cmd));
   }, []);
 
   const fuse = useMemo(() => {
@@ -61,7 +65,7 @@ export default function App() {
       threshold: 0.4,
       includeScore: true,
     });
-  }, [flatCommands]); 
+  }, [flatCommands]);
 
   useEffect(() => {
     let filteredResults;
