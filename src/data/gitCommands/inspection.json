@@ -1,11 +1,25 @@
 [
   {
     "command": "git log",
-    "description": "Show the commit logs",
-    "keywords": [],
-    "level": "",
-    "example": "git log",
-    "related": [],
+    "description": "Show the commit logs (history of commits, authors, messages, and changes)",
+    "keywords": [
+      "log",
+      "history",
+      "commit log",
+      "show commits",
+      "view history",
+      "git log",
+      "list commits",
+      "see changes"
+    ],
+    "level": "beginner",
+    "example": "git log --oneline",
+    "related": [
+      "git show",
+      "git diff",
+      "git blame",
+      "git reflog"
+    ],
     "variations": [
       {
         "command": "git log <revision-range>",
@@ -222,11 +236,24 @@
   },
   {
     "command": "git status",
-    "description": "Show the working tree status",
-    "keywords": [],
-    "level": "",
-    "example": "git status",
-    "related": [],
+    "description": "Show the working tree status (what's changed, staged, or untracked)",
+    "keywords": [
+      "status",
+      "working tree",
+      "show changes",
+      "untracked files",
+      "staged files",
+      "git status",
+      "current state"
+    ],
+    "level": "beginner",
+    "example": "git status -s",
+    "related": [
+      "git add",
+      "git diff",
+      "git commit",
+      "git reset"
+    ],
     "variations": [
       {
         "command": "git status -s",
@@ -322,11 +349,25 @@
   },
   {
     "command": "git diff",
-    "description": "Show changes between commits, commit and working tree, etc.",
-    "keywords": [],
-    "level": "",
-    "example": "git diff",
-    "related": [],
+    "description": "Show changes between commits, commit and working tree, etc. (compare changes, see differences)",
+    "keywords": [
+      "diff",
+      "compare",
+      "changes",
+      "difference",
+      "show diff",
+      "unstaged changes",
+      "staged changes",
+      "git diff"
+    ],
+    "level": "beginner",
+    "example": "git diff HEAD",
+    "related": [
+      "git status",
+      "git log",
+      "git show",
+      "git diff --cached"
+    ],
     "variations": [
       {
         "command": "git diff --cached",

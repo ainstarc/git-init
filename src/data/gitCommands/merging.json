@@ -1,11 +1,26 @@
 [
   {
     "command": "git merge <commit>",
-    "description": "Merge changes from specified commit(s) into the current branch",
-    "keywords": [],
-    "level": "",
-    "example": "git merge <commit>",
-    "related": [],
+    "description": "Merge changes from specified commit(s) into the current branch (combine branches or integrate changes)",
+    "keywords": [
+      "merge",
+      "combine",
+      "integrate",
+      "join branches",
+      "merge branch",
+      "merge commit",
+      "resolve conflicts",
+      "merge changes"
+    ],
+    "level": "intermediate",
+    "example": "git merge feature/login",
+    "related": [
+      "git rebase",
+      "git cherry-pick",
+      "git pull",
+      "git merge --abort",
+      "git merge --squash"
+    ],
     "variations": [
       {
         "command": "git merge -n <commit>",

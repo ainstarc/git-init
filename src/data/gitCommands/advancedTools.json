@@ -1,11 +1,26 @@
 [
   {
     "command": "git notes",
-    "description": "Add or inspect notes attached to objects",
-    "keywords": [],
-    "level": "",
-    "example": "git notes",
-    "related": [],
+    "description": "Add or inspect notes attached to objects (annotate commits with extra information)",
+    "keywords": [
+      "notes",
+      "annotate",
+      "add note",
+      "commit note",
+      "extra info",
+      "attach note",
+      "inspect note",
+      "git notes"
+    ],
+    "level": "advanced",
+    "example": "git notes add -m 'Reviewed by Alice'",
+    "related": [
+      "git log",
+      "git show",
+      "git notes add",
+      "git notes list",
+      "git notes remove"
+    ],
     "variations": [
       {
         "command": "git notes list",

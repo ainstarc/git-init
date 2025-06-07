@@ -1,19 +1,27 @@
 [
   {
     "command": "git fetch",
-    "description": "Download objects and refs from another repository",
+    "description": "Download objects and refs from another repository (update local with remote changes without merging)",
     "keywords": [
+      "fetch",
       "remote",
       "update",
       "download",
-      "refs"
+      "refs",
+      "get changes",
+      "sync",
+      "pull without merge",
+      "fetch branches",
+      "fetch tags"
     ],
     "level": "intermediate",
     "example": "git fetch origin",
     "related": [
       "git pull",
       "git remote",
-      "git push"
+      "git push",
+      "git fetch --all",
+      "git fetch --prune"
     ],
     "variations": [
       {
@@ -133,19 +141,24 @@
   },
   {
     "command": "git pull",
-    "description": "Fetch from a remote repository and immediately merge",
+    "description": "Fetch from a remote repository and immediately merge (update local branch with remote changes)",
     "keywords": [
       "pull",
       "merge",
-      "fetch",
-      "remote"
+      "fetch and merge",
+      "remote update",
+      "sync",
+      "get latest",
+      "update branch",
+      "pull changes"
     ],
     "level": "intermediate",
     "example": "git pull origin main",
     "related": [
       "git fetch",
       "git merge",
-      "git rebase"
+      "git rebase",
+      "git pull --rebase"
     ],
     "variations": [
       {
@@ -298,20 +311,26 @@
   },
   {
     "command": "git push",
-    "description": "Update remote refs along with associated objects",
+    "description": "Update remote refs along with associated objects (upload local commits to remote)",
     "keywords": [
       "push",
       "remote",
       "upload",
       "refs",
       "branches",
-      "tags"
+      "tags",
+      "send changes",
+      "publish",
+      "push branch",
+      "push tag"
     ],
     "level": "intermediate",
     "example": "git push origin main",
     "related": [
       "git fetch",
-      "git pull"
+      "git pull",
+      "git push --force",
+      "git push --tags"
     ],
     "variations": [
       {
@@ -608,23 +627,27 @@
   },
   {
     "command": "git remote",
-    "description": "Manage set of tracked repositories",
+    "description": "Manage set of tracked repositories (add, remove, rename, or show remotes)",
     "keywords": [
       "remote",
       "repository",
-      "add",
-      "remove",
-      "rename",
-      "url",
-      "fetch",
-      "prune"
+      "add remote",
+      "remove remote",
+      "rename remote",
+      "remote url",
+      "fetch remote",
+      "prune remote",
+      "list remotes",
+      "show remotes"
     ],
     "level": "intermediate",
     "example": "git remote -v",
     "related": [
       "git fetch",
       "git push",
-      "git pull"
+      "git pull",
+      "git remote add",
+      "git remote remove"
     ],
     "variations": [
       {

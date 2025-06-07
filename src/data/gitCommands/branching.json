@@ -1,11 +1,25 @@
 [
   {
     "command": "git branch",
-    "description": "List, create, or delete branches",
-    "keywords": [],
-    "level": "",
+    "description": "List, create, or delete branches in your repository.",
+    "keywords": [
+      "branch",
+      "list branches",
+      "create branch",
+      "delete branch",
+      "show branches",
+      "manage branches",
+      "branching"
+    ],
+    "level": "beginner",
     "example": "git branch",
-    "related": [],
+    "related": [
+      "git checkout",
+      "git switch",
+      "git merge",
+      "git branch -d",
+      "git branch -a"
+    ],
     "variations": [
       {
         "command": "git branch --color",
@@ -546,21 +560,24 @@
   },
   {
     "command": "git rebase",
-    "description": "Reapply commits on top of another base tip",
+    "description": "Reapply commits on top of another base tip (move or combine commits)",
     "keywords": [
       "rebase",
-      "interactive",
-      "commit",
-      "branch",
+      "move commits",
+      "combine commits",
+      "replay commits",
+      "base branch",
       "upstream",
-      "base"
+      "interactive rebase",
+      "reorder commits"
     ],
     "level": "advanced",
     "example": "git rebase -i HEAD~3",
     "related": [
       "git merge",
       "git cherry-pick",
-      "git reset"
+      "git reset",
+      "git commit --amend"
     ],
     "variations": [
       {
@@ -602,11 +619,23 @@
   },
   {
     "command": "git checkout <branch>",
-    "description": "Switch to an existing branch",
-    "keywords": [],
-    "level": "",
-    "example": "git checkout <branch>",
-    "related": [],
+    "description": "Switch to an existing branch or restore files.",
+    "keywords": [
+      "checkout",
+      "switch branch",
+      "restore file",
+      "change branch",
+      "move branch",
+      "branch switch",
+      "checkout branch"
+    ],
+    "level": "beginner",
+    "example": "git checkout feature/login",
+    "related": [
+      "git switch",
+      "git branch",
+      "git merge"
+    ],
     "variations": [
       {
         "command": "git checkout -q <branch>",
@@ -769,11 +798,21 @@
   },
   {
     "command": "git switch <branch>",
-    "description": "Switch to an existing branch",
-    "keywords": [],
-    "level": "",
-    "example": "git switch <branch>",
-    "related": [],
+    "description": "Switch to an existing branch (modern alternative to checkout)",
+    "keywords": [
+      "switch",
+      "switch branch",
+      "change branch",
+      "move branch",
+      "checkout alternative",
+      "branch switch"
+    ],
+    "level": "beginner",
+    "example": "git switch develop",
+    "related": [
+      "git checkout",
+      "git branch"
+    ],
     "variations": [
       {
         "command": "git switch --no-guess <branch>",

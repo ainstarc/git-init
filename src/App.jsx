@@ -12,6 +12,99 @@ import gitCommands from "./data/gitCommands";
 import "./styles/themes.css";
 import "./App.css";
 
+const STOP_WORDS = new Set([
+  "the",
+  "a",
+  "an",
+  "to",
+  "for",
+  "of",
+  "on",
+  "in",
+  "with",
+  "and",
+  "or",
+  "by",
+  "from",
+  "at",
+  "as",
+  "is",
+  "are",
+  "be",
+  "this",
+  "that",
+  "it",
+  "my",
+  "your",
+  "their",
+  "our",
+  "was",
+  "were",
+  "can",
+  "will",
+  "should",
+  "do",
+  "does",
+  "did",
+  "but",
+  "if",
+  "so",
+  "just",
+  "about",
+  "into",
+  "out",
+  "up",
+  "down",
+  "over",
+  "under",
+  "then",
+  "than",
+  "after",
+  "before",
+  "when",
+  "while",
+  "which",
+  "who",
+  "whom",
+  "whose",
+  "how",
+  "what",
+  "why",
+  "where",
+  "all",
+  "any",
+  "each",
+  "few",
+  "more",
+  "most",
+  "other",
+  "some",
+  "such",
+  "no",
+  "nor",
+  "not",
+  "only",
+  "own",
+  "same",
+  "too",
+  "very",
+  "s",
+  "t",
+  "can",
+  "will",
+  "don",
+  "should",
+  "now",
+]);
+
+function cleanQuery(query) {
+  return query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((word) => !STOP_WORDS.has(word))
+    .join(" ");
+}
+
 export default function App() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(gitCommands);
@@ -34,7 +127,6 @@ export default function App() {
     { id: "inspection", name: "Inspection" },
     { id: "workingTree", name: "Working Tree" },
     { id: "advancedTools", name: "Advanced Tools" },
-    { id: "phrases", name: "Phrases" },
   ];
 
   // Flatten commands + their variations for search
@@ -58,18 +150,24 @@ export default function App() {
     return new Fuse(flatCommands, {
       keys: [
         { name: "command", weight: 2 },
-        { name: "description", weight: 0.7 },
-        { name: "keywords", weight: 0.9 },
+        { name: "description", weight: 1.2 },
+        { name: "keywords", weight: 1.5 },
         { name: "category", weight: 0.5 },
+        { name: "example", weight: 0.7 },
+        { name: "related", weight: 0.5 },
       ],
-      threshold: 0.4,
+      threshold: 0.35, // more strict
       includeScore: true,
+      useExtendedSearch: true,
+      ignoreLocation: true,
+      minMatchCharLength: 2,
     });
   }, [flatCommands]);
 
   // Perform search and filter by category
   useEffect(() => {
-    if (!query) {
+    const cleaned = cleanQuery(query);
+    if (!cleaned) {
       setResults(
         activeCategory === "all"
           ? flatCommands
@@ -77,13 +175,11 @@ export default function App() {
       );
       return;
     }
-
-    const searchResults = fuse.search(query);
+    const searchResults = fuse.search(cleaned);
     const filtered =
       activeCategory === "all"
         ? searchResults
         : searchResults.filter((res) => res.item.category === activeCategory);
-
     setResults(filtered.map((res) => res.item));
     setFocusedIndex(-1);
   }, [query, activeCategory, fuse, flatCommands]);
@@ -120,17 +216,24 @@ export default function App() {
       </header>
 
       <p className="app-description">
-        Search for Git commands using natural language – try "start a repo", "undo commit", or "switch branch"
+        Search for Git commands using natural language – try "start a repo",
+        "undo commit", or "switch branch"
       </p>
 
       <SearchBar query={query} setQuery={setQuery} onKeyDown={handleKeyDown} />
 
-      <div className="category-filters" role="tablist" aria-label="Command categories">
+      <div
+        className="category-filters"
+        role="tablist"
+        aria-label="Command categories"
+      >
         {categories.map((category) => (
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            className={`category-button ${activeCategory === category.id ? "active" : ""}`}
+            className={`category-button ${
+              activeCategory === category.id ? "active" : ""
+            }`}
             aria-pressed={activeCategory === category.id}
             aria-label={`Filter by ${category.name}`}
           >

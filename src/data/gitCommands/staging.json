@@ -1,11 +1,25 @@
 [
   {
     "command": "git add <pathspec>",
-    "description": "Add file contents to the index (staging area)",
-    "keywords": [],
-    "level": "",
-    "example": "git add <pathspec>",
-    "related": [],
+    "description": "Add file contents to the index (staging area) to prepare for commit.",
+    "keywords": [
+      "add",
+      "stage",
+      "staging",
+      "index",
+      "track file",
+      "prepare commit",
+      "add file",
+      "add changes"
+    ],
+    "level": "beginner",
+    "example": "git add src/App.jsx",
+    "related": [
+      "git status",
+      "git reset",
+      "git commit",
+      "git add --patch"
+    ],
     "variations": [
       {
         "command": "git add --verbose <pathspec>",
@@ -189,11 +203,25 @@
   },
   {
     "command": "git reset",
-    "description": "Reset current HEAD to the specified state, optionally modifying the index and working directory",
-    "keywords": [],
-    "level": "",
-    "example": "git reset",
-    "related": [],
+    "description": "Reset current HEAD to the specified state, optionally modifying the index and working directory (unstage or undo changes).",
+    "keywords": [
+      "reset",
+      "unstage",
+      "undo",
+      "revert",
+      "remove from staging",
+      "reset index",
+      "reset file",
+      "reset commit"
+    ],
+    "level": "intermediate",
+    "example": "git reset HEAD~1",
+    "related": [
+      "git add",
+      "git checkout",
+      "git revert",
+      "git commit --amend"
+    ],
     "variations": [
       {
         "command": "git reset [<commit>]",

@@ -1,11 +1,22 @@
 [
   {
     "command": "git init",
-    "description": "Create an empty Git repository or reinitialize an existing one",
-    "keywords": [],
-    "level": "",
+    "description": "Create an empty Git repository or reinitialize an existing one.",
+    "keywords": [
+      "init",
+      "initialize",
+      "create repo",
+      "new repository",
+      "start git",
+      "setup repo",
+      "git init"
+    ],
+    "level": "beginner",
     "example": "git init",
-    "related": [],
+    "related": [
+      "git clone",
+      "git config"
+    ],
     "variations": [
       {
         "command": "git init -q",
@@ -145,11 +156,21 @@
   },
   {
     "command": "git clone <repository>",
-    "description": "Clone a repository",
-    "keywords": [],
-    "level": "",
-    "example": "git clone <repository>",
-    "related": [],
+    "description": "Clone a repository from a remote source.",
+    "keywords": [
+      "clone",
+      "download repo",
+      "copy repo",
+      "get repository",
+      "fetch repo",
+      "git clone"
+    ],
+    "level": "beginner",
+    "example": "git clone https://github.com/user/repo.git",
+    "related": [
+      "git init",
+      "git remote add"
+    ],
     "variations": [
       {
         "command": "git clone --depth <depth> <repository>",
@@ -201,17 +222,18 @@
   },
   {
     "command": "git --version",
-    "description": "Show the installed Git version",
+    "description": "Show the installed Git version.",
     "keywords": [
       "version",
       "check git",
       "git info",
-      "installed version"
+      "installed version",
+      "git --v"
     ],
-    "level": "",
+    "level": "beginner",
     "example": "git --version",
     "related": [
-      "git --v"
+      "git --help"
     ],
     "variations": [
       {
@@ -238,11 +260,20 @@
   },
   {
     "command": "git --help",
-    "description": "Show help information for Git and its subcommands",
-    "keywords": [],
-    "level": "",
+    "description": "Show help information for Git and its subcommands.",
+    "keywords": [
+      "help",
+      "manual",
+      "usage",
+      "git help",
+      "git commands",
+      "git documentation"
+    ],
+    "level": "beginner",
     "example": "git --help",
-    "related": [],
+    "related": [
+      "git --version"
+    ],
     "variations": [
       {
         "command": "git -h",
@@ -261,22 +292,34 @@
   },
   {
     "command": "git -C <path>",
-    "description": "Run Git commands as if the working directory were at the given path",
-    "keywords": [],
-    "level": "",
-    "example": "git -C <path>",
-    "related": [],
+    "description": "Run Git commands as if the working directory were at the given path.",
+    "keywords": [
+      "run in directory",
+      "change directory",
+      "git -C"
+    ],
+    "level": "advanced",
+    "example": "git -C ../other-repo status",
+    "related": [
+      "git status"
+    ],
     "variations": [],
     "id": "coreConfig-5",
     "category": "coreConfig"
   },
   {
     "command": "git -c <name>=<value>",
-    "description": "Set a configuration value for the duration of a single Git command",
-    "keywords": [],
-    "level": "",
-    "example": "git -c <name>=<value>",
-    "related": [],
+    "description": "Set a configuration value for the duration of a single Git command.",
+    "keywords": [
+      "temporary config",
+      "set config",
+      "git -c"
+    ],
+    "level": "advanced",
+    "example": "git -c user.name='Alice' status",
+    "related": [
+      "git config"
+    ],
     "variations": [],
     "id": "coreConfig-6",
     "category": "coreConfig"

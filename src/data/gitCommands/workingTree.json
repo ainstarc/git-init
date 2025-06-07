@@ -79,19 +79,39 @@
   },
   {
     "command": "git stash",
-    "description": "Stash the changes in a dirty working directory away",
-    "keywords": [],
-    "level": "",
+    "description": "Stash the changes in a dirty working directory away (temporarily save uncommitted changes)",
+    "keywords": [
+      "stash",
+      "save changes",
+      "temporary",
+      "shelve",
+      "work in progress",
+      "uncommitted",
+      "hide changes",
+      "set aside"
+    ],
+    "level": "beginner",
     "example": "git stash",
-    "related": [],
+    "related": [
+      "git stash pop",
+      "git stash apply",
+      "git stash list",
+      "git reset"
+    ],
     "variations": [
       {
         "command": "git stash list",
         "description": "Show the list of stashed changes",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "list stashes",
+          "show stashes",
+          "stash history"
+        ],
+        "level": "beginner",
         "example": "git stash list",
-        "related": [],
+        "related": [
+          "git stash show"
+        ],
         "variations": [],
         "id": "workingTree-2-v1",
         "category": "workingTree"
@@ -99,10 +119,16 @@
       {
         "command": "git stash show",
         "description": "Show the changes recorded in the latest stash",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "show stash",
+          "stash diff",
+          "stash details"
+        ],
+        "level": "beginner",
         "example": "git stash show",
-        "related": [],
+        "related": [
+          "git stash list"
+        ],
         "variations": [],
         "id": "workingTree-2-v2",
         "category": "workingTree"
@@ -110,43 +136,70 @@
       {
         "command": "git stash show -u",
         "description": "Include untracked files in the stash diff",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "untracked",
+          "show untracked",
+          "stash diff untracked"
+        ],
+        "level": "intermediate",
         "example": "git stash show -u",
-        "related": [],
+        "related": [
+          "git stash show"
+        ],
         "variations": [],
         "id": "workingTree-2-v3",
         "category": "workingTree"
       },
       {
         "command": "git stash pop",
-        "description": "Apply the latest stash and remove it",
-        "keywords": [],
-        "level": "",
+        "description": "Apply the latest stash and remove it from the stash list",
+        "keywords": [
+          "apply stash",
+          "restore changes",
+          "unstash",
+          "pop stash"
+        ],
+        "level": "beginner",
         "example": "git stash pop",
-        "related": [],
+        "related": [
+          "git stash apply",
+          "git stash list"
+        ],
         "variations": [],
         "id": "workingTree-2-v4",
         "category": "workingTree"
       },
       {
         "command": "git stash apply",
-        "description": "Apply the latest stash without removing it",
-        "keywords": [],
-        "level": "",
+        "description": "Apply the latest stash without removing it from the stash list",
+        "keywords": [
+          "apply stash",
+          "restore changes",
+          "unstash",
+          "keep stash"
+        ],
+        "level": "beginner",
         "example": "git stash apply",
-        "related": [],
+        "related": [
+          "git stash pop",
+          "git stash list"
+        ],
         "variations": [],
         "id": "workingTree-2-v5",
         "category": "workingTree"
       },
       {
         "command": "git stash apply --index",
-        "description": "Reinstate the staged changes too when applying",
-        "keywords": [],
-        "level": "",
+        "description": "Reinstate the staged changes too when applying a stash",
+        "keywords": [
+          "apply stash index",
+          "restore staged"
+        ],
+        "level": "intermediate",
         "example": "git stash apply --index",
-        "related": [],
+        "related": [
+          "git stash apply"
+        ],
         "variations": [],
         "id": "workingTree-2-v6",
         "category": "workingTree"
@@ -154,10 +207,16 @@
       {
         "command": "git stash drop",
         "description": "Remove a single stash entry",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "remove stash",
+          "delete stash",
+          "drop stash"
+        ],
+        "level": "beginner",
         "example": "git stash drop",
-        "related": [],
+        "related": [
+          "git stash clear"
+        ],
         "variations": [],
         "id": "workingTree-2-v7",
         "category": "workingTree"
@@ -165,32 +224,49 @@
       {
         "command": "git stash clear",
         "description": "Remove all stash entries",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "clear stash",
+          "delete all stashes",
+          "remove all stashes"
+        ],
+        "level": "beginner",
         "example": "git stash clear",
-        "related": [],
+        "related": [
+          "git stash drop"
+        ],
         "variations": [],
         "id": "workingTree-2-v8",
         "category": "workingTree"
       },
       {
         "command": "git stash save <message>",
-        "description": "Legacy command to save changes with a message",
-        "keywords": [],
-        "level": "",
-        "example": "git stash save <message>",
-        "related": [],
+        "description": "Legacy command to save changes with a message (use 'git stash push -m' instead)",
+        "keywords": [
+          "save stash",
+          "stash message",
+          "legacy stash"
+        ],
+        "level": "advanced",
+        "example": "git stash save 'WIP: refactor'",
+        "related": [
+          "git stash push"
+        ],
         "variations": [],
         "id": "workingTree-2-v9",
         "category": "workingTree"
       },
       {
         "command": "git stash create",
-        "description": "Create a stash object from the working directory but do not store it",
-        "keywords": [],
-        "level": "",
+        "description": "Create a stash object from the working directory but do not store it in the stash list",
+        "keywords": [
+          "create stash object",
+          "manual stash"
+        ],
+        "level": "advanced",
         "example": "git stash create",
-        "related": [],
+        "related": [
+          "git stash store"
+        ],
         "variations": [],
         "id": "workingTree-2-v10",
         "category": "workingTree"
@@ -198,112 +274,17 @@
       {
         "command": "git stash store <commit>",
         "description": "Store a given commit as a stash entry",
-        "keywords": [],
-        "level": "",
+        "keywords": [
+          "store stash",
+          "stash commit"
+        ],
+        "level": "advanced",
         "example": "git stash store <commit>",
-        "related": [],
+        "related": [
+          "git stash create"
+        ],
         "variations": [],
         "id": "workingTree-2-v11",
-        "category": "workingTree"
-      },
-      {
-        "command": "git stash branch <branchname>",
-        "description": "Create and switch to a new branch based on a stash",
-        "keywords": [],
-        "level": "",
-        "example": "git stash branch <branchname>",
-        "related": [],
-        "variations": [],
-        "id": "workingTree-2-v12",
-        "category": "workingTree"
-      },
-      {
-        "command": "git stash push",
-        "description": "Stash changes using the modern push syntax",
-        "keywords": [],
-        "level": "",
-        "example": "git stash push",
-        "related": [],
-        "variations": [
-          {
-            "command": "git stash push -u",
-            "description": "Include untracked files in the stash",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -u",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v1"
-          },
-          {
-            "command": "git stash push -a",
-            "description": "Include all ignored and untracked files",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -a",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v2"
-          },
-          {
-            "command": "git stash push -p",
-            "description": "Interactively select hunks to stash",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -p",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v3"
-          },
-          {
-            "command": "git stash push -k",
-            "description": "Keep the staged index intact",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -k",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v4"
-          },
-          {
-            "command": "git stash push -m <message>",
-            "description": "Add a message to the stash",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -m <message>",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v5"
-          },
-          {
-            "command": "git stash push --staged",
-            "description": "Only stash staged changes",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push --staged",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v6"
-          },
-          {
-            "command": "git stash push -- path/to/file",
-            "description": "Stash changes in specific paths",
-            "category": "workingTree",
-            "keywords": [],
-            "level": "",
-            "example": "git stash push -- path/to/file",
-            "related": [],
-            "variations": [],
-            "id": "workingTree-2-v7"
-          }
-        ],
-        "id": "workingTree-2-v13",
         "category": "workingTree"
       }
     ],

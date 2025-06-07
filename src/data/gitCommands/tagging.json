@@ -1,20 +1,135 @@
 [
   {
     "command": "git tag <tagname>",
-    "description": "Create a tag reference to mark a point in history",
+    "description": "Create a tag reference to mark a point in history, such as a release or milestone.",
     "keywords": [
       "tag",
       "mark",
-      "release"
+      "release",
+      "milestone",
+      "version",
+      "annotate",
+      "label",
+      "checkpoint",
+      "snapshot"
     ],
     "level": "intermediate",
     "example": "git tag v1.0",
     "related": [
-      "git tag -a <tagname> -m \"message\"",
+      "git tag -a <tagname> -m 'message'",
       "git tag -d <tagname>",
-      "git push origin <tagname>"
+      "git push origin <tagname>",
+      "git show <tagname>",
+      "git tag --list"
     ],
-    "variations": [],
+    "variations": [
+      {
+        "command": "git tag -a <tagname> -m 'message'",
+        "description": "Create an annotated tag with a message.",
+        "keywords": [
+          "annotated tag",
+          "tag message",
+          "create tag"
+        ],
+        "level": "intermediate",
+        "example": "git tag -a v1.0 -m 'Release version 1.0'",
+        "related": [
+          "git tag <tagname>",
+          "git tag -d <tagname>"
+        ],
+        "variations": [],
+        "id": "tagging-1-v1",
+        "category": "tagging"
+      },
+      {
+        "command": "git tag -d <tagname>",
+        "description": "Delete a local tag.",
+        "keywords": [
+          "delete tag",
+          "remove tag"
+        ],
+        "level": "intermediate",
+        "example": "git tag -d v1.0",
+        "related": [
+          "git tag <tagname>",
+          "git push origin :refs/tags/<tagname>"
+        ],
+        "variations": [],
+        "id": "tagging-1-v2",
+        "category": "tagging"
+      },
+      {
+        "command": "git push origin <tagname>",
+        "description": "Push a local tag to the remote repository.",
+        "keywords": [
+          "push tag",
+          "upload tag",
+          "remote tag"
+        ],
+        "level": "intermediate",
+        "example": "git push origin v1.0",
+        "related": [
+          "git tag <tagname>",
+          "git tag -a <tagname> -m 'message'"
+        ],
+        "variations": [],
+        "id": "tagging-1-v3",
+        "category": "tagging"
+      },
+      {
+        "command": "git push origin :refs/tags/<tagname>",
+        "description": "Delete a tag from the remote repository.",
+        "keywords": [
+          "delete remote tag",
+          "remove remote tag"
+        ],
+        "level": "advanced",
+        "example": "git push origin :refs/tags/v1.0",
+        "related": [
+          "git tag -d <tagname>",
+          "git tag <tagname>"
+        ],
+        "variations": [],
+        "id": "tagging-1-v4",
+        "category": "tagging"
+      },
+      {
+        "command": "git show <tagname>",
+        "description": "Show information about a tag.",
+        "keywords": [
+          "show tag",
+          "tag details",
+          "tag info"
+        ],
+        "level": "beginner",
+        "example": "git show v1.0",
+        "related": [
+          "git tag <tagname>",
+          "git tag --list"
+        ],
+        "variations": [],
+        "id": "tagging-1-v5",
+        "category": "tagging"
+      },
+      {
+        "command": "git tag --list",
+        "description": "List all tags in the repository.",
+        "keywords": [
+          "list tags",
+          "show tags",
+          "all tags"
+        ],
+        "level": "beginner",
+        "example": "git tag --list",
+        "related": [
+          "git tag <tagname>",
+          "git show <tagname>"
+        ],
+        "variations": [],
+        "id": "tagging-1-v6",
+        "category": "tagging"
+      }
+    ],
     "id": "tagging-1",
     "category": "tagging"
   }
