@@ -1,0 +1,72 @@
+[
+  {
+    "phrase": "start a new repository",
+    "intent": "Initialize a new Git repository",
+    "suggestedCommand": "git init",
+    "keywords": ["create repo", "new project", "begin git", "init repo", "initialize"],
+    "category": "coreConfig"
+  },
+  {
+    "phrase": "save my changes",
+    "intent": "Commit staged changes to the repository",
+    "suggestedCommand": "git commit -m 'your message'",
+    "keywords": ["commit", "save work", "record changes", "snapshot"],
+    "category": "commits"
+  },
+  {
+    "phrase": "upload to GitHub",
+    "intent": "Push local commits to a remote repository",
+    "suggestedCommand": "git push origin main",
+    "keywords": ["push", "upload", "send to remote", "github"],
+    "category": "remotes"
+  },
+  {
+    "phrase": "download updates",
+    "intent": "Pull latest changes from a remote repository",
+    "suggestedCommand": "git pull origin main",
+    "keywords": ["pull", "fetch", "update", "get latest", "sync"],
+    "category": "remotes"
+  },
+  {
+    "phrase": "switch to another branch",
+    "intent": "Switch to a different branch in the repository",
+    "suggestedCommand": "git switch <branch>",
+    "keywords": ["change branch", "checkout branch", "move branch", "switch"],
+    "category": "branching"
+  },
+  {
+    "phrase": "undo my last commit",
+    "intent": "Undo the most recent commit, keeping changes staged",
+    "suggestedCommand": "git reset --soft HEAD~1",
+    "keywords": ["undo commit", "revert last", "reset", "remove commit"],
+    "category": "commits"
+  },
+  {
+    "phrase": "see what files changed",
+    "intent": "Show the status of files in the working directory",
+    "suggestedCommand": "git status",
+    "keywords": ["status", "changed files", "unstaged", "staged", "show changes"],
+    "category": "inspection"
+  },
+  {
+    "phrase": "see commit history",
+    "intent": "Show the commit log/history",
+    "suggestedCommand": "git log --oneline",
+    "keywords": ["history", "log", "commits", "show history"],
+    "category": "inspection"
+  },
+  {
+    "phrase": "discard local changes",
+    "intent": "Restore files to the last committed state",
+    "suggestedCommand": "git restore <file>" ,
+    "keywords": ["undo changes", "revert file", "reset file", "discard"],
+    "category": "workingTree"
+  },
+  {
+    "phrase": "add all files",
+    "intent": "Stage all changes for commit",
+    "suggestedCommand": "git add .",
+    "keywords": ["stage all", "add everything", "add all", "track all"],
+    "category": "staging"
+  }
+]

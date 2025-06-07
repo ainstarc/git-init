@@ -1,110 +1,55 @@
-# Git-Init: Find Git Commands Instantly
+# git-init: The Ultimate Git Command Search & Reference
 
-Git-Init is a user-friendly tool that helps you find the right Git command for any task. Whether you're a beginner or an experienced developer, this tool makes it easy to discover Git commands using natural language.
+[![Build Status](https://img.shields.io/github/workflow/status/ainstarc/git-init/CI)](https://github.com/ainstarc/git-init/actions)
+
+A modern, themeable, and accessible Git command search/reference app. Instantly find the right Git command using natural language, fuzzy search, and phrase matching. 
 
 ## Features
+- 🔍 **Fuzzy & Natural Language Search**: Find commands by keywords, phrases, or intent (e.g. "undo last commit").
+- 💡 **Phrase & Synonym Expansion**: Search supports synonyms and common Git task phrasing.
+- 🏷️ **Rich Command Data**: Each command includes description, example, keywords, related, and more.
+- 🎨 **Themes & System Theme**: Light, dark, sepia, nord, solarized, and system theme support.
+- 🖼️ **Category Color Coding**: Instantly scan by command type.
+- 🏷️ **Keyword Tags**: See all relevant keywords for each command.
+- 🧑‍💻 **Accessible & Responsive**: Keyboard navigation, focus styles, and mobile-friendly.
+- 📋 **Quick Copy**: Copy any command with one click or Enter.
+- 📈 **PWA: Installable & Offline**: Works as a PWA, with auto-update on new releases.
+- 🛠️ **Data Maintenance Scripts**: Ensure unique command IDs, no duplicates, and easy data enrichment.
 
-- **Natural Language Search**: Find commands by describing what you want to do
-- **Keyword Matching**: Search for commands using alternative terms and concepts
-- **Command Categories**: Browse commands by category (basics, branching, remote, etc.)
-- **Copy to Clipboard**: Easily copy commands with a single click
-- **Multiple Themes**: Choose from light, dark, sepia, nord, and solarized-light themes
-- **Theme Persistence**: Your selected theme is remembered across sessions
-- **Keyboard Navigation**: Use arrow keys to navigate through results
-- **Offline Support**: Works even without an internet connection
-- **Auto Updates**: Automatically notifies you when a new version is available
-- **Duplicate Command Checker**: Script to identify duplicate Git commands in the dataset
-- **Defaults Injector**: Script (`injectDefaults`) to ensure all command JSON files have required fields and structure
-- **Auto-Generated Command Index**: Command index file is generated automatically for up-to-date imports
-- **Report Issue**: Quickly report issues with any command using the integrated ReportIssue component
+## Getting Started
 
-## How to Use
-
-1. Type what you want to do in the search bar (e.g., "start a repo", "undo changes", "switch branch")
-2. Browse the matching Git commands
-3. Click "Copy" to copy the command to your clipboard
-4. Use the category filters to narrow down results
-5. Select your preferred theme from the dropdown in the header
-6. Use the "Report Issue" button on any command to provide feedback or report problems
-
-## Examples of Natural Language Queries
-
-- "start a new repository" → `git init`
-- "save my changes" → `git commit`
-- "upload to GitHub" → `git push`
-- "download updates" → `git pull`
-- "switch to another branch" → `git checkout` or `git switch`
-- "undo my last commit" → `git reset`
-
-## Running Locally
-
-To run this project locally:
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/ainstarc/git-init.git
-   cd git-init
-   ```
-
-2. Install dependencies:
-
-   ```
+1. **Install dependencies:**
+   ```sh
    npm install
    ```
-
-3. Start the development server:
-
+2. **Run locally:**
+   ```sh
+   npm start
    ```
-   # For Node.js v17 or higher, use:
-   set NODE_OPTIONS=--openssl-legacy-provider && npm start
-
-   # For Linux/Mac:
-   # export NODE_OPTIONS=--openssl-legacy-provider && npm start
-
-   # For older Node.js versions:
-   # npm start
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+4. **Run data maintenance scripts:**
+   ```sh
+   node scripts/injectDefaults.js && node scripts/checkDuplicates.js
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+## Data Maintenance
+- All command data is in `src/data/gitCommands/*.json`.
+- Run `injectDefaults.js` to fill missing fields and assign unique IDs.
+- Run `checkDuplicates.js` to ensure no duplicate commands (by command string).
+- `phrases.json` is for natural language phrase mapping (not a command file).
 
-## Available Scripts
+## PWA & Service Worker
+- The app is a PWA and will auto-update to the latest version when a new release is deployed. The service worker is configured to skip waiting and activate immediately on update.
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run deploy` - Deploys the app to GitHub Pages
-- `npm run checkDuplicates` - Checks for duplicate Git commands in the dataset
-- `npm run injectDefaults` - Ensures all command JSON files have required fields and structure
-- `npm run generateDataIndex` - Regenerates the command index file for up-to-date imports
-
-## Technologies Used
-
-- React 19
-- Fuse.js for fuzzy searching
-- GitHub Pages for deployment
-- Service Workers for offline functionality and updates
-
-## Data Structure
-
-- Git command data is organized in JSON files with explicit `category` fields for better filtering and clarity.
-- Command documentation is refactored for improved completeness and consistency.
-- All command JSON files are auto-updated for required fields and structure using the `injectDefaults` script.
-- The command index file (`src/data/gitCommands/index.js`) is auto-generated for up-to-date imports.
-
-## Browser Compatibility
-
-Git-Init works with all modern browsers:
-
-- Chrome
-- Firefox
-- Safari
-- Edge
+## Accessibility
+- All interactive elements are keyboard accessible and have focus styles.
+- Color contrast and ARIA labels are provided for screen readers.
 
 ## Contributing
-
-Contributions are welcome! Feel free to add more Git commands, improve search functionality, or enhance the UI.
+Pull requests are welcome! Please run the data scripts before submitting changes to command data.
 
 ## License
-
-This project is open source and available under the MIT License.
+MIT

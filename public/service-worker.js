@@ -86,6 +86,15 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+// This service worker will auto-update and activate new versions immediately.
+self.addEventListener("install", (event) => {
+  self.skipWaiting();
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
 // Listen for messages from clients
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {

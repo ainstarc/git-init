@@ -28,7 +28,7 @@ function collectCommands(commands, sourceFile, parentId = null) {
 }
 
 fs.readdirSync(commandsDir)
-  .filter((file) => file.endsWith(".json"))
+  .filter((file) => file.endsWith(".json") && file !== "phrases.json")
   .forEach((file) => {
     const filePath = path.join(commandsDir, file);
     try {

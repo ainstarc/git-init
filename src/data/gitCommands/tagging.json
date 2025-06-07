@@ -38,7 +38,7 @@
           "git tag -d <tagname>"
         ],
         "variations": [],
-        "id": "tagging-1-v1",
+        "id": "tagging-1-varof-tagging-1",
         "category": "tagging"
       },
       {
@@ -55,7 +55,7 @@
           "git push origin :refs/tags/<tagname>"
         ],
         "variations": [],
-        "id": "tagging-1-v2",
+        "id": "tagging-2-varof-tagging-1",
         "category": "tagging"
       },
       {
@@ -73,7 +73,7 @@
           "git tag -a <tagname> -m 'message'"
         ],
         "variations": [],
-        "id": "tagging-1-v3",
+        "id": "tagging-3-varof-tagging-1",
         "category": "tagging"
       },
       {
@@ -90,7 +90,7 @@
           "git tag <tagname>"
         ],
         "variations": [],
-        "id": "tagging-1-v4",
+        "id": "tagging-4-varof-tagging-1",
         "category": "tagging"
       },
       {
@@ -108,7 +108,7 @@
           "git tag --list"
         ],
         "variations": [],
-        "id": "tagging-1-v5",
+        "id": "tagging-5-varof-tagging-1",
         "category": "tagging"
       },
       {
@@ -126,7 +126,7 @@
           "git show <tagname>"
         ],
         "variations": [],
-        "id": "tagging-1-v6",
+        "id": "tagging-6-varof-tagging-1",
         "category": "tagging"
       }
     ],

@@ -15,7 +15,7 @@
         "example": "git restore [<options>] <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v1",
+        "id": "workingTree-1-varof-workingTree-1",
         "category": "workingTree"
       },
       {
@@ -26,7 +26,7 @@
         "example": "git restore --source=<tree> <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v2",
+        "id": "workingTree-2-varof-workingTree-1",
         "category": "workingTree"
       },
       {
@@ -37,7 +37,7 @@
         "example": "git restore --staged <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v3",
+        "id": "workingTree-3-varof-workingTree-1",
         "category": "workingTree"
       },
       {
@@ -48,7 +48,7 @@
         "example": "git restore --worktree <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v4",
+        "id": "workingTree-4-varof-workingTree-1",
         "category": "workingTree"
       },
       {
@@ -59,7 +59,7 @@
         "example": "git restore --pathspec-from-file=<file>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v5",
+        "id": "workingTree-5-varof-workingTree-1",
         "category": "workingTree"
       },
       {
@@ -70,7 +70,7 @@
         "example": "git restore --patch <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-v6",
+        "id": "workingTree-6-varof-workingTree-1",
         "category": "workingTree"
       }
     ],
@@ -113,7 +113,7 @@
           "git stash show"
         ],
         "variations": [],
-        "id": "workingTree-2-v1",
+        "id": "workingTree-1-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -130,7 +130,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-v2",
+        "id": "workingTree-2-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -147,7 +147,7 @@
           "git stash show"
         ],
         "variations": [],
-        "id": "workingTree-2-v3",
+        "id": "workingTree-3-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -166,7 +166,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-v4",
+        "id": "workingTree-4-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -185,7 +185,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-v5",
+        "id": "workingTree-5-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -201,7 +201,7 @@
           "git stash apply"
         ],
         "variations": [],
-        "id": "workingTree-2-v6",
+        "id": "workingTree-6-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -218,7 +218,7 @@
           "git stash clear"
         ],
         "variations": [],
-        "id": "workingTree-2-v7",
+        "id": "workingTree-7-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -235,7 +235,7 @@
           "git stash drop"
         ],
         "variations": [],
-        "id": "workingTree-2-v8",
+        "id": "workingTree-8-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -252,7 +252,7 @@
           "git stash push"
         ],
         "variations": [],
-        "id": "workingTree-2-v9",
+        "id": "workingTree-9-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -268,7 +268,7 @@
           "git stash store"
         ],
         "variations": [],
-        "id": "workingTree-2-v10",
+        "id": "workingTree-10-varof-workingTree-2",
         "category": "workingTree"
       },
       {
@@ -284,7 +284,7 @@
           "git stash create"
         ],
         "variations": [],
-        "id": "workingTree-2-v11",
+        "id": "workingTree-11-varof-workingTree-2",
         "category": "workingTree"
       }
     ],

@@ -32,7 +32,7 @@
         "example": "git fetch <repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v1",
+        "id": "remotes-1-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -43,7 +43,7 @@
         "example": "git fetch <repository> <refspec>",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v2",
+        "id": "remotes-2-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -54,7 +54,7 @@
         "example": "git fetch <group>",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v3",
+        "id": "remotes-3-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -65,7 +65,7 @@
         "example": "git fetch --multiple <repository>...",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v4",
+        "id": "remotes-4-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -79,27 +79,27 @@
           {
             "command": "git fetch --all --prune",
             "description": "Also remove any remote-tracking references that no longer exist on the remote",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git fetch --all --prune",
             "related": [],
             "variations": [],
-            "id": "remotes-1-v1"
+            "id": "remotes-1-varof-remotes-5-varof-remotes-1",
+            "category": "remotes"
           },
           {
             "command": "git fetch --all --tags",
             "description": "Fetch all tags from all remotes",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git fetch --all --tags",
             "related": [],
             "variations": [],
-            "id": "remotes-1-v2"
+            "id": "remotes-2-varof-remotes-5-varof-remotes-1",
+            "category": "remotes"
           }
         ],
-        "id": "remotes-1-v5",
+        "id": "remotes-5-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -110,7 +110,7 @@
         "example": "git fetch --depth <depth>",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v6",
+        "id": "remotes-6-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -121,7 +121,7 @@
         "example": "git fetch --prune",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v7",
+        "id": "remotes-7-varof-remotes-1",
         "category": "remotes"
       },
       {
@@ -132,7 +132,7 @@
         "example": "git fetch --dry-run",
         "related": [],
         "variations": [],
-        "id": "remotes-1-v8",
+        "id": "remotes-8-varof-remotes-1",
         "category": "remotes"
       }
     ],
@@ -169,7 +169,7 @@
         "example": "git pull <repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v1",
+        "id": "remotes-1-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -180,7 +180,7 @@
         "example": "git pull <repository> <refspec>",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v2",
+        "id": "remotes-2-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -191,7 +191,7 @@
         "example": "git pull --rebase",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v3",
+        "id": "remotes-3-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -202,7 +202,7 @@
         "example": "git pull --no-rebase",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v4",
+        "id": "remotes-4-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -213,7 +213,7 @@
         "example": "git pull --ff-only",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v5",
+        "id": "remotes-5-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -224,7 +224,7 @@
         "example": "git pull --no-commit",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v6",
+        "id": "remotes-6-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -235,7 +235,7 @@
         "example": "git pull --squash",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v7",
+        "id": "remotes-7-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -246,7 +246,7 @@
         "example": "git pull --allow-unrelated-histories",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v8",
+        "id": "remotes-8-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -260,16 +260,16 @@
           {
             "command": "git pull --depth=1",
             "description": "Fetch only the latest commit (shallow)",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git pull --depth=1",
             "related": [],
             "variations": [],
-            "id": "remotes-2-v1"
+            "id": "remotes-1-varof-remotes-9-varof-remotes-2",
+            "category": "remotes"
           }
         ],
-        "id": "remotes-2-v9",
+        "id": "remotes-9-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -280,7 +280,7 @@
         "example": "git pull --no-tags",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v10",
+        "id": "remotes-10-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -291,7 +291,7 @@
         "example": "git pull --verbose",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v11",
+        "id": "remotes-11-varof-remotes-2",
         "category": "remotes"
       },
       {
@@ -302,7 +302,7 @@
         "example": "git pull --quiet",
         "related": [],
         "variations": [],
-        "id": "remotes-2-v12",
+        "id": "remotes-12-varof-remotes-2",
         "category": "remotes"
       }
     ],
@@ -341,7 +341,7 @@
         "example": "git push <repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v1",
+        "id": "remotes-1-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -352,7 +352,7 @@
         "example": "git push <repository> <refspec>…​",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v2",
+        "id": "remotes-2-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -363,7 +363,7 @@
         "example": "git push --all",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v3",
+        "id": "remotes-3-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -374,7 +374,7 @@
         "example": "git push --branches",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v4",
+        "id": "remotes-4-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -385,7 +385,7 @@
         "example": "git push --mirror",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v5",
+        "id": "remotes-5-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -396,7 +396,7 @@
         "example": "git push --tags",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v6",
+        "id": "remotes-6-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -407,7 +407,7 @@
         "example": "git push --follow-tags",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v7",
+        "id": "remotes-7-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -418,7 +418,7 @@
         "example": "git push --atomic",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v8",
+        "id": "remotes-8-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -429,7 +429,7 @@
         "example": "git push --dry-run",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v9",
+        "id": "remotes-9-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -440,7 +440,7 @@
         "example": "git push --receive-pack=<git-receive-pack>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v10",
+        "id": "remotes-10-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -451,7 +451,7 @@
         "example": "git push --repo=<repository>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v11",
+        "id": "remotes-11-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -465,38 +465,38 @@
           {
             "command": "git push --force-with-lease",
             "description": "Force push only if the remote ref is as expected",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --force-with-lease",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v1"
+            "id": "remotes-1-varof-remotes-12-varof-remotes-3",
+            "category": "remotes"
           },
           {
             "command": "git push --force-with-lease=<refname>[:<expect>]",
             "description": "More precise force-with-lease targeting a specific ref and expected value",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --force-with-lease=<refname>[:<expect>]",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v2"
+            "id": "remotes-2-varof-remotes-12-varof-remotes-3",
+            "category": "remotes"
           },
           {
             "command": "git push --force-if-includes",
             "description": "Force push only if remote contains the commits",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --force-if-includes",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v3"
+            "id": "remotes-3-varof-remotes-12-varof-remotes-3",
+            "category": "remotes"
           }
         ],
-        "id": "remotes-3-v12",
+        "id": "remotes-12-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -507,7 +507,7 @@
         "example": "git push --delete <branch>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v13",
+        "id": "remotes-13-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -518,7 +518,7 @@
         "example": "git push --prune",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v14",
+        "id": "remotes-14-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -529,7 +529,7 @@
         "example": "git push --quiet",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v15",
+        "id": "remotes-15-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -540,7 +540,7 @@
         "example": "git push --verbose",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v16",
+        "id": "remotes-16-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -551,7 +551,7 @@
         "example": "git push --set-upstream",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v17",
+        "id": "remotes-17-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -562,7 +562,7 @@
         "example": "git push --push-option=<string>",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v18",
+        "id": "remotes-18-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -576,38 +576,38 @@
           {
             "command": "git push --signed=true",
             "description": "Force signing",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --signed=true",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v1"
+            "id": "remotes-1-varof-remotes-19-varof-remotes-3",
+            "category": "remotes"
           },
           {
             "command": "git push --signed=false",
             "description": "Disable signing",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --signed=false",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v2"
+            "id": "remotes-2-varof-remotes-19-varof-remotes-3",
+            "category": "remotes"
           },
           {
             "command": "git push --signed=if-asked",
             "description": "Sign if requested",
-            "category": "remotes",
             "keywords": [],
             "level": "",
             "example": "git push --signed=if-asked",
             "related": [],
             "variations": [],
-            "id": "remotes-3-v3"
+            "id": "remotes-3-varof-remotes-19-varof-remotes-3",
+            "category": "remotes"
           }
         ],
-        "id": "remotes-3-v19",
+        "id": "remotes-19-varof-remotes-3",
         "category": "remotes"
       },
       {
@@ -618,7 +618,7 @@
         "example": "git push --no-verify",
         "related": [],
         "variations": [],
-        "id": "remotes-3-v20",
+        "id": "remotes-20-varof-remotes-3",
         "category": "remotes"
       }
     ],
@@ -658,7 +658,7 @@
         "example": "git remote [-v | --verbose]",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v1",
+        "id": "remotes-1-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -669,7 +669,7 @@
         "example": "git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v2",
+        "id": "remotes-2-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -680,7 +680,7 @@
         "example": "git remote rename [--[no-]progress] <old> <new>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v3",
+        "id": "remotes-3-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -691,7 +691,7 @@
         "example": "git remote remove <name>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v4",
+        "id": "remotes-4-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -702,7 +702,7 @@
         "example": "git remote set-head <name> (-a | --auto | -d | --delete | <branch>)",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v5",
+        "id": "remotes-5-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -713,7 +713,7 @@
         "example": "git remote set-branches [--add] <name> <branch>…​",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v6",
+        "id": "remotes-6-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -724,7 +724,7 @@
         "example": "git remote get-url [--push] [--all] <name>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v7",
+        "id": "remotes-7-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -735,7 +735,7 @@
         "example": "git remote set-url [--push] <name> <newurl> [<oldurl>]",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v8",
+        "id": "remotes-8-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -746,7 +746,7 @@
         "example": "git remote set-url --add [--push] <name> <newurl>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v9",
+        "id": "remotes-9-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -757,7 +757,7 @@
         "example": "git remote set-url --delete [--push] <name> <URL>",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v10",
+        "id": "remotes-10-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -768,7 +768,7 @@
         "example": "git remote [-v | --verbose] show [-n] <name>…​",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v11",
+        "id": "remotes-11-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -779,7 +779,7 @@
         "example": "git remote prune [-n | --dry-run] <name>…​",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v12",
+        "id": "remotes-12-varof-remotes-4",
         "category": "remotes"
       },
       {
@@ -790,7 +790,7 @@
         "example": "git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]",
         "related": [],
         "variations": [],
-        "id": "remotes-4-v13",
+        "id": "remotes-13-varof-remotes-4",
         "category": "remotes"
       }
     ],

@@ -36,7 +36,7 @@
           "git add"
         ],
         "variations": [],
-        "id": "commits-1-v1",
+        "id": "commits-1-varof-commits-1",
         "category": "commits"
       },
       {
@@ -54,7 +54,7 @@
           "git commit --patch"
         ],
         "variations": [],
-        "id": "commits-1-v2",
+        "id": "commits-2-varof-commits-1",
         "category": "commits"
       },
       {
@@ -72,7 +72,7 @@
           "git commit --interactive"
         ],
         "variations": [],
-        "id": "commits-1-v3",
+        "id": "commits-3-varof-commits-1",
         "category": "commits"
       },
       {
@@ -89,7 +89,7 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-v4",
+        "id": "commits-4-varof-commits-1",
         "category": "commits"
       },
       {
@@ -108,7 +108,7 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-v5",
+        "id": "commits-5-varof-commits-1",
         "category": "commits"
       },
       {
@@ -126,7 +126,7 @@
           "git diff"
         ],
         "variations": [],
-        "id": "commits-1-v6",
+        "id": "commits-6-varof-commits-1",
         "category": "commits"
       },
       {
@@ -144,7 +144,7 @@
           "git commit --amend"
         ],
         "variations": [],
-        "id": "commits-1-v7",
+        "id": "commits-7-varof-commits-1",
         "category": "commits"
       },
       {
@@ -161,7 +161,7 @@
           "git commit -m <msg>"
         ],
         "variations": [],
-        "id": "commits-1-v8",
+        "id": "commits-8-varof-commits-1",
         "category": "commits"
       },
       {
@@ -178,7 +178,7 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-v9",
+        "id": "commits-9-varof-commits-1",
         "category": "commits"
       },
       {
@@ -195,7 +195,7 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-v10",
+        "id": "commits-10-varof-commits-1",
         "category": "commits"
       },
       {
@@ -212,7 +212,7 @@
           "git commit --date=<date>"
         ],
         "variations": [],
-        "id": "commits-1-v11",
+        "id": "commits-11-varof-commits-1",
         "category": "commits"
       },
       {
@@ -229,7 +229,7 @@
           "git commit --author=<author>"
         ],
         "variations": [],
-        "id": "commits-1-v12",
+        "id": "commits-12-varof-commits-1",
         "category": "commits"
       }
     ],

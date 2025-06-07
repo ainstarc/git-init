@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+- Improved fuzzy search: stop-words, synonyms, phrase support, typo tolerance
+- Integrated natural language phrase search (`phrases.json`)
+- Synonym expansion and boosting for search
+- Highlighting of matched query terms in results
+- Category color-coding and badges
+- Max results limit and "Show More" button
+- Sticky, accessible, and responsive UI improvements
+- Unique IDs for all commands and variations (no duplicate React keys)
+- Data maintenance scripts: auto-inject defaults, check for duplicates
+- PWA: Service worker now auto-updates to latest version on deploy
+
 ## [1.3.0] - 2025-06-07
 
 ### Added

@@ -26,7 +26,7 @@
         "example": "git init -q",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v1",
+        "id": "coreConfig-1-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -37,7 +37,7 @@
         "example": "git init --quiet",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v2",
+        "id": "coreConfig-2-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -48,7 +48,7 @@
         "example": "git init --bare",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v3",
+        "id": "coreConfig-3-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -59,7 +59,7 @@
         "example": "git init --template=<template-directory>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v4",
+        "id": "coreConfig-4-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -70,7 +70,7 @@
         "example": "git init --separate-git-dir <git-dir>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v5",
+        "id": "coreConfig-5-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -81,7 +81,7 @@
         "example": "git init --object-format=<format>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v6",
+        "id": "coreConfig-6-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -92,7 +92,7 @@
         "example": "git init --ref-format=<format>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v7",
+        "id": "coreConfig-7-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -103,7 +103,7 @@
         "example": "git init -b <branch-name>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v8",
+        "id": "coreConfig-8-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -114,7 +114,7 @@
         "example": "git init --initial-branch=<branch-name>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v9",
+        "id": "coreConfig-9-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -125,7 +125,7 @@
         "example": "git init --shared",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v10",
+        "id": "coreConfig-10-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -136,7 +136,7 @@
         "example": "git init --shared=<permissions>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v11",
+        "id": "coreConfig-11-varof-coreConfig-1",
         "category": "coreConfig"
       },
       {
@@ -147,7 +147,7 @@
         "example": "git init <directory>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-1-v12",
+        "id": "coreConfig-12-varof-coreConfig-1",
         "category": "coreConfig"
       }
     ],
@@ -180,7 +180,7 @@
         "example": "git clone --depth <depth> <repository>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-2-v1",
+        "id": "coreConfig-1-varof-coreConfig-2",
         "category": "coreConfig"
       },
       {
@@ -191,7 +191,7 @@
         "example": "git clone --single-branch <repository>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-2-v2",
+        "id": "coreConfig-2-varof-coreConfig-2",
         "category": "coreConfig"
       },
       {
@@ -202,7 +202,7 @@
         "example": "git clone --quiet <repository>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-2-v3",
+        "id": "coreConfig-3-varof-coreConfig-2",
         "category": "coreConfig"
       },
       {
@@ -213,7 +213,7 @@
         "example": "git clone --mirror <repository>",
         "related": [],
         "variations": [],
-        "id": "coreConfig-2-v4",
+        "id": "coreConfig-4-varof-coreConfig-2",
         "category": "coreConfig"
       }
     ],
@@ -251,7 +251,7 @@
           "git --version"
         ],
         "variations": [],
-        "id": "coreConfig-3-v1",
+        "id": "coreConfig-1-varof-coreConfig-3",
         "category": "coreConfig"
       }
     ],
@@ -283,7 +283,7 @@
         "example": "git -h",
         "related": [],
         "variations": [],
-        "id": "coreConfig-4-v1",
+        "id": "coreConfig-1-varof-coreConfig-4",
         "category": "coreConfig"
       }
     ],
@@ -340,7 +340,7 @@
         "example": "git --exec-path",
         "related": [],
         "variations": [],
-        "id": "coreConfig-7-v1",
+        "id": "coreConfig-1-varof-coreConfig-7",
         "category": "coreConfig"
       }
     ],

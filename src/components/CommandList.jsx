@@ -7,6 +7,7 @@ export default function CommandList({
   focusedIndex,
   onCopy,
   copiedCommand,
+  highlightTerms = [],
 }) {
   if (results.length === 0) {
     return (
@@ -28,7 +29,7 @@ export default function CommandList({
       <ul className="command-list-container">
         {results.map((command, index) => (
           <CommandItem
-            key={command.command}
+            key={command.id || command.command || index}
             command={command.command}
             description={command.description}
             example={command.example}
@@ -39,6 +40,7 @@ export default function CommandList({
             parentCommand={command.parentCommand}
             onCopy={onCopy}
             copied={copiedCommand === command.command}
+            highlight={highlightTerms}
           />
         ))}
       </ul>

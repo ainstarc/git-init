@@ -9,6 +9,7 @@ import { useThemeContext } from "./context/ThemeContext";
 import FaviconSwitcher from "./components/FaviconSwitcher";
 
 import gitCommands from "./data/gitCommands";
+import phrases from "./data/gitCommands/phrases.json";
 import "./styles/themes.css";
 import "./App.css";
 
@@ -105,12 +106,60 @@ function cleanQuery(query) {
     .join(" ");
 }
 
+// Synonym map for expansion (add more as needed)
+const SYNONYMS = {
+  repo: ["repository", "project"],
+  commit: ["save", "record", "snapshot"],
+  push: ["upload", "send"],
+  pull: ["fetch", "download", "sync"],
+  branch: ["switch", "checkout", "change"],
+  revert: ["undo", "reset"],
+  status: ["changed", "unstaged", "staged"],
+  history: ["log"],
+  add: ["stage", "track"],
+  file: ["files"],
+};
+
+function expandWithSynonyms(query) {
+  const words = query.split(/\s+/);
+  let expanded = [...words];
+  for (const word of words) {
+    for (const [key, syns] of Object.entries(SYNONYMS)) {
+      if (word === key || syns.includes(word)) {
+        expanded.push(key, ...syns);
+      }
+    }
+  }
+  // Remove duplicates
+  return Array.from(new Set(expanded)).join(" ");
+}
+
+// Helper: Find phrase matches for a query
+function findPhraseMatches(query) {
+  const cleaned = cleanQuery(query);
+  if (!cleaned) return [];
+  // Simple: match if query contains phrase or any keyword (case-insensitive, partial ok)
+  return phrases.filter((phraseObj) => {
+    const allPhrases = [phraseObj.phrase, ...phraseObj.keywords];
+    return allPhrases.some((p) => cleaned.includes(p.toLowerCase()));
+  });
+}
+
+// Get highlight terms from query
+function getHighlightTerms(query) {
+  // Remove stop words, expand synonyms, split to terms
+  let cleaned = cleanQuery(query);
+  cleaned = expandWithSynonyms(cleaned);
+  return cleaned.split(/\s+/).filter(Boolean);
+}
+
 export default function App() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(gitCommands);
   const [copiedCommand, setCopiedCommand] = useState(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [activeCategory, setActiveCategory] = useState("all");
+  const [showAll, setShowAll] = useState(false);
 
   useThemeContext();
 
@@ -166,22 +215,38 @@ export default function App() {
 
   // Perform search and filter by category
   useEffect(() => {
-    const cleaned = cleanQuery(query);
-    if (!cleaned) {
-      setResults(
+    let cleaned = cleanQuery(query);
+    cleaned = expandWithSynonyms(cleaned);
+    let phraseMatches = findPhraseMatches(query);
+    let phraseCommands = [];
+    if (phraseMatches.length > 0) {
+      // Try to find the actual command object(s) for each phrase's suggestedCommand
+      phraseCommands = phraseMatches
+        .map((pm) => flatCommands.find((cmd) => cmd.command === pm.suggestedCommand))
+        .filter(Boolean);
+    }
+    let searchResults = [];
+    if (!cleaned.trim()) {
+      searchResults =
         activeCategory === "all"
           ? flatCommands
-          : flatCommands.filter((cmd) => cmd.category === activeCategory)
-      );
-      return;
+          : flatCommands.filter((cmd) => cmd.category === activeCategory);
+    } else {
+      const fuseResults = fuse.search(cleaned);
+      const filtered =
+        activeCategory === "all"
+          ? fuseResults
+          : fuseResults.filter((res) => res.item.category === activeCategory);
+      searchResults = filtered.map((res) => res.item);
     }
-    const searchResults = fuse.search(cleaned);
-    const filtered =
-      activeCategory === "all"
-        ? searchResults
-        : searchResults.filter((res) => res.item.category === activeCategory);
-    setResults(filtered.map((res) => res.item));
+    // Merge phraseCommands at the top, dedupe
+    const merged = [
+      ...phraseCommands,
+      ...searchResults.filter((cmd) => !phraseCommands.includes(cmd)),
+    ];
+    setResults(merged);
     setFocusedIndex(-1);
+    setShowAll(false); // Reset show more on new search
   }, [query, activeCategory, fuse, flatCommands]);
 
   // Clipboard copy logic
@@ -205,6 +270,8 @@ export default function App() {
       copyToClipboard(results[focusedIndex].command);
     }
   };
+
+  const MAX_RESULTS = 12;
 
   return (
     <div className="app-container">
@@ -243,11 +310,19 @@ export default function App() {
       </div>
 
       <CommandList
-        results={results}
+        results={showAll ? results : results.slice(0, MAX_RESULTS)}
         focusedIndex={focusedIndex}
         onCopy={copyToClipboard}
         copiedCommand={copiedCommand}
+        highlightTerms={getHighlightTerms(query)}
       />
+      {results.length > MAX_RESULTS && !showAll && (
+        <div className="show-more-container">
+          <button className="show-more-btn" onClick={() => setShowAll(true)}>
+            Show More ({results.length - MAX_RESULTS} more)
+          </button>
+        </div>
+      )}
 
       <footer className="app-footer">
         <p>Find the perfect Git command for any task</p>

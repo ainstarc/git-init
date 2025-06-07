@@ -29,7 +29,7 @@
         "example": "git add --verbose <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v1",
+        "id": "staging-1-varof-staging-1",
         "category": "staging"
       },
       {
@@ -40,7 +40,7 @@
         "example": "git add -v <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v2",
+        "id": "staging-2-varof-staging-1",
         "category": "staging"
       },
       {
@@ -51,7 +51,7 @@
         "example": "git add --dry-run <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v3",
+        "id": "staging-3-varof-staging-1",
         "category": "staging"
       },
       {
@@ -62,7 +62,7 @@
         "example": "git add -n <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v4",
+        "id": "staging-4-varof-staging-1",
         "category": "staging"
       },
       {
@@ -73,7 +73,7 @@
         "example": "git add --force <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v5",
+        "id": "staging-5-varof-staging-1",
         "category": "staging"
       },
       {
@@ -84,7 +84,7 @@
         "example": "git add -f <pathspec>",
         "related": [],
         "variations": [],
-        "id": "staging-1-v6",
+        "id": "staging-6-varof-staging-1",
         "category": "staging"
       },
       {
@@ -95,7 +95,7 @@
         "example": "git add --interactive",
         "related": [],
         "variations": [],
-        "id": "staging-1-v7",
+        "id": "staging-7-varof-staging-1",
         "category": "staging"
       },
       {
@@ -106,7 +106,7 @@
         "example": "git add -i",
         "related": [],
         "variations": [],
-        "id": "staging-1-v8",
+        "id": "staging-8-varof-staging-1",
         "category": "staging"
       },
       {
@@ -117,7 +117,7 @@
         "example": "git add --patch",
         "related": [],
         "variations": [],
-        "id": "staging-1-v9",
+        "id": "staging-9-varof-staging-1",
         "category": "staging"
       },
       {
@@ -128,7 +128,7 @@
         "example": "git add -p",
         "related": [],
         "variations": [],
-        "id": "staging-1-v10",
+        "id": "staging-10-varof-staging-1",
         "category": "staging"
       },
       {
@@ -139,7 +139,7 @@
         "example": "git add --edit",
         "related": [],
         "variations": [],
-        "id": "staging-1-v11",
+        "id": "staging-11-varof-staging-1",
         "category": "staging"
       },
       {
@@ -150,7 +150,7 @@
         "example": "git add -e",
         "related": [],
         "variations": [],
-        "id": "staging-1-v12",
+        "id": "staging-12-varof-staging-1",
         "category": "staging"
       },
       {
@@ -161,7 +161,7 @@
         "example": "git add --all",
         "related": [],
         "variations": [],
-        "id": "staging-1-v13",
+        "id": "staging-13-varof-staging-1",
         "category": "staging"
       },
       {
@@ -172,7 +172,7 @@
         "example": "git add -A",
         "related": [],
         "variations": [],
-        "id": "staging-1-v14",
+        "id": "staging-14-varof-staging-1",
         "category": "staging"
       },
       {
@@ -183,7 +183,7 @@
         "example": "git add --update",
         "related": [],
         "variations": [],
-        "id": "staging-1-v15",
+        "id": "staging-15-varof-staging-1",
         "category": "staging"
       },
       {
@@ -194,7 +194,7 @@
         "example": "git add -u",
         "related": [],
         "variations": [],
-        "id": "staging-1-v16",
+        "id": "staging-16-varof-staging-1",
         "category": "staging"
       }
     ],
@@ -234,60 +234,60 @@
           {
             "command": "git reset --soft [<commit>]",
             "description": "Reset HEAD only, leaving index and working tree unchanged",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset --soft [<commit>]",
             "related": [],
             "variations": [],
-            "id": "staging-2-v1"
+            "id": "staging-1-varof-staging-1-varof-staging-2",
+            "category": "staging"
           },
           {
             "command": "git reset --mixed [<commit>]",
             "description": "Reset HEAD and index, but not working tree (default)",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset --mixed [<commit>]",
             "related": [],
             "variations": [],
-            "id": "staging-2-v2"
+            "id": "staging-2-varof-staging-1-varof-staging-2",
+            "category": "staging"
           },
           {
             "command": "git reset --hard [<commit>]",
             "description": "Reset HEAD, index, and working tree to match commit",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset --hard [<commit>]",
             "related": [],
             "variations": [],
-            "id": "staging-2-v3"
+            "id": "staging-3-varof-staging-1-varof-staging-2",
+            "category": "staging"
           },
           {
             "command": "git reset --merge [<commit>]",
             "description": "Reset with merge conflict detection",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset --merge [<commit>]",
             "related": [],
             "variations": [],
-            "id": "staging-2-v4"
+            "id": "staging-4-varof-staging-1-varof-staging-2",
+            "category": "staging"
           },
           {
             "command": "git reset --keep [<commit>]",
             "description": "Reset but keep local changes",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset --keep [<commit>]",
             "related": [],
             "variations": [],
-            "id": "staging-2-v5"
+            "id": "staging-5-varof-staging-1-varof-staging-2",
+            "category": "staging"
           }
         ],
-        "id": "staging-2-v1",
+        "id": "staging-1-varof-staging-2",
         "category": "staging"
       },
       {
@@ -301,16 +301,16 @@
           {
             "command": "git reset -q [--patch | -p] [<tree-ish>] [--] <pathspec>",
             "description": "Interactively reset hunks of the index",
-            "category": "staging",
             "keywords": [],
             "level": "",
             "example": "git reset -q [--patch | -p] [<tree-ish>] [--] <pathspec>",
             "related": [],
             "variations": [],
-            "id": "staging-2-v1"
+            "id": "staging-1-varof-staging-2-varof-staging-2",
+            "category": "staging"
           }
         ],
-        "id": "staging-2-v2",
+        "id": "staging-2-varof-staging-2",
         "category": "staging"
       },
       {
@@ -321,7 +321,7 @@
         "example": "git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]",
         "related": [],
         "variations": [],
-        "id": "staging-2-v3",
+        "id": "staging-3-varof-staging-2",
         "category": "staging"
       }
     ],

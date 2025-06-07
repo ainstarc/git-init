@@ -28,18 +28,22 @@ function countAllCommands(commands) {
   return count;
 }
 
-function applyDefaults(command, index, filename) {
+function applyDefaults(command, index, filename, parentId = null) {
   if (!command.command) {
     throw new Error(`Missing 'command' in ${filename} at index ${index}`);
   }
+
+  // Generate a unique id: filename-index[-parentId]
+  let id = `${filename}-${index + 1}`;
+  if (parentId) id = `${id}-varof-${parentId}`;
 
   const injected = { command: command.command };
 
   // Copy all keys except category and example with default fallback
   for (const key in expectedFields) {
-    if (key === "category") continue; // skip here, will overwrite later
+    if (key === "category") continue;
     if (key === "example") {
-      injected.example = command.example ?? command.command;
+      injected[key] = command[key] ?? command.command;
       continue;
     }
     injected[key] = command[key] ?? expectedFields[key];
@@ -48,29 +52,15 @@ function applyDefaults(command, index, filename) {
   // Overwrite category unconditionally
   injected.category = filename;
 
+  // Set unique id
+  injected.id = id;
+
+  // Recursively inject variations with parent id
   if (Array.isArray(command.variations)) {
-    injected.variations = command.variations.map((variation, vIndex) => {
-      const vInjected = { command: variation.command };
-
-      for (const key in expectedFields) {
-        if (key === "category") continue; // skip here
-        if (key === "example") {
-          vInjected.example = variation.example ?? variation.command;
-          continue;
-        }
-        vInjected[key] = variation[key] ?? expectedFields[key];
-      }
-
-      // Overwrite category and set id
-      vInjected.category = filename;
-      vInjected.id = `${filename}-${index + 1}-v${vIndex + 1}`;
-
-      return vInjected;
-    });
+    injected.variations = command.variations.map((variation, vIndex) =>
+      applyDefaults(variation, vIndex, filename, id)
+    );
   }
-
-  // Set id for main command
-  injected.id = `${filename}-${index + 1}`;
 
   return injected;
 }
@@ -102,7 +92,7 @@ function injectDefaultsToFile(filePath) {
 }
 
 fs.readdirSync(commandsDir)
-  .filter((file) => file.endsWith(".json"))
+  .filter((file) => file.endsWith(".json") && file !== "phrases.json")
   .forEach((file) => {
     injectDefaultsToFile(path.join(commandsDir, file));
   });

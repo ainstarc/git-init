@@ -29,7 +29,7 @@
         "example": "git log <revision-range>",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v1",
+        "id": "inspection-1-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -40,7 +40,7 @@
         "example": "git log -- <path>",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v2",
+        "id": "inspection-2-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -51,7 +51,7 @@
         "example": "git log --oneline",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v3",
+        "id": "inspection-3-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -62,7 +62,7 @@
         "example": "git log --graph",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v4",
+        "id": "inspection-4-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -73,7 +73,7 @@
         "example": "git log --decorate",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v5",
+        "id": "inspection-5-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -84,7 +84,7 @@
         "example": "git log --stat",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v6",
+        "id": "inspection-6-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -95,7 +95,7 @@
         "example": "git log -p",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v7",
+        "id": "inspection-7-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -106,7 +106,7 @@
         "example": "git log --name-only",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v8",
+        "id": "inspection-8-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -117,7 +117,7 @@
         "example": "git log --name-status",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v9",
+        "id": "inspection-9-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -128,7 +128,7 @@
         "example": "git log --author=\"<pattern>\"",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v10",
+        "id": "inspection-10-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -139,7 +139,7 @@
         "example": "git log --grep=\"<pattern>\"",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v11",
+        "id": "inspection-11-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -150,7 +150,7 @@
         "example": "git log --since=\"2 weeks ago\"",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v12",
+        "id": "inspection-12-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -161,7 +161,7 @@
         "example": "git log --until=\"yesterday\"",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v13",
+        "id": "inspection-13-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -172,7 +172,7 @@
         "example": "git log --reverse",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v14",
+        "id": "inspection-14-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -183,7 +183,7 @@
         "example": "git log --pretty=oneline",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v15",
+        "id": "inspection-15-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -194,7 +194,7 @@
         "example": "git log --pretty=format:\"%h %s\"",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v16",
+        "id": "inspection-16-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -205,7 +205,7 @@
         "example": "git log --abbrev-commit",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v17",
+        "id": "inspection-17-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -216,7 +216,7 @@
         "example": "git log --relative-date",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v18",
+        "id": "inspection-18-varof-inspection-1",
         "category": "inspection"
       },
       {
@@ -227,7 +227,7 @@
         "example": "git log --all",
         "related": [],
         "variations": [],
-        "id": "inspection-1-v19",
+        "id": "inspection-19-varof-inspection-1",
         "category": "inspection"
       }
     ],
@@ -263,7 +263,7 @@
         "example": "git status -s",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v1",
+        "id": "inspection-1-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -274,7 +274,7 @@
         "example": "git status --short",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v2",
+        "id": "inspection-2-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -285,7 +285,7 @@
         "example": "git status -b",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v3",
+        "id": "inspection-3-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -296,7 +296,7 @@
         "example": "git status --branch",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v4",
+        "id": "inspection-4-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -307,7 +307,7 @@
         "example": "git status --show-stash",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v5",
+        "id": "inspection-5-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -318,7 +318,7 @@
         "example": "git status --ignored",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v6",
+        "id": "inspection-6-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -329,7 +329,7 @@
         "example": "git status --untracked-files",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v7",
+        "id": "inspection-7-varof-inspection-2",
         "category": "inspection"
       },
       {
@@ -340,7 +340,7 @@
         "example": "git status --no-renames",
         "related": [],
         "variations": [],
-        "id": "inspection-2-v8",
+        "id": "inspection-8-varof-inspection-2",
         "category": "inspection"
       }
     ],
@@ -377,7 +377,7 @@
         "example": "git diff --cached",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v1",
+        "id": "inspection-1-varof-inspection-3",
         "category": "inspection"
       },
       {
@@ -388,7 +388,7 @@
         "example": "git diff --merge-base <commit>",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v2",
+        "id": "inspection-2-varof-inspection-3",
         "category": "inspection"
       },
       {
@@ -399,7 +399,7 @@
         "example": "git diff <commit>",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v3",
+        "id": "inspection-3-varof-inspection-3",
         "category": "inspection"
       },
       {
@@ -410,7 +410,7 @@
         "example": "git diff <commit1> <commit2>",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v4",
+        "id": "inspection-4-varof-inspection-3",
         "category": "inspection"
       },
       {
@@ -421,7 +421,7 @@
         "example": "git diff <blob1> <blob2>",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v5",
+        "id": "inspection-5-varof-inspection-3",
         "category": "inspection"
       },
       {
@@ -432,7 +432,7 @@
         "example": "git diff --no-index <path1> <path2>",
         "related": [],
         "variations": [],
-        "id": "inspection-3-v6",
+        "id": "inspection-6-varof-inspection-3",
         "category": "inspection"
       }
     ],

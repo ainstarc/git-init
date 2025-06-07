@@ -32,38 +32,38 @@
           {
             "command": "git branch --color=always",
             "description": "Always show color",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --color=always",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-1-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch --color=auto",
             "description": "Show color when output is a terminal",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --color=auto",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-1-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch --no-color",
             "description": "Disable color output",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --no-color",
             "related": [],
             "variations": [],
-            "id": "branching-1-v3"
+            "id": "branching-3-varof-branching-1-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v1",
+        "id": "branching-1-varof-branching-1",
         "category": "branching"
       },
       {
@@ -74,7 +74,7 @@
         "example": "git branch --show-current",
         "related": [],
         "variations": [],
-        "id": "branching-1-v2",
+        "id": "branching-2-varof-branching-1",
         "category": "branching"
       },
       {
@@ -88,27 +88,27 @@
           {
             "command": "git branch -v --abbrev=7",
             "description": "Show abbreviated commit SHA with 7 characters",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -v --abbrev=7",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-3-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch -v --no-abbrev",
             "description": "Show full commit SHA",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -v --no-abbrev",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-3-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v3",
+        "id": "branching-3-varof-branching-1",
         "category": "branching"
       },
       {
@@ -122,16 +122,16 @@
           {
             "command": "git branch --no-column",
             "description": "Disable column output",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --no-column",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-4-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v4",
+        "id": "branching-4-varof-branching-1",
         "category": "branching"
       },
       {
@@ -145,16 +145,16 @@
           {
             "command": "git branch --sort=-committerdate",
             "description": "Sort branches by latest commit date descending",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --sort=-committerdate",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-5-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v5",
+        "id": "branching-5-varof-branching-1",
         "category": "branching"
       },
       {
@@ -168,16 +168,16 @@
           {
             "command": "git branch --merged develop",
             "description": "List branches merged into 'develop'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --merged develop",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-6-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v6",
+        "id": "branching-6-varof-branching-1",
         "category": "branching"
       },
       {
@@ -191,16 +191,16 @@
           {
             "command": "git branch --no-merged feature-xyz",
             "description": "List branches not merged into 'feature-xyz'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --no-merged feature-xyz",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-7-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v7",
+        "id": "branching-7-varof-branching-1",
         "category": "branching"
       },
       {
@@ -214,16 +214,16 @@
           {
             "command": "git branch --contains abc1234",
             "description": "List branches containing commit abc1234",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --contains abc1234",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-8-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v8",
+        "id": "branching-8-varof-branching-1",
         "category": "branching"
       },
       {
@@ -237,16 +237,16 @@
           {
             "command": "git branch --no-contains abc1234",
             "description": "List branches not containing commit abc1234",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --no-contains abc1234",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-9-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v9",
+        "id": "branching-9-varof-branching-1",
         "category": "branching"
       },
       {
@@ -260,16 +260,16 @@
           {
             "command": "git branch --points-at HEAD",
             "description": "List branches pointing at HEAD",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --points-at HEAD",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-10-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v10",
+        "id": "branching-10-varof-branching-1",
         "category": "branching"
       },
       {
@@ -283,16 +283,16 @@
           {
             "command": "git branch --format='%(refname:short)'",
             "description": "Show short branch names only",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --format='%(refname:short)'",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-11-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v11",
+        "id": "branching-11-varof-branching-1",
         "category": "branching"
       },
       {
@@ -303,7 +303,7 @@
         "example": "git branch -r",
         "related": [],
         "variations": [],
-        "id": "branching-1-v12",
+        "id": "branching-12-varof-branching-1",
         "category": "branching"
       },
       {
@@ -314,7 +314,7 @@
         "example": "git branch -a",
         "related": [],
         "variations": [],
-        "id": "branching-1-v13",
+        "id": "branching-13-varof-branching-1",
         "category": "branching"
       },
       {
@@ -328,16 +328,16 @@
           {
             "command": "git branch --list 'feature/*'",
             "description": "List branches with names matching 'feature/*'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --list 'feature/*'",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-14-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v14",
+        "id": "branching-14-varof-branching-1",
         "category": "branching"
       },
       {
@@ -351,27 +351,27 @@
           {
             "command": "git branch --track feature origin/feature",
             "description": "Create and track branch 'feature' from remote",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --track feature origin/feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-15-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch --no-track feature",
             "description": "Create branch 'feature' without tracking",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --no-track feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-15-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v15",
+        "id": "branching-15-varof-branching-1",
         "category": "branching"
       },
       {
@@ -382,7 +382,7 @@
         "example": "git branch -f",
         "related": [],
         "variations": [],
-        "id": "branching-1-v16",
+        "id": "branching-16-varof-branching-1",
         "category": "branching"
       },
       {
@@ -393,7 +393,7 @@
         "example": "git branch --recurse-submodules",
         "related": [],
         "variations": [],
-        "id": "branching-1-v17",
+        "id": "branching-17-varof-branching-1",
         "category": "branching"
       },
       {
@@ -407,27 +407,27 @@
           {
             "command": "git branch --set-upstream-to=origin/main feature",
             "description": "Set 'feature' branch to track 'origin/main'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch --set-upstream-to=origin/main feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-18-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch -u origin/main feature",
             "description": "Shorter syntax to set upstream",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -u origin/main feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-18-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v18",
+        "id": "branching-18-varof-branching-1",
         "category": "branching"
       },
       {
@@ -438,7 +438,7 @@
         "example": "git branch --unset-upstream",
         "related": [],
         "variations": [],
-        "id": "branching-1-v19",
+        "id": "branching-19-varof-branching-1",
         "category": "branching"
       },
       {
@@ -452,27 +452,27 @@
           {
             "command": "git branch -m oldbranch newbranch",
             "description": "Rename 'oldbranch' to 'newbranch'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -m oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-20-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch -M oldbranch newbranch",
             "description": "Force rename 'oldbranch' to 'newbranch'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -M oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-20-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v20",
+        "id": "branching-20-varof-branching-1",
         "category": "branching"
       },
       {
@@ -486,27 +486,27 @@
           {
             "command": "git branch -c oldbranch newbranch",
             "description": "Copy 'oldbranch' to 'newbranch'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -c oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-21-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch -C oldbranch newbranch",
             "description": "Force copy 'oldbranch' to 'newbranch'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -C oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-21-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v21",
+        "id": "branching-21-varof-branching-1",
         "category": "branching"
       },
       {
@@ -520,27 +520,27 @@
           {
             "command": "git branch -d feature",
             "description": "Delete branch 'feature'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -d feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1"
+            "id": "branching-1-varof-branching-22-varof-branching-1",
+            "category": "branching"
           },
           {
             "command": "git branch -D feature",
             "description": "Force delete branch 'feature'",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git branch -D feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v2"
+            "id": "branching-2-varof-branching-22-varof-branching-1",
+            "category": "branching"
           }
         ],
-        "id": "branching-1-v22",
+        "id": "branching-22-varof-branching-1",
         "category": "branching"
       },
       {
@@ -551,7 +551,7 @@
         "example": "git branch --edit-description",
         "related": [],
         "variations": [],
-        "id": "branching-1-v23",
+        "id": "branching-23-varof-branching-1",
         "category": "branching"
       }
     ],
@@ -588,7 +588,7 @@
         "example": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]",
         "related": [],
         "variations": [],
-        "id": "branching-2-v1",
+        "id": "branching-1-varof-branching-2",
         "category": "branching"
       },
       {
@@ -599,7 +599,7 @@
         "example": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>] --root [<branch>]",
         "related": [],
         "variations": [],
-        "id": "branching-2-v2",
+        "id": "branching-2-varof-branching-2",
         "category": "branching"
       },
       {
@@ -610,7 +610,7 @@
         "example": "git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)",
         "related": [],
         "variations": [],
-        "id": "branching-2-v3",
+        "id": "branching-3-varof-branching-2",
         "category": "branching"
       }
     ],
@@ -645,7 +645,7 @@
         "example": "git checkout -q <branch>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v1",
+        "id": "branching-1-varof-branching-3",
         "category": "branching"
       },
       {
@@ -656,7 +656,7 @@
         "example": "git checkout -f <branch>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v2",
+        "id": "branching-2-varof-branching-3",
         "category": "branching"
       },
       {
@@ -667,7 +667,7 @@
         "example": "git checkout -m <branch>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v3",
+        "id": "branching-3-varof-branching-3",
         "category": "branching"
       },
       {
@@ -681,16 +681,16 @@
           {
             "command": "git checkout --detach <commit>",
             "description": "Detach HEAD at a specific commit",
-            "category": "branching",
             "keywords": [],
             "level": "",
             "example": "git checkout --detach <commit>",
             "related": [],
             "variations": [],
-            "id": "branching-3-v1"
+            "id": "branching-1-varof-branching-4-varof-branching-3",
+            "category": "branching"
           }
         ],
-        "id": "branching-3-v4",
+        "id": "branching-4-varof-branching-3",
         "category": "branching"
       },
       {
@@ -701,7 +701,7 @@
         "example": "git checkout -b <new-branch> <start-point>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v5",
+        "id": "branching-5-varof-branching-3",
         "category": "branching"
       },
       {
@@ -712,7 +712,7 @@
         "example": "git checkout -B <new-branch> <start-point>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v6",
+        "id": "branching-6-varof-branching-3",
         "category": "branching"
       },
       {
@@ -723,7 +723,7 @@
         "example": "git checkout --orphan <new-branch>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v7",
+        "id": "branching-7-varof-branching-3",
         "category": "branching"
       },
       {
@@ -734,7 +734,7 @@
         "example": "git checkout <tree-ish> -- <pathspec>…​",
         "related": [],
         "variations": [],
-        "id": "branching-3-v8",
+        "id": "branching-8-varof-branching-3",
         "category": "branching"
       },
       {
@@ -745,7 +745,7 @@
         "example": "git checkout <tree-ish> --pathspec-from-file=<file>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v9",
+        "id": "branching-9-varof-branching-3",
         "category": "branching"
       },
       {
@@ -756,7 +756,7 @@
         "example": "git checkout --ours <pathspec>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v10",
+        "id": "branching-10-varof-branching-3",
         "category": "branching"
       },
       {
@@ -767,7 +767,7 @@
         "example": "git checkout --theirs <pathspec>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v11",
+        "id": "branching-11-varof-branching-3",
         "category": "branching"
       },
       {
@@ -778,7 +778,7 @@
         "example": "git checkout --conflict=<style> <pathspec>",
         "related": [],
         "variations": [],
-        "id": "branching-3-v12",
+        "id": "branching-12-varof-branching-3",
         "category": "branching"
       },
       {
@@ -789,7 +789,7 @@
         "example": "git checkout --patch [<tree-ish>] [--] [<pathspec>…​]",
         "related": [],
         "variations": [],
-        "id": "branching-3-v13",
+        "id": "branching-13-varof-branching-3",
         "category": "branching"
       }
     ],
@@ -822,7 +822,7 @@
         "example": "git switch --no-guess <branch>",
         "related": [],
         "variations": [],
-        "id": "branching-4-v1",
+        "id": "branching-1-varof-branching-4",
         "category": "branching"
       },
       {
@@ -833,7 +833,7 @@
         "example": "git switch --detach <start-point>",
         "related": [],
         "variations": [],
-        "id": "branching-4-v2",
+        "id": "branching-2-varof-branching-4",
         "category": "branching"
       },
       {
@@ -844,7 +844,7 @@
         "example": "git switch -c <new-branch> <start-point>",
         "related": [],
         "variations": [],
-        "id": "branching-4-v3",
+        "id": "branching-3-varof-branching-4",
         "category": "branching"
       },
       {
@@ -855,7 +855,7 @@
         "example": "git switch -C <new-branch> <start-point>",
         "related": [],
         "variations": [],
-        "id": "branching-4-v4",
+        "id": "branching-4-varof-branching-4",
         "category": "branching"
       },
       {
@@ -866,7 +866,7 @@
         "example": "git switch --orphan <new-branch>",
         "related": [],
         "variations": [],
-        "id": "branching-4-v5",
+        "id": "branching-5-varof-branching-4",
         "category": "branching"
       }
     ],
