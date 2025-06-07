@@ -35,44 +35,43 @@ function applyDefaults(command, index, filename) {
 
   const injected = { command: command.command };
 
+  // Copy all keys except category and example with default fallback
   for (const key in expectedFields) {
-    if (command[key] === undefined || command[key] === null || command[key] === "") {
-      if (key === "category") {
-        injected[key] = filename;
-      } else if (key === "example") {
-        injected[key] = command.command;
-      } else {
-        injected[key] = expectedFields[key];
-      }
-    } else {
-      injected[key] = command[key];
+    if (key === "category") continue; // skip here, will overwrite later
+    if (key === "example") {
+      injected.example = command.example ?? command.command;
+      continue;
     }
+    injected[key] = command[key] ?? expectedFields[key];
   }
+
+  // Overwrite category unconditionally
+  injected.category = filename;
 
   if (Array.isArray(command.variations)) {
     injected.variations = command.variations.map((variation, vIndex) => {
       const vInjected = { command: variation.command };
 
       for (const key in expectedFields) {
-        if (variation[key] === undefined || variation[key] === null) {
-          if (key === "category") {
-            vInjected[key] = filename;
-          } else if (key === "example") {
-            vInjected[key] = variation.command;
-          } else {
-            vInjected[key] = expectedFields[key];
-          }
-        } else {
-          vInjected[key] = variation[key];
+        if (key === "category") continue; // skip here
+        if (key === "example") {
+          vInjected.example = variation.example ?? variation.command;
+          continue;
         }
+        vInjected[key] = variation[key] ?? expectedFields[key];
       }
 
+      // Overwrite category and set id
+      vInjected.category = filename;
       vInjected.id = `${filename}-${index + 1}-v${vIndex + 1}`;
+
       return vInjected;
     });
   }
 
+  // Set id for main command
   injected.id = `${filename}-${index + 1}`;
+
   return injected;
 }
 
@@ -83,6 +82,7 @@ function injectDefaultsToFile(filePath) {
 
   try {
     const fileContent = fs.readFileSync(filePath, "utf-8").trim();
+
     if (!fileContent) {
       console.warn(`⚠️ Skipping empty file: ${fileName}.json`);
       return;
@@ -108,3 +108,6 @@ fs.readdirSync(commandsDir)
   });
 
 console.log(`\n🧮 Grand Total Commands (with all variations): ${grandTotal}`);
+if (grandTotal === 0) {
+  console.warn("⚠️ No commands found. Please check your JSON files.");
+}

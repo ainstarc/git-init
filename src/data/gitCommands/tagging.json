@@ -2,7 +2,6 @@
   {
     "command": "git tag <tagname>",
     "description": "Create a tag reference to mark a point in history",
-    "category": "tagging",
     "keywords": [
       "tag",
       "mark",
@@ -16,6 +15,7 @@
       "git push origin <tagname>"
     ],
     "variations": [],
-    "id": "tagging-1"
+    "id": "tagging-1",
+    "category": "tagging"
   }
 ]

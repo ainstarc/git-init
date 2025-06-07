@@ -5,9 +5,10 @@ import data2 from "./commits.json";
 import data3 from "./coreConfig.json";
 import data4 from "./inspection.json";
 import data5 from "./merging.json";
-import data6 from "./staging.json";
-import data7 from "./tagging.json";
-import data8 from "./workingTree.json";
+import data6 from "./remotes.json";
+import data7 from "./staging.json";
+import data8 from "./tagging.json";
+import data9 from "./workingTree.json";
 
 const gitCommands = [
   ...data0,
@@ -18,7 +19,8 @@ const gitCommands = [
   ...data5,
   ...data6,
   ...data7,
-  ...data8
+  ...data8,
+  ...data9
 ];
 
 export default gitCommands;

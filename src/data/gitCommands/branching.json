@@ -2,7 +2,6 @@
   {
     "command": "git branch",
     "description": "List, create, or delete branches",
-    "category": "branching",
     "keywords": [],
     "level": "",
     "example": "git branch",
@@ -11,7 +10,6 @@
       {
         "command": "git branch --color",
         "description": "Show branch list with color highlighting",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --color",
@@ -26,7 +24,7 @@
             "example": "git branch --color=always",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch --color=auto",
@@ -37,7 +35,7 @@
             "example": "git branch --color=auto",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1-v2"
+            "id": "branching-1-v2"
           },
           {
             "command": "git branch --no-color",
@@ -48,26 +46,26 @@
             "example": "git branch --no-color",
             "related": [],
             "variations": [],
-            "id": "branching-1-v1-v3"
+            "id": "branching-1-v3"
           }
         ],
-        "id": "branching-1-v1"
+        "id": "branching-1-v1",
+        "category": "branching"
       },
       {
         "command": "git branch --show-current",
         "description": "Show the current branch name",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --show-current",
         "related": [],
         "variations": [],
-        "id": "branching-1-v2"
+        "id": "branching-1-v2",
+        "category": "branching"
       },
       {
         "command": "git branch -v",
         "description": "Show branches with last commit info",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -v",
@@ -82,7 +80,7 @@
             "example": "git branch -v --abbrev=7",
             "related": [],
             "variations": [],
-            "id": "branching-1-v3-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch -v --no-abbrev",
@@ -93,15 +91,15 @@
             "example": "git branch -v --no-abbrev",
             "related": [],
             "variations": [],
-            "id": "branching-1-v3-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v3"
+        "id": "branching-1-v3",
+        "category": "branching"
       },
       {
         "command": "git branch --column",
         "description": "Display output in columns",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --column",
@@ -116,15 +114,15 @@
             "example": "git branch --no-column",
             "related": [],
             "variations": [],
-            "id": "branching-1-v4-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v4"
+        "id": "branching-1-v4",
+        "category": "branching"
       },
       {
         "command": "git branch --sort",
         "description": "Sort branch list by key",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --sort",
@@ -139,15 +137,15 @@
             "example": "git branch --sort=-committerdate",
             "related": [],
             "variations": [],
-            "id": "branching-1-v5-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v5"
+        "id": "branching-1-v5",
+        "category": "branching"
       },
       {
         "command": "git branch --merged",
         "description": "List branches merged into current HEAD",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --merged",
@@ -162,15 +160,15 @@
             "example": "git branch --merged develop",
             "related": [],
             "variations": [],
-            "id": "branching-1-v6-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v6"
+        "id": "branching-1-v6",
+        "category": "branching"
       },
       {
         "command": "git branch --no-merged",
         "description": "List branches not merged into current HEAD",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --no-merged",
@@ -185,15 +183,15 @@
             "example": "git branch --no-merged feature-xyz",
             "related": [],
             "variations": [],
-            "id": "branching-1-v7-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v7"
+        "id": "branching-1-v7",
+        "category": "branching"
       },
       {
         "command": "git branch --contains",
         "description": "List branches containing a commit",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --contains",
@@ -208,15 +206,15 @@
             "example": "git branch --contains abc1234",
             "related": [],
             "variations": [],
-            "id": "branching-1-v8-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v8"
+        "id": "branching-1-v8",
+        "category": "branching"
       },
       {
         "command": "git branch --no-contains",
         "description": "List branches not containing a commit",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --no-contains",
@@ -231,15 +229,15 @@
             "example": "git branch --no-contains abc1234",
             "related": [],
             "variations": [],
-            "id": "branching-1-v9-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v9"
+        "id": "branching-1-v9",
+        "category": "branching"
       },
       {
         "command": "git branch --points-at",
         "description": "List branches pointing at a specific object",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --points-at",
@@ -254,15 +252,15 @@
             "example": "git branch --points-at HEAD",
             "related": [],
             "variations": [],
-            "id": "branching-1-v10-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v10"
+        "id": "branching-1-v10",
+        "category": "branching"
       },
       {
         "command": "git branch --format",
         "description": "Format branch output",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --format",
@@ -277,37 +275,37 @@
             "example": "git branch --format='%(refname:short)'",
             "related": [],
             "variations": [],
-            "id": "branching-1-v11-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v11"
+        "id": "branching-1-v11",
+        "category": "branching"
       },
       {
         "command": "git branch -r",
         "description": "List remote-tracking branches",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -r",
         "related": [],
         "variations": [],
-        "id": "branching-1-v12"
+        "id": "branching-1-v12",
+        "category": "branching"
       },
       {
         "command": "git branch -a",
         "description": "List all branches (local + remote)",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -a",
         "related": [],
         "variations": [],
-        "id": "branching-1-v13"
+        "id": "branching-1-v13",
+        "category": "branching"
       },
       {
         "command": "git branch --list",
         "description": "List branches matching pattern",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --list",
@@ -322,15 +320,15 @@
             "example": "git branch --list 'feature/*'",
             "related": [],
             "variations": [],
-            "id": "branching-1-v14-v1"
+            "id": "branching-1-v1"
           }
         ],
-        "id": "branching-1-v14"
+        "id": "branching-1-v14",
+        "category": "branching"
       },
       {
         "command": "git branch --track",
         "description": "Set up a new branch to track a remote branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --track",
@@ -345,7 +343,7 @@
             "example": "git branch --track feature origin/feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v15-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch --no-track feature",
@@ -356,37 +354,37 @@
             "example": "git branch --no-track feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v15-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v15"
+        "id": "branching-1-v15",
+        "category": "branching"
       },
       {
         "command": "git branch -f",
         "description": "Force move or create branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -f",
         "related": [],
         "variations": [],
-        "id": "branching-1-v16"
+        "id": "branching-1-v16",
+        "category": "branching"
       },
       {
         "command": "git branch --recurse-submodules",
         "description": "Recurse into submodules when listing branches",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --recurse-submodules",
         "related": [],
         "variations": [],
-        "id": "branching-1-v17"
+        "id": "branching-1-v17",
+        "category": "branching"
       },
       {
         "command": "git branch --set-upstream-to",
         "description": "Set upstream for branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --set-upstream-to",
@@ -401,7 +399,7 @@
             "example": "git branch --set-upstream-to=origin/main feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v18-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch -u origin/main feature",
@@ -412,26 +410,26 @@
             "example": "git branch -u origin/main feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v18-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v18"
+        "id": "branching-1-v18",
+        "category": "branching"
       },
       {
         "command": "git branch --unset-upstream",
         "description": "Unset upstream tracking branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --unset-upstream",
         "related": [],
         "variations": [],
-        "id": "branching-1-v19"
+        "id": "branching-1-v19",
+        "category": "branching"
       },
       {
         "command": "git branch -m",
         "description": "Rename branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -m",
@@ -446,7 +444,7 @@
             "example": "git branch -m oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v20-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch -M oldbranch newbranch",
@@ -457,15 +455,15 @@
             "example": "git branch -M oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v20-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v20"
+        "id": "branching-1-v20",
+        "category": "branching"
       },
       {
         "command": "git branch -c",
         "description": "Copy branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -c",
@@ -480,7 +478,7 @@
             "example": "git branch -c oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v21-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch -C oldbranch newbranch",
@@ -491,15 +489,15 @@
             "example": "git branch -C oldbranch newbranch",
             "related": [],
             "variations": [],
-            "id": "branching-1-v21-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v21"
+        "id": "branching-1-v21",
+        "category": "branching"
       },
       {
         "command": "git branch -d",
         "description": "Delete a branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch -d",
@@ -514,7 +512,7 @@
             "example": "git branch -d feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v22-v1"
+            "id": "branching-1-v1"
           },
           {
             "command": "git branch -D feature",
@@ -525,23 +523,315 @@
             "example": "git branch -D feature",
             "related": [],
             "variations": [],
-            "id": "branching-1-v22-v2"
+            "id": "branching-1-v2"
           }
         ],
-        "id": "branching-1-v22"
+        "id": "branching-1-v22",
+        "category": "branching"
       },
       {
         "command": "git branch --edit-description",
         "description": "Edit the description of a branch",
-        "category": "branching",
         "keywords": [],
         "level": "",
         "example": "git branch --edit-description",
         "related": [],
         "variations": [],
-        "id": "branching-1-v23"
+        "id": "branching-1-v23",
+        "category": "branching"
       }
     ],
-    "id": "branching-1"
+    "id": "branching-1",
+    "category": "branching"
+  },
+  {
+    "command": "git rebase",
+    "description": "Reapply commits on top of another base tip",
+    "keywords": [
+      "rebase",
+      "interactive",
+      "commit",
+      "branch",
+      "upstream",
+      "base"
+    ],
+    "level": "advanced",
+    "example": "git rebase -i HEAD~3",
+    "related": [
+      "git merge",
+      "git cherry-pick",
+      "git reset"
+    ],
+    "variations": [
+      {
+        "command": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]",
+        "description": "Rebase the current branch onto another base, optionally interactively and/or executing commands",
+        "keywords": [],
+        "level": "",
+        "example": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]",
+        "related": [],
+        "variations": [],
+        "id": "branching-2-v1",
+        "category": "branching"
+      },
+      {
+        "command": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>] --root [<branch>]",
+        "description": "Rebase all commits reachable from the root, optionally interactively",
+        "keywords": [],
+        "level": "",
+        "example": "git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>] --root [<branch>]",
+        "related": [],
+        "variations": [],
+        "id": "branching-2-v2",
+        "category": "branching"
+      },
+      {
+        "command": "git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)",
+        "description": "Control the state of an ongoing rebase (continue, skip, abort, etc.)",
+        "keywords": [],
+        "level": "",
+        "example": "git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)",
+        "related": [],
+        "variations": [],
+        "id": "branching-2-v3",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-2",
+    "category": "branching"
+  },
+  {
+    "command": "git checkout <branch>",
+    "description": "Switch to an existing branch",
+    "keywords": [],
+    "level": "",
+    "example": "git checkout <branch>",
+    "related": [],
+    "variations": [
+      {
+        "command": "git checkout -q <branch>",
+        "description": "Switch quietly without showing output",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout -q <branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v1",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout -f <branch>",
+        "description": "Force switch even if there are local changes",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout -f <branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v2",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout -m <branch>",
+        "description": "Attempt a 3-way merge if switching with conflicts",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout -m <branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v3",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --detach <branch>",
+        "description": "Switch to a detached HEAD at the specified branch or commit",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --detach <branch>",
+        "related": [],
+        "variations": [
+          {
+            "command": "git checkout --detach <commit>",
+            "description": "Detach HEAD at a specific commit",
+            "category": "branching",
+            "keywords": [],
+            "level": "",
+            "example": "git checkout --detach <commit>",
+            "related": [],
+            "variations": [],
+            "id": "branching-3-v1"
+          }
+        ],
+        "id": "branching-3-v4",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout -b <new-branch> <start-point>",
+        "description": "Create and switch to a new branch",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout -b <new-branch> <start-point>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v5",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout -B <new-branch> <start-point>",
+        "description": "Create or reset a branch and switch to it",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout -B <new-branch> <start-point>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v6",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --orphan <new-branch>",
+        "description": "Create a new branch without history",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --orphan <new-branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v7",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout <tree-ish> -- <pathspec>…​",
+        "description": "Checkout files from a specific tree-ish to the working directory",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout <tree-ish> -- <pathspec>…​",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v8",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout <tree-ish> --pathspec-from-file=<file>",
+        "description": "Read paths from file while checking out from a specific tree-ish",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout <tree-ish> --pathspec-from-file=<file>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v9",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --ours <pathspec>",
+        "description": "Checkout 'ours' version for conflicted paths",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --ours <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v10",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --theirs <pathspec>",
+        "description": "Checkout 'theirs' version for conflicted paths",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --theirs <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v11",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --conflict=<style> <pathspec>",
+        "description": "Set conflict style when checking out conflicted files",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --conflict=<style> <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v12",
+        "category": "branching"
+      },
+      {
+        "command": "git checkout --patch [<tree-ish>] [--] [<pathspec>…​]",
+        "description": "Interactively select hunks from a specific tree-ish to checkout",
+        "keywords": [],
+        "level": "",
+        "example": "git checkout --patch [<tree-ish>] [--] [<pathspec>…​]",
+        "related": [],
+        "variations": [],
+        "id": "branching-3-v13",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-3",
+    "category": "branching"
+  },
+  {
+    "command": "git switch <branch>",
+    "description": "Switch to an existing branch",
+    "keywords": [],
+    "level": "",
+    "example": "git switch <branch>",
+    "related": [],
+    "variations": [
+      {
+        "command": "git switch --no-guess <branch>",
+        "description": "Do not guess branch name when ambiguous",
+        "keywords": [],
+        "level": "",
+        "example": "git switch --no-guess <branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-4-v1",
+        "category": "branching"
+      },
+      {
+        "command": "git switch --detach <start-point>",
+        "description": "Switch to a detached HEAD at a specific commit or branch",
+        "keywords": [],
+        "level": "",
+        "example": "git switch --detach <start-point>",
+        "related": [],
+        "variations": [],
+        "id": "branching-4-v2",
+        "category": "branching"
+      },
+      {
+        "command": "git switch -c <new-branch> <start-point>",
+        "description": "Create and switch to a new branch",
+        "keywords": [],
+        "level": "",
+        "example": "git switch -c <new-branch> <start-point>",
+        "related": [],
+        "variations": [],
+        "id": "branching-4-v3",
+        "category": "branching"
+      },
+      {
+        "command": "git switch -C <new-branch> <start-point>",
+        "description": "Create or reset and switch to a new branch",
+        "keywords": [],
+        "level": "",
+        "example": "git switch -C <new-branch> <start-point>",
+        "related": [],
+        "variations": [],
+        "id": "branching-4-v4",
+        "category": "branching"
+      },
+      {
+        "command": "git switch --orphan <new-branch>",
+        "description": "Create a new branch without any commit history",
+        "keywords": [],
+        "level": "",
+        "example": "git switch --orphan <new-branch>",
+        "related": [],
+        "variations": [],
+        "id": "branching-4-v5",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-4",
+    "category": "branching"
   }
 ]
