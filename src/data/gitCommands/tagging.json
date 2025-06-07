@@ -1,0 +1,21 @@
+[
+  {
+    "command": "git tag <tagname>",
+    "description": "Create a tag reference to mark a point in history",
+    "category": "tagging",
+    "keywords": [
+      "tag",
+      "mark",
+      "release"
+    ],
+    "level": "intermediate",
+    "example": "git tag v1.0",
+    "related": [
+      "git tag -a <tagname> -m \"message\"",
+      "git tag -d <tagname>",
+      "git push origin <tagname>"
+    ],
+    "variations": [],
+    "id": "tagging-1"
+  }
+]

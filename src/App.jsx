@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Fuse from "fuse.js";
 
 import SearchBar from "./components/SearchBar";
@@ -6,22 +6,11 @@ import CommandList from "./components/CommandList";
 import ThemeSelector from "./components/ThemeSelector";
 import UpdateNotification from "./components/UpdateNotification";
 import { useThemeContext } from "./context/ThemeContext";
+import FaviconSwitcher from "./components/FaviconSwitcher";
 
 import gitCommands from "./data/gitCommands";
 import "./styles/themes.css";
 import "./App.css";
-
-// Configure Fuse.js for advanced searching
-const fuse = new Fuse(gitCommands, {
-  keys: [
-    { name: "command", weight: 1 },
-    { name: "description", weight: 0.7 },
-    { name: "keywords", weight: 0.9 },
-    { name: "category", weight: 0.5 },
-  ],
-  threshold: 0.4, // Slightly more lenient threshold for better matches
-  includeScore: true,
-});
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -36,33 +25,60 @@ export default function App() {
   // Categories for filtering
   const categories = [
     { id: "all", name: "All Commands" },
-    { id: "basics", name: "Basics" },
+    { id: "coreConfig", name: "Core Config" },
+    { id: "staging", name: "Staging" },
+    { id: "commits", name: "Commits" },
     { id: "branching", name: "Branching" },
-    { id: "remote", name: "Remote" },
-    { id: "history", name: "History" },
-    { id: "advanced", name: "Advanced" },
+    { id: "remotes", name: "Remotes" },
+    { id: "merging", name: "Merging" },
+    { id: "tagging", name: "Tagging" },
+    { id: "inspection", name: "Inspection" },
+    { id: "workingTree", name: "Working Tree" },
+    { id: "advancedTools", name: "Advanced Tools" },
+    { id: "phrases", name: "Phrases" }, // if phrases is command category or maybe info/help
   ];
+
+  const flatCommands = useMemo(() => {
+    return gitCommands.flatMap((cmd) => {
+      const base = { ...cmd, isVariation: false };
+      const variations = (cmd.variations || []).map((variation) => ({
+        ...variation,
+        parentCommand: cmd.command,
+        isVariation: true,
+      }));
+      return [base, ...variations];
+    });
+  }, [gitCommands]);
+
+  const fuse = useMemo(() => {
+    return new Fuse(flatCommands, {
+      keys: [
+        { name: "command", weight: 1 },
+        { name: "description", weight: 0.7 },
+        { name: "keywords", weight: 0.9 },
+        { name: "category", weight: 0.5 },
+      ],
+      threshold: 0.4,
+      includeScore: true,
+    });
+  }, [flatCommands]);
 
   useEffect(() => {
     let filteredResults;
 
-    // First filter by category if needed
     if (activeCategory === "all") {
-      filteredResults = gitCommands;
+      filteredResults = flatCommands;
     } else {
-      filteredResults = gitCommands.filter(
+      filteredResults = flatCommands.filter(
         (cmd) => cmd.category === activeCategory
       );
     }
 
-    // Then apply search if there's a query
     if (!query) {
       setResults(filteredResults);
     } else {
-      // Use Fuse to search with the query
       const searchResults = fuse.search(query);
 
-      // Filter search results by active category if needed
       const finalResults = searchResults
         .filter(
           (result) =>
@@ -74,7 +90,7 @@ export default function App() {
     }
 
     setFocusedIndex(-1);
-  }, [query, activeCategory]);
+  }, [query, activeCategory, flatCommands, fuse]);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -98,6 +114,7 @@ export default function App() {
 
   return (
     <div className="app-container">
+      <FaviconSwitcher /> 
       <header className="app-header">
         <h1>git-init</h1>
         <ThemeSelector />

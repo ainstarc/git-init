@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git commit -m \"message\"",
+    "description": "Record changes to the repository with a message",
+    "category": "commits",
+    "keywords": [
+      "commit",
+      "save",
+      "message"
+    ],
+    "level": "intermediate",
+    "example": "git commit -m \"Add feature X\"",
+    "related": [
+      "git commit -a -m \"message\"",
+      "git commit --amend"
+    ],
+    "variations": [],
+    "id": "commits-1"
+  }
+]

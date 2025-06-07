@@ -1,0 +1,21 @@
+[
+  {
+    "command": "git merge <branch>",
+    "description": "Join two or more development histories together",
+    "category": "merging",
+    "keywords": [
+      "merge",
+      "combine",
+      "branches"
+    ],
+    "level": "advanced",
+    "example": "git merge feature-xyz",
+    "related": [
+      "git merge --no-ff <branch>",
+      "git merge --abort",
+      "git merge --continue"
+    ],
+    "variations": [],
+    "id": "merging-1"
+  }
+]

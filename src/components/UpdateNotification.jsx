@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './UpdateNotification.css';
+import '../styles/UpdateNotification.css';
 
 const UpdateNotification = () => {
   const [showUpdateNotification, setShowUpdateNotification] = useState(false);

@@ -2,7 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 2023-05-31
+## [1.2.0] - 2025-06-07
+
+### Added
+
+- Added support for Git command variations to provide more detailed command options.
+- Introduced new Git command modules covering core configuration, commits, and staging.
+- Enhanced UI for command items with improved focus, copy feedback, and category display.
+
+### Changed
+
+- Refactored Git command data structure for better organization and easier expansion.
+- Improved scripts and components for handling command variations and filtering.
+
+### Fixed
+
+- Various UI and interaction improvements related to command listing and clipboard functionality.
+
+## [1.1.0] - 2025-05-31
 
 ### Added
 
@@ -27,7 +44,7 @@ All notable changes to this project will be documented in this file.
 - CSS styling issues with proper theme variable implementation
 - Mobile responsiveness improvements
 
-## [1.0.0] - 2024-05-30
+## [1.0.0] - 2025-05-30
 
 ### Added
 
