@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2025-06-07
+
+### Added
+
+- Added `checkDuplicates` script to identify duplicate Git commands in the dataset.
+- Added `injectDefaults` script to ensure all Git command JSON files have required fields and structure.
+- Introduced `ReportIssue` component and integrated it into `CommandItem` for user feedback and issue reporting.
+- Auto-generated command index file for up-to-date imports from command JSON files.
+
+### Changed
+
+- Refactored Git command JSON files to include explicit `category` fields for improved filtering and organization.
+- Improved and clarified Git command documentation for completeness and consistency.
+- Updated package dependencies.
+
+### Fixed
+
+- Minor UI and integration improvements.
+
 ## [1.2.0] - 2025-06-07
 
 ### Added

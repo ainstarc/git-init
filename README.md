@@ -13,6 +13,10 @@ Git-Init is a user-friendly tool that helps you find the right Git command for a
 - **Keyboard Navigation**: Use arrow keys to navigate through results
 - **Offline Support**: Works even without an internet connection
 - **Auto Updates**: Automatically notifies you when a new version is available
+- **Duplicate Command Checker**: Script to identify duplicate Git commands in the dataset
+- **Defaults Injector**: Script (`injectDefaults`) to ensure all command JSON files have required fields and structure
+- **Auto-Generated Command Index**: Command index file is generated automatically for up-to-date imports
+- **Report Issue**: Quickly report issues with any command using the integrated ReportIssue component
 
 ## How to Use
 
@@ -21,6 +25,7 @@ Git-Init is a user-friendly tool that helps you find the right Git command for a
 3. Click "Copy" to copy the command to your clipboard
 4. Use the category filters to narrow down results
 5. Select your preferred theme from the dropdown in the header
+6. Use the "Report Issue" button on any command to provide feedback or report problems
 
 ## Examples of Natural Language Queries
 
@@ -69,6 +74,9 @@ To run this project locally:
 - `npm test` - Launches the test runner
 - `npm run build` - Builds the app for production
 - `npm run deploy` - Deploys the app to GitHub Pages
+- `npm run checkDuplicates` - Checks for duplicate Git commands in the dataset
+- `npm run injectDefaults` - Ensures all command JSON files have required fields and structure
+- `npm run generateDataIndex` - Regenerates the command index file for up-to-date imports
 
 ## Technologies Used
 
@@ -76,6 +84,13 @@ To run this project locally:
 - Fuse.js for fuzzy searching
 - GitHub Pages for deployment
 - Service Workers for offline functionality and updates
+
+## Data Structure
+
+- Git command data is organized in JSON files with explicit `category` fields for better filtering and clarity.
+- Command documentation is refactored for improved completeness and consistency.
+- All command JSON files are auto-updated for required fields and structure using the `injectDefaults` script.
+- The command index file (`src/data/gitCommands/index.js`) is auto-generated for up-to-date imports.
 
 ## Browser Compatibility
 
@@ -85,13 +100,6 @@ Git-Init works with all modern browsers:
 - Firefox
 - Safari
 - Edge
-
-## Node.js Compatibility
-
-This project is compatible with:
-
-- Node.js v16+ (recommended)
-- Node.js v17+ and v20+ (requires OpenSSL legacy provider flag as noted in the running instructions)
 
 ## Contributing
 
