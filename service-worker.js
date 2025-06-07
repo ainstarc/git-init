@@ -4,7 +4,7 @@
 // See https://developers.google.com/web/tools/workbox/modules/workbox-precaching
 // for more information about precaching.
 
-const CACHE_NAME = "git-init-cache-v1.2.0";
+const CACHE_NAME = "git-init-cache-v1.3.0";
 const urlsToCache = [
   "/",
   "/index.html",
