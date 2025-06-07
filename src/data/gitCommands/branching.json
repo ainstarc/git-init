@@ -1,0 +1,70 @@
+[
+  {
+    "command": "git checkout -b new-branch",
+    "description": "Create a new branch and switch to it",
+    "category": "branching",
+    "keywords": [
+      "checkout",
+      "branch",
+      "create",
+      "switch"
+    ],
+    "level": "intermediate",
+    "example": "git checkout -b new-branch",
+    "related": [
+      "git switch -b new-branch"
+    ],
+    "id": "branching-1"
+  },
+  {
+    "command": "git switch <branch>",
+    "description": "Switch to another branch",
+    "category": "branching",
+    "keywords": [
+      "switch",
+      "branch",
+      "change"
+    ],
+    "level": "intermediate",
+    "example": "git switch develop",
+    "related": [
+      "git checkout develop"
+    ],
+    "id": "branching-2"
+  },
+  {
+    "command": "git branch",
+    "description": "List, create, or delete branches",
+    "category": "branching",
+    "keywords": [
+      "branch",
+      "list",
+      "create",
+      "delete"
+    ],
+    "level": "intermediate",
+    "example": "git branch feature-xyz",
+    "related": [
+      "git branch -d feature-xyz",
+      "git branch -a"
+    ],
+    "id": "branching-3"
+  },
+  {
+    "command": "git rebase <branch>",
+    "description": "Reapply commits on top of another base tip",
+    "category": "branching",
+    "keywords": [
+      "rebase",
+      "reapply",
+      "commits"
+    ],
+    "level": "advanced",
+    "example": "git rebase main",
+    "related": [
+      "git merge main",
+      "git cherry-pick <commit>"
+    ],
+    "id": "branching-4"
+  }
+]

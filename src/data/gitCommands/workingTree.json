@@ -1,0 +1,19 @@
+[
+  {
+    "command": "git restore <file>",
+    "description": "Discard changes in the working directory",
+    "category": "workingTree",
+    "keywords": [
+      "restore",
+      "undo",
+      "discard"
+    ],
+    "level": "beginner",
+    "example": "git restore README.md",
+    "related": [
+      "git checkout -- <file>",
+      "git reset HEAD <file>"
+    ],
+    "id": "workingTree-1"
+  }
+]

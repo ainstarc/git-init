@@ -35,13 +35,20 @@ export default function App() {
 
   // Categories for filtering
   const categories = [
-    { id: "all", name: "All Commands" },
-    { id: "basics", name: "Basics" },
-    { id: "branching", name: "Branching" },
-    { id: "remote", name: "Remote" },
-    { id: "history", name: "History" },
-    { id: "advanced", name: "Advanced" },
-  ];
+  { id: "all", name: "All Commands" },
+  { id: "coreConfig", name: "Core Config" },
+  { id: "staging", name: "Staging" },
+  { id: "commits", name: "Commits" },
+  { id: "branching", name: "Branching" },
+  { id: "remotes", name: "Remotes" },
+  { id: "merging", name: "Merging" },
+  { id: "tagging", name: "Tagging" },
+  { id: "inspection", name: "Inspection" },
+  { id: "workingTree", name: "Working Tree" },
+  { id: "advancedTools", name: "Advanced Tools" },
+  { id: "phrases", name: "Phrases" },  // if phrases is command category or maybe info/help
+];
+
 
   useEffect(() => {
     let filteredResults;

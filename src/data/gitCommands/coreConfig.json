@@ -1,0 +1,19 @@
+[
+  {
+    "command": "git init",
+    "description": "Create a new Git repository",
+    "category": "coreConfig",
+    "keywords": [
+      "init",
+      "create",
+      "repository",
+      "new"
+    ],
+    "level": "beginner",
+    "example": "git init",
+    "related": [
+      "git clone <repository-url>"
+    ],
+    "id": "coreConfig-1"
+  }
+]

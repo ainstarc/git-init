@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git add <file>",
+    "description": "Add file contents to the staging area (index)",
+    "category": "staging",
+    "keywords": [
+      "add",
+      "stage",
+      "index"
+    ],
+    "level": "beginner",
+    "example": "git add README.md",
+    "related": [
+      "git add .",
+      "git add -A",
+      "git reset <file>"
+    ],
+    "id": "staging-1"
+  }
+]
