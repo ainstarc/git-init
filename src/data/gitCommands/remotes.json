@@ -27,7 +27,12 @@
       {
         "command": "git fetch <repository>",
         "description": "Fetch from the specified remote repository",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "repository",
+          "remote repository",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch <repository>",
         "related": [],
@@ -38,7 +43,13 @@
       {
         "command": "git fetch <repository> <refspec>",
         "description": "Fetch specific branches or tags using refspec",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "refspec",
+          "branches",
+          "tags",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch <repository> <refspec>",
         "related": [],
@@ -49,7 +60,11 @@
       {
         "command": "git fetch <group>",
         "description": "Fetch from a configured remote group",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "remote group",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch <group>",
         "related": [],
@@ -60,7 +75,11 @@
       {
         "command": "git fetch --multiple <repository>...",
         "description": "Fetch from multiple repositories in one command",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "multiple repositories",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch --multiple <repository>...",
         "related": [],
@@ -71,7 +90,11 @@
       {
         "command": "git fetch --all",
         "description": "Fetch from all remotes",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "all remotes",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch --all",
         "related": [],
@@ -79,7 +102,12 @@
           {
             "command": "git fetch --all --prune",
             "description": "Also remove any remote-tracking references that no longer exist on the remote",
-            "keywords": [],
+            "keywords": [
+              "fetch",
+              "all remotes",
+              "prune",
+              "git fetch"
+            ],
             "level": "basic",
             "example": "git fetch --all --prune",
             "related": [],
@@ -90,7 +118,12 @@
           {
             "command": "git fetch --all --tags",
             "description": "Fetch all tags from all remotes",
-            "keywords": [],
+            "keywords": [
+              "fetch",
+              "all remotes",
+              "tags",
+              "git fetch"
+            ],
             "level": "basic",
             "example": "git fetch --all --tags",
             "related": [],
@@ -105,7 +138,12 @@
       {
         "command": "git fetch --depth <depth>",
         "description": "Create a shallow clone with truncated history",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "shallow clone",
+          "truncated history",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch --depth <depth>",
         "related": [],
@@ -116,7 +154,12 @@
       {
         "command": "git fetch --prune",
         "description": "Remove deleted branches from remotes",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "prune",
+          "remove deleted branches",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch --prune",
         "related": [],
@@ -127,7 +170,12 @@
       {
         "command": "git fetch --dry-run",
         "description": "Show what would be fetched without doing it",
-        "keywords": [],
+        "keywords": [
+          "fetch",
+          "dry run",
+          "simulate fetch",
+          "git fetch"
+        ],
         "level": "basic",
         "example": "git fetch --dry-run",
         "related": [],
@@ -164,7 +212,12 @@
       {
         "command": "git pull <repository>",
         "description": "Pull from a specific remote",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "repository",
+          "remote repository",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull <repository>",
         "related": [],
@@ -175,7 +228,11 @@
       {
         "command": "git pull <repository> <refspec>",
         "description": "Pull using a specific refspec",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "refspec",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull <repository> <refspec>",
         "related": [],
@@ -186,7 +243,11 @@
       {
         "command": "git pull --rebase",
         "description": "Rebase the current branch on top of the upstream branch after fetching",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "rebase",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --rebase",
         "related": [],
@@ -197,7 +258,11 @@
       {
         "command": "git pull --no-rebase",
         "description": "Disable rebase if enabled in config",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "no rebase",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --no-rebase",
         "related": [],
@@ -208,7 +273,11 @@
       {
         "command": "git pull --ff-only",
         "description": "Refuse to merge and exit if the fast-forward is not possible",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "fast-forward",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --ff-only",
         "related": [],
@@ -219,7 +288,11 @@
       {
         "command": "git pull --no-commit",
         "description": "Perform the merge but do not commit",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "no commit",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --no-commit",
         "related": [],
@@ -230,7 +303,11 @@
       {
         "command": "git pull --squash",
         "description": "Create a single commit from all changes",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "squash",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --squash",
         "related": [],
@@ -241,7 +318,11 @@
       {
         "command": "git pull --allow-unrelated-histories",
         "description": "Allow merging unrelated histories",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "unrelated histories",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --allow-unrelated-histories",
         "related": [],
@@ -252,7 +333,11 @@
       {
         "command": "git pull --depth <depth>",
         "description": "Limit fetching to a specific commit depth",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "depth",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --depth <depth>",
         "related": [],
@@ -260,7 +345,12 @@
           {
             "command": "git pull --depth=1",
             "description": "Fetch only the latest commit (shallow)",
-            "keywords": [],
+            "keywords": [
+              "pull",
+              "depth",
+              "shallow",
+              "git pull"
+            ],
             "level": "basic",
             "example": "git pull --depth=1",
             "related": [],
@@ -275,7 +365,11 @@
       {
         "command": "git pull --no-tags",
         "description": "Do not fetch tags",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "no tags",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --no-tags",
         "related": [],
@@ -286,7 +380,11 @@
       {
         "command": "git pull --verbose",
         "description": "Show more detailed output",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "verbose",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --verbose",
         "related": [],
@@ -297,7 +395,11 @@
       {
         "command": "git pull --quiet",
         "description": "Suppress all output",
-        "keywords": [],
+        "keywords": [
+          "pull",
+          "quiet",
+          "git pull"
+        ],
         "level": "basic",
         "example": "git pull --quiet",
         "related": [],
@@ -336,7 +438,12 @@
       {
         "command": "git push <repository>",
         "description": "Push to a specific remote repository",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "repository",
+          "remote repository",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push <repository>",
         "related": [],
@@ -347,7 +454,11 @@
       {
         "command": "git push <repository> <refspec>…​",
         "description": "Push specific refs to remote",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "refspec",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push <repository> <refspec>…​",
         "related": [],
@@ -358,7 +469,11 @@
       {
         "command": "git push --all",
         "description": "Push all branches",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "all branches",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --all",
         "related": [],
@@ -369,7 +484,11 @@
       {
         "command": "git push --branches",
         "description": "Push all branches (alias to --all)",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "branches",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --branches",
         "related": [],
@@ -380,7 +499,11 @@
       {
         "command": "git push --mirror",
         "description": "Mirror all refs (branches, tags, etc.)",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "mirror",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --mirror",
         "related": [],
@@ -391,7 +514,11 @@
       {
         "command": "git push --tags",
         "description": "Push all tags",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "tags",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --tags",
         "related": [],
@@ -402,7 +529,11 @@
       {
         "command": "git push --follow-tags",
         "description": "Push tags that are referenced by commits",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "follow tags",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --follow-tags",
         "related": [],
@@ -413,7 +544,11 @@
       {
         "command": "git push --atomic",
         "description": "Push all refs or none",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "atomic",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --atomic",
         "related": [],
@@ -424,7 +559,12 @@
       {
         "command": "git push --dry-run",
         "description": "Simulate push without actually transferring",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "dry run",
+          "simulate push",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --dry-run",
         "related": [],
@@ -435,7 +575,11 @@
       {
         "command": "git push --receive-pack=<git-receive-pack>",
         "description": "Specify the remote helper program",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "receive-pack",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --receive-pack=<git-receive-pack>",
         "related": [],
@@ -446,7 +590,11 @@
       {
         "command": "git push --repo=<repository>",
         "description": "Push to an alternate repository",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "alternate repository",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --repo=<repository>",
         "related": [],
@@ -457,7 +605,12 @@
       {
         "command": "git push --force",
         "description": "Force push (dangerous, overwrites remote history)",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "force",
+          "overwrite",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --force",
         "related": [],
@@ -465,7 +618,11 @@
           {
             "command": "git push --force-with-lease",
             "description": "Force push only if the remote ref is as expected",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "force with lease",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --force-with-lease",
             "related": [],
@@ -476,7 +633,12 @@
           {
             "command": "git push --force-with-lease=<refname>[:<expect>]",
             "description": "More precise force-with-lease targeting a specific ref and expected value",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "force with lease",
+              "refname",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --force-with-lease=<refname>[:<expect>]",
             "related": [],
@@ -487,7 +649,11 @@
           {
             "command": "git push --force-if-includes",
             "description": "Force push only if remote contains the commits",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "force if includes",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --force-if-includes",
             "related": [],
@@ -502,7 +668,12 @@
       {
         "command": "git push --delete <branch>",
         "description": "Delete a remote branch",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "delete",
+          "remote branch",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --delete <branch>",
         "related": [],
@@ -513,7 +684,12 @@
       {
         "command": "git push --prune",
         "description": "Remove remote refs that no longer exist locally",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "prune",
+          "remove remote refs",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --prune",
         "related": [],
@@ -524,7 +700,11 @@
       {
         "command": "git push --quiet",
         "description": "Suppress output",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "quiet",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --quiet",
         "related": [],
@@ -535,7 +715,11 @@
       {
         "command": "git push --verbose",
         "description": "Show detailed output",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "verbose",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --verbose",
         "related": [],
@@ -546,7 +730,12 @@
       {
         "command": "git push --set-upstream",
         "description": "Set upstream (tracking) reference for the current branch",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "set upstream",
+          "tracking reference",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --set-upstream",
         "related": [],
@@ -557,7 +746,11 @@
       {
         "command": "git push --push-option=<string>",
         "description": "Send push options to the remote",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "push option",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --push-option=<string>",
         "related": [],
@@ -568,7 +761,12 @@
       {
         "command": "git push --signed",
         "description": "GPG-sign the push",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "signed",
+          "GPG",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --signed",
         "related": [],
@@ -576,7 +774,12 @@
           {
             "command": "git push --signed=true",
             "description": "Force signing",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "signed",
+              "force signing",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --signed=true",
             "related": [],
@@ -587,7 +790,12 @@
           {
             "command": "git push --signed=false",
             "description": "Disable signing",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "signed",
+              "disable signing",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --signed=false",
             "related": [],
@@ -598,7 +806,12 @@
           {
             "command": "git push --signed=if-asked",
             "description": "Sign if requested",
-            "keywords": [],
+            "keywords": [
+              "push",
+              "signed",
+              "sign if requested",
+              "git push"
+            ],
             "level": "basic",
             "example": "git push --signed=if-asked",
             "related": [],
@@ -613,7 +826,11 @@
       {
         "command": "git push --no-verify",
         "description": "Bypass pre-push hooks",
-        "keywords": [],
+        "keywords": [
+          "push",
+          "no verify",
+          "git push"
+        ],
         "level": "basic",
         "example": "git push --no-verify",
         "related": [],
@@ -627,174 +844,83 @@
   },
   {
     "command": "git remote",
-    "description": "Manage set of tracked repositories (add, remove, rename, or show remotes)",
+    "description": "Manage set of tracked repositories (remotes). List, add, or remove remote connections.",
     "keywords": [
       "remote",
-      "repository",
+      "remotes",
       "add remote",
       "remove remote",
-      "rename remote",
-      "remote url",
-      "fetch remote",
-      "prune remote",
       "list remotes",
-      "show remotes"
+      "git remote",
+      "origin",
+      "upstream",
+      "track remote",
+      "remote repository"
     ],
-    "level": "intermediate",
+    "level": "beginner",
     "example": "git remote -v",
     "related": [
       "git fetch",
       "git push",
       "git pull",
-      "git remote add",
-      "git remote remove"
+      "git clone"
     ],
     "variations": [
       {
-        "command": "git remote [-v | --verbose]",
-        "description": "List remote repositories with or without verbose information",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote [-v | --verbose]",
-        "related": [],
+        "command": "git remote add <name> <url>",
+        "description": "Add a new remote repository with a given name and URL.",
+        "keywords": [
+          "add remote",
+          "new remote",
+          "remote url",
+          "git remote add"
+        ],
+        "level": "beginner",
+        "example": "git remote add origin https://github.com/user/repo.git",
+        "related": [
+          "git remote",
+          "git push"
+        ],
         "variations": [],
-        "id": "remotes-4-var1",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>",
-        "description": "Add a new remote with optional tracking and fetch options",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var2",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote rename [--[no-]progress] <old> <new>",
-        "description": "Rename an existing remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote rename [--[no-]progress] <old> <new>",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var3",
-        "category": "remotes"
+        "category": "remotes",
+        "id": "remotes-4-var1"
       },
       {
         "command": "git remote remove <name>",
-        "description": "Remove a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote remove <name>",
-        "related": [],
+        "description": "Remove a remote repository by name.",
+        "keywords": [
+          "remove remote",
+          "delete remote",
+          "git remote remove"
+        ],
+        "level": "beginner",
+        "example": "git remote remove origin",
+        "related": [
+          "git remote"
+        ],
         "variations": [],
-        "id": "remotes-4-var4",
-        "category": "remotes"
+        "category": "remotes",
+        "id": "remotes-4-var2"
       },
       {
-        "command": "git remote set-head <name> (-a | --auto | -d | --delete | <branch>)",
-        "description": "Set or delete the default branch (HEAD) for a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote set-head <name> (-a | --auto | -d | --delete | <branch>)",
-        "related": [],
+        "command": "git remote rename <old> <new>",
+        "description": "Rename a remote repository.",
+        "keywords": [
+          "rename remote",
+          "change remote name",
+          "git remote rename"
+        ],
+        "level": "intermediate",
+        "example": "git remote rename origin upstream",
+        "related": [
+          "git remote"
+        ],
         "variations": [],
-        "id": "remotes-4-var5",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote set-branches [--add] <name> <branch>…​",
-        "description": "Change list of branches tracked by a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote set-branches [--add] <name> <branch>…​",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var6",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote get-url [--push] [--all] <name>",
-        "description": "Get URLs for a remote (fetch or push URLs)",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote get-url [--push] [--all] <name>",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var7",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote set-url [--push] <name> <newurl> [<oldurl>]",
-        "description": "Change the URL of a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote set-url [--push] <name> <newurl> [<oldurl>]",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var8",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote set-url --add [--push] <name> <newurl>",
-        "description": "Add a new URL to a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote set-url --add [--push] <name> <newurl>",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var9",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote set-url --delete [--push] <name> <URL>",
-        "description": "Delete a URL from a remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote set-url --delete [--push] <name> <URL>",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var10",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote [-v | --verbose] show [-n] <name>…​",
-        "description": "Show detailed information about remotes",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote [-v | --verbose] show [-n] <name>…​",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var11",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote prune [-n | --dry-run] <name>…​",
-        "description": "Prune stale tracking branches for the given remote",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote prune [-n | --dry-run] <name>…​",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var12",
-        "category": "remotes"
-      },
-      {
-        "command": "git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]",
-        "description": "Fetch updates from remotes, optionally pruning removed branches",
-        "keywords": [],
-        "level": "basic",
-        "example": "git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]",
-        "related": [],
-        "variations": [],
-        "id": "remotes-4-var13",
-        "category": "remotes"
+        "category": "remotes",
+        "id": "remotes-4-var3"
       }
     ],
-    "id": "remotes-4",
-    "category": "remotes"
+    "category": "remotes",
+    "id": "remotes-4"
   }
 ]

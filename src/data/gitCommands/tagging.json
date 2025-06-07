@@ -1,133 +1,80 @@
 [
   {
-    "command": "git tag <tagname>",
-    "description": "Create a tag reference to mark a point in history, such as a release or milestone.",
+    "command": "git tag",
+    "description": "Create, list, or delete tags. Tags are used to mark specific points in history as important (e.g., releases).",
     "keywords": [
       "tag",
-      "mark",
-      "release",
-      "milestone",
-      "version",
-      "annotate",
-      "label",
-      "checkpoint",
-      "snapshot"
+      "tags",
+      "create tag",
+      "delete tag",
+      "list tags",
+      "git tag",
+      "annotated tag",
+      "lightweight tag",
+      "release tag",
+      "mark version"
     ],
-    "level": "intermediate",
-    "example": "git tag v1.0",
+    "level": "beginner",
+    "example": "git tag",
     "related": [
-      "git tag -a <tagname> -m 'message'",
-      "git tag -d <tagname>",
-      "git push origin <tagname>",
-      "git show <tagname>",
-      "git tag --list"
+      "git show",
+      "git push",
+      "git checkout"
     ],
     "variations": [
       {
-        "command": "git tag -a <tagname> -m 'message'",
+        "command": "git tag -a <tag> -m '<message>'",
         "description": "Create an annotated tag with a message.",
         "keywords": [
           "annotated tag",
-          "tag message",
-          "create tag"
+          "message",
+          "create tag",
+          "git tag -a"
         ],
-        "level": "intermediate",
-        "example": "git tag -a v1.0 -m 'Release version 1.0'",
+        "level": "beginner",
+        "example": "git tag -a v1.0 -m 'Release 1.0'",
         "related": [
-          "git tag <tagname>",
-          "git tag -d <tagname>"
+          "git tag",
+          "git push"
         ],
         "variations": [],
-        "id": "tagging-1-var1",
-        "category": "tagging"
+        "category": "tagging",
+        "id": "tagging-1-var1"
       },
       {
-        "command": "git tag -d <tagname>",
-        "description": "Delete a local tag.",
+        "command": "git tag -d <tag>",
+        "description": "Delete a tag by name.",
         "keywords": [
           "delete tag",
-          "remove tag"
+          "remove tag",
+          "git tag -d"
         ],
-        "level": "intermediate",
+        "level": "beginner",
         "example": "git tag -d v1.0",
         "related": [
-          "git tag <tagname>",
-          "git push origin :refs/tags/<tagname>"
+          "git tag"
         ],
         "variations": [],
-        "id": "tagging-1-var2",
-        "category": "tagging"
+        "category": "tagging",
+        "id": "tagging-1-var2"
       },
       {
-        "command": "git push origin <tagname>",
-        "description": "Push a local tag to the remote repository.",
-        "keywords": [
-          "push tag",
-          "upload tag",
-          "remote tag"
-        ],
-        "level": "intermediate",
-        "example": "git push origin v1.0",
-        "related": [
-          "git tag <tagname>",
-          "git tag -a <tagname> -m 'message'"
-        ],
-        "variations": [],
-        "id": "tagging-1-var3",
-        "category": "tagging"
-      },
-      {
-        "command": "git push origin :refs/tags/<tagname>",
-        "description": "Delete a tag from the remote repository.",
-        "keywords": [
-          "delete remote tag",
-          "remove remote tag"
-        ],
-        "level": "advanced",
-        "example": "git push origin :refs/tags/v1.0",
-        "related": [
-          "git tag -d <tagname>",
-          "git tag <tagname>"
-        ],
-        "variations": [],
-        "id": "tagging-1-var4",
-        "category": "tagging"
-      },
-      {
-        "command": "git show <tagname>",
-        "description": "Show information about a tag.",
-        "keywords": [
-          "show tag",
-          "tag details",
-          "tag info"
-        ],
-        "level": "beginner",
-        "example": "git show v1.0",
-        "related": [
-          "git tag <tagname>",
-          "git tag --list"
-        ],
-        "variations": [],
-        "id": "tagging-1-var5",
-        "category": "tagging"
-      },
-      {
-        "command": "git tag --list",
-        "description": "List all tags in the repository.",
+        "command": "git tag -l <pattern>",
+        "description": "List tags matching a pattern.",
         "keywords": [
           "list tags",
-          "show tags",
-          "all tags"
+          "pattern",
+          "search tags",
+          "git tag -l"
         ],
-        "level": "beginner",
-        "example": "git tag --list",
+        "level": "intermediate",
+        "example": "git tag -l 'v1.*'",
         "related": [
-          "git tag <tagname>",
-          "git show <tagname>"
+          "git tag"
         ],
         "variations": [],
-        "id": "tagging-1-var6",
-        "category": "tagging"
+        "category": "tagging",
+        "id": "tagging-1-var3"
       }
     ],
     "id": "tagging-1",

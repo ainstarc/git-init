@@ -1,24 +1,27 @@
 [
   {
-    "command": "git add <pathspec>",
-    "description": "Add file contents to the index (staging area) to prepare for commit.",
+    "command": "git add",
+    "description": "Stage file contents to the index (staging area) in preparation for a commit. Use to track new or modified files.",
     "keywords": [
       "add",
       "stage",
-      "staging",
+      "track",
+      "staging area",
       "index",
-      "track file",
       "prepare commit",
+      "git add",
       "add file",
-      "add changes"
+      "add files",
+      "add all",
+      "track changes",
+      "include in commit"
     ],
     "level": "beginner",
-    "example": "git add src/App.jsx",
+    "example": "git add <file>",
     "related": [
       "git status",
-      "git reset",
       "git commit",
-      "git add --patch"
+      "git reset"
     ],
     "variations": [
       {
@@ -196,6 +199,107 @@
         "variations": [],
         "id": "staging-1-var16",
         "category": "staging"
+      },
+      {
+        "command": "git add .",
+        "description": "Stage all changes (new, modified, deleted files) in the current directory and subdirectories.",
+        "keywords": [
+          "add all",
+          "stage all",
+          "dot",
+          "current directory",
+          "all files",
+          "git add ."
+        ],
+        "level": "beginner",
+        "example": "git add .",
+        "related": [
+          "git add",
+          "git status"
+        ],
+        "variations": [],
+        "category": "staging",
+        "id": "staging-1-var17"
+      },
+      {
+        "command": "git add -A",
+        "description": "Stage all changes in the repository, including deletions (removes files from the index if deleted).",
+        "keywords": [
+          "add all",
+          "stage all",
+          "remove deleted",
+          "git add -A",
+          "all changes"
+        ],
+        "level": "beginner",
+        "example": "git add -A",
+        "related": [
+          "git add .",
+          "git status"
+        ],
+        "variations": [],
+        "category": "staging",
+        "id": "staging-1-var18"
+      },
+      {
+        "command": "git add -u",
+        "description": "Stage modified and deleted files, but not new untracked files.",
+        "keywords": [
+          "update",
+          "modified",
+          "deleted",
+          "no new files",
+          "git add -u"
+        ],
+        "level": "intermediate",
+        "example": "git add -u",
+        "related": [
+          "git add",
+          "git status"
+        ],
+        "variations": [],
+        "category": "staging",
+        "id": "staging-1-var19"
+      },
+      {
+        "command": "git add <pattern>",
+        "description": "Stage files matching a pattern (e.g., *.js for all JavaScript files).",
+        "keywords": [
+          "pattern",
+          "glob",
+          "wildcard",
+          "add pattern",
+          "git add <pattern>"
+        ],
+        "level": "intermediate",
+        "example": "git add *.js",
+        "related": [
+          "git add"
+        ],
+        "variations": [],
+        "category": "staging",
+        "id": "staging-1-var20"
+      },
+      {
+        "command": "git add --patch",
+        "description": "Interactively choose hunks of changes to stage (partial staging).",
+        "keywords": [
+          "patch",
+          "interactive",
+          "partial",
+          "hunk",
+          "choose changes",
+          "git add --patch"
+        ],
+        "level": "advanced",
+        "example": "git add --patch",
+        "related": [
+          "git add",
+          "git diff"
+        ],
+        "variations": [],
+        "category": "staging",
+        "id": "staging-1-var21"
       }
     ],
     "id": "staging-1",

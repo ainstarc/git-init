@@ -1,15 +1,18 @@
 [
   {
     "command": "git branch",
-    "description": "List, create, or delete branches in your repository.",
+    "description": "List, create, or delete branches. Useful for managing parallel lines of development.",
     "keywords": [
       "branch",
-      "list branches",
+      "branches",
       "create branch",
       "delete branch",
-      "show branches",
+      "list branches",
+      "git branch",
       "manage branches",
-      "branching"
+      "feature branch",
+      "main branch",
+      "switch branch"
     ],
     "level": "beginner",
     "example": "git branch",
@@ -17,8 +20,7 @@
       "git checkout",
       "git switch",
       "git merge",
-      "git branch -d",
-      "git branch -a"
+      "git rebase"
     ],
     "variations": [
       {

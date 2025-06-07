@@ -1,19 +1,25 @@
 [
   {
     "command": "git log",
-    "description": "Show the commit logs (history of commits, authors, messages, and changes)",
+    "description": "Show the commit history with author, date, and message for each commit. Useful for reviewing project history and changes.",
     "keywords": [
       "log",
       "history",
       "commit log",
       "show commits",
       "view history",
-      "git log",
       "list commits",
-      "see changes"
+      "see changes",
+      "git log",
+      "commit history",
+      "review commits",
+      "timeline",
+      "chronological",
+      "audit",
+      "track changes"
     ],
     "level": "beginner",
-    "example": "git log --oneline",
+    "example": "git log",
     "related": [
       "git show",
       "git diff",
@@ -22,213 +28,376 @@
     ],
     "variations": [
       {
-        "command": "git log <revision-range>",
-        "description": "Show logs for a specific commit range",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log <revision-range>",
-        "related": [],
+        "command": "git log --oneline",
+        "description": "Show a condensed, one-line summary for each commit. Great for a quick overview.",
+        "keywords": [
+          "oneline",
+          "summary",
+          "compact",
+          "short log",
+          "quick view",
+          "single line",
+          "git log --oneline"
+        ],
+        "level": "beginner",
+        "example": "git log --oneline",
+        "related": [
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var1",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var1"
+      },
+      {
+        "command": "git log <revision-range>",
+        "description": "Show logs for a specific commit range, e.g., between two commits or branches.",
+        "keywords": [
+          "range",
+          "revision",
+          "between commits",
+          "compare history",
+          "log range",
+          "git log <revision-range>"
+        ],
+        "level": "intermediate",
+        "example": "git log master..feature-branch",
+        "related": [
+          "git diff",
+          "git log"
+        ],
+        "variations": [],
+        "category": "inspection",
+        "id": "inspection-1-var2"
       },
       {
         "command": "git log -- <path>",
-        "description": "Show logs affecting a specific file or path",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log -- <path>",
-        "related": [],
+        "description": "Show commit history affecting a specific file or directory.",
+        "keywords": [
+          "file history",
+          "path",
+          "file log",
+          "track file",
+          "changes to file",
+          "git log -- <path>"
+        ],
+        "level": "intermediate",
+        "example": "git log -- src/App.jsx",
+        "related": [
+          "git blame",
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var2",
-        "category": "inspection"
-      },
-      {
-        "command": "git log --oneline",
-        "description": "Condense each commit to a single line",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --oneline",
-        "related": [],
-        "variations": [],
-        "id": "inspection-1-var3",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var3"
       },
       {
         "command": "git log --graph",
-        "description": "Show a text-based graphical representation of commits",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --graph",
-        "related": [],
+        "description": "Show a text-based graphical representation of the commit history (branching and merging).",
+        "keywords": [
+          "graph",
+          "visualize",
+          "branches",
+          "tree",
+          "ascii graph",
+          "git log --graph"
+        ],
+        "level": "intermediate",
+        "example": "git log --graph --oneline --all",
+        "related": [
+          "git log --oneline",
+          "git log --all"
+        ],
         "variations": [],
-        "id": "inspection-1-var4",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var4"
       },
       {
         "command": "git log --decorate",
-        "description": "Include branch and tag names in the log output",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show branch and tag names alongside commit history.",
+        "keywords": [
+          "decorate",
+          "tags",
+          "branches",
+          "labels",
+          "git log --decorate"
+        ],
+        "level": "intermediate",
         "example": "git log --decorate",
-        "related": [],
+        "related": [
+          "git log --graph"
+        ],
         "variations": [],
-        "id": "inspection-1-var5",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var5"
       },
       {
         "command": "git log --stat",
-        "description": "Show stats about what changed in each commit",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show statistics about what changed in each commit (files changed, insertions, deletions).",
+        "keywords": [
+          "stat",
+          "statistics",
+          "file changes",
+          "insertions",
+          "deletions",
+          "summary",
+          "git log --stat"
+        ],
+        "level": "intermediate",
         "example": "git log --stat",
-        "related": [],
+        "related": [
+          "git diff"
+        ],
         "variations": [],
-        "id": "inspection-1-var6",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var6"
       },
       {
         "command": "git log -p",
-        "description": "Show full patch (diff) for each commit",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show the full patch (diff) for each commit, displaying the actual changes.",
+        "keywords": [
+          "patch",
+          "diff",
+          "show changes",
+          "commit diff",
+          "git log -p"
+        ],
+        "level": "advanced",
         "example": "git log -p",
-        "related": [],
+        "related": [
+          "git diff",
+          "git show"
+        ],
         "variations": [],
-        "id": "inspection-1-var7",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var7"
       },
       {
         "command": "git log --name-only",
-        "description": "Show names of changed files in each commit",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show only the names of files changed in each commit.",
+        "keywords": [
+          "name only",
+          "files changed",
+          "file list",
+          "git log --name-only"
+        ],
+        "level": "intermediate",
         "example": "git log --name-only",
-        "related": [],
+        "related": [
+          "git log --stat"
+        ],
         "variations": [],
-        "id": "inspection-1-var8",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var8"
       },
       {
         "command": "git log --name-status",
-        "description": "Show file names and status (added, modified, deleted)",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show file names and status (added, modified, deleted) for each commit.",
+        "keywords": [
+          "name status",
+          "file status",
+          "added",
+          "modified",
+          "deleted",
+          "git log --name-status"
+        ],
+        "level": "intermediate",
         "example": "git log --name-status",
-        "related": [],
+        "related": [
+          "git log --stat"
+        ],
         "variations": [],
-        "id": "inspection-1-var9",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var9"
       },
       {
-        "command": "git log --author=\"<pattern>\"",
-        "description": "Filter commits by author name",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --author=\"<pattern>\"",
-        "related": [],
+        "command": "git log --author=<pattern>",
+        "description": "Filter commits by author name using a pattern (supports wildcards).",
+        "keywords": [
+          "author",
+          "filter author",
+          "search author",
+          "git log --author"
+        ],
+        "level": "intermediate",
+        "example": "git log --author='Alice'",
+        "related": [
+          "git shortlog"
+        ],
         "variations": [],
-        "id": "inspection-1-var10",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var10"
       },
       {
-        "command": "git log --grep=\"<pattern>\"",
-        "description": "Search commit messages for a pattern",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --grep=\"<pattern>\"",
-        "related": [],
+        "command": "git log --grep=<pattern>",
+        "description": "Search commit messages for a pattern (e.g., bugfix, feature).",
+        "keywords": [
+          "grep",
+          "search message",
+          "find commit",
+          "pattern",
+          "git log --grep"
+        ],
+        "level": "intermediate",
+        "example": "git log --grep='fix'",
+        "related": [
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var11",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var11"
       },
       {
-        "command": "git log --since=\"2 weeks ago\"",
-        "description": "Show commits more recent than a specific time",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --since=\"2 weeks ago\"",
-        "related": [],
+        "command": "git log --since=<date>",
+        "description": "Show commits more recent than a specific date or time (e.g., 2 weeks ago).",
+        "keywords": [
+          "since",
+          "recent",
+          "date",
+          "time",
+          "filter date",
+          "git log --since"
+        ],
+        "level": "intermediate",
+        "example": "git log --since='2 weeks ago'",
+        "related": [
+          "git log --until"
+        ],
         "variations": [],
-        "id": "inspection-1-var12",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var12"
       },
       {
-        "command": "git log --until=\"yesterday\"",
-        "description": "Show commits older than a specific time",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --until=\"yesterday\"",
-        "related": [],
+        "command": "git log --until=<date>",
+        "description": "Show commits older than a specific date or time (e.g., yesterday).",
+        "keywords": [
+          "until",
+          "older",
+          "date",
+          "time",
+          "filter date",
+          "git log --until"
+        ],
+        "level": "intermediate",
+        "example": "git log --until='yesterday'",
+        "related": [
+          "git log --since"
+        ],
         "variations": [],
-        "id": "inspection-1-var13",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var13"
       },
       {
         "command": "git log --reverse",
-        "description": "Show commits in reverse order",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show commits in reverse order (oldest first).",
+        "keywords": [
+          "reverse",
+          "oldest first",
+          "reverse order",
+          "git log --reverse"
+        ],
+        "level": "intermediate",
         "example": "git log --reverse",
-        "related": [],
+        "related": [
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var14",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var14"
       },
       {
         "command": "git log --pretty=oneline",
-        "description": "Show each commit as a single line (similar to `--oneline`)",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show each commit as a single line using the pretty format (customizable).",
+        "keywords": [
+          "pretty",
+          "oneline",
+          "format",
+          "custom",
+          "git log --pretty=oneline"
+        ],
+        "level": "advanced",
         "example": "git log --pretty=oneline",
-        "related": [],
+        "related": [
+          "git log --oneline"
+        ],
         "variations": [],
-        "id": "inspection-1-var15",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var15"
       },
       {
-        "command": "git log --pretty=format:\"%h %s\"",
-        "description": "Custom log output format using placeholders",
-        "keywords": [],
-        "level": "basic",
-        "example": "git log --pretty=format:\"%h %s\"",
-        "related": [],
+        "command": "git log --pretty=format:'%h %s'",
+        "description": "Custom log output format using placeholders for hash, subject, etc.",
+        "keywords": [
+          "pretty",
+          "format",
+          "custom",
+          "hash",
+          "subject",
+          "git log --pretty=format"
+        ],
+        "level": "advanced",
+        "example": "git log --pretty=format:'%h %s'",
+        "related": [
+          "git log --pretty=oneline"
+        ],
         "variations": [],
-        "id": "inspection-1-var16",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var16"
       },
       {
         "command": "git log --abbrev-commit",
-        "description": "Use abbreviated commit hashes",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show abbreviated commit hashes in the log output.",
+        "keywords": [
+          "abbrev",
+          "abbreviated",
+          "short hash",
+          "commit hash",
+          "git log --abbrev-commit"
+        ],
+        "level": "advanced",
         "example": "git log --abbrev-commit",
-        "related": [],
+        "related": [
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var17",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var17"
       },
       {
         "command": "git log --relative-date",
-        "description": "Show dates relative to the current time (e.g., 2 weeks ago)",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show commit dates relative to the current time (e.g., 2 weeks ago).",
+        "keywords": [
+          "relative date",
+          "ago",
+          "time ago",
+          "git log --relative-date"
+        ],
+        "level": "intermediate",
         "example": "git log --relative-date",
-        "related": [],
+        "related": [
+          "git log"
+        ],
         "variations": [],
-        "id": "inspection-1-var18",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var18"
       },
       {
         "command": "git log --all",
-        "description": "Show log entries from all references",
-        "keywords": [],
-        "level": "basic",
+        "description": "Show log entries from all references (branches, tags, etc).",
+        "keywords": [
+          "all",
+          "all branches",
+          "all refs",
+          "everything",
+          "git log --all"
+        ],
+        "level": "intermediate",
         "example": "git log --all",
-        "related": [],
+        "related": [
+          "git log --graph"
+        ],
         "variations": [],
-        "id": "inspection-1-var19",
-        "category": "inspection"
+        "category": "inspection",
+        "id": "inspection-1-var19"
       }
     ],
     "id": "inspection-1",

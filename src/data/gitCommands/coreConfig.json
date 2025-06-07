@@ -359,13 +359,102 @@
     "category": "coreConfig"
   },
   {
-    "command": "git config list [<file-option>] [<display-option>] [--includes]",
-    "description": "List all Git configuration settings",
-    "keywords": [],
-    "level": "basic",
-    "example": "git config list [<file-option>] [<display-option>] [--includes]",
-    "related": [],
-    "variations": [],
+    "command": "git config",
+    "description": "Get and set repository or global options. Used to configure user info, editor, aliases, and more.",
+    "keywords": [
+      "config",
+      "configure",
+      "settings",
+      "user name",
+      "user email",
+      "set config",
+      "get config",
+      "git config",
+      "global config",
+      "local config",
+      "edit config",
+      "set option"
+    ],
+    "level": "beginner",
+    "example": "git config --global user.name 'Alice'",
+    "related": [
+      "git config --list",
+      "git config --edit"
+    ],
+    "variations": [
+      {
+        "command": "git config --global user.name '<name>'",
+        "description": "Set the global user name for all repositories.",
+        "keywords": [
+          "user name",
+          "global",
+          "set name",
+          "git config --global user.name"
+        ],
+        "level": "beginner",
+        "example": "git config --global user.name 'Alice'",
+        "related": [
+          "git config"
+        ],
+        "variations": [],
+        "category": "coreConfig",
+        "id": "coreConfig-9-var1"
+      },
+      {
+        "command": "git config --global user.email '<email>'",
+        "description": "Set the global user email for all repositories.",
+        "keywords": [
+          "user email",
+          "global",
+          "set email",
+          "git config --global user.email"
+        ],
+        "level": "beginner",
+        "example": "git config --global user.email 'alice@example.com'",
+        "related": [
+          "git config"
+        ],
+        "variations": [],
+        "category": "coreConfig",
+        "id": "coreConfig-9-var2"
+      },
+      {
+        "command": "git config --list",
+        "description": "List all Git configuration settings (local, global, and system).",
+        "keywords": [
+          "list config",
+          "show config",
+          "all settings",
+          "git config --list"
+        ],
+        "level": "beginner",
+        "example": "git config --list",
+        "related": [
+          "git config"
+        ],
+        "variations": [],
+        "category": "coreConfig",
+        "id": "coreConfig-9-var3"
+      },
+      {
+        "command": "git config --edit",
+        "description": "Open the Git configuration file in the default editor.",
+        "keywords": [
+          "edit config",
+          "open config",
+          "config file",
+          "git config --edit"
+        ],
+        "level": "intermediate",
+        "example": "git config --edit",
+        "related": [
+          "git config"
+        ],
+        "variations": [],
+        "category": "coreConfig",
+        "id": "coreConfig-9-var4"
+      }
+    ],
     "id": "coreConfig-9",
     "category": "coreConfig"
   },

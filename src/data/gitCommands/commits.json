@@ -1,176 +1,75 @@
 [
   {
     "command": "git commit",
-    "description": "Record changes to the repository (save staged changes as a new commit)",
+    "description": "Record changes to the repository. Creates a new commit with staged changes and a message describing the update.",
     "keywords": [
       "commit",
-      "save changes",
+      "save",
       "record",
       "snapshot",
-      "checkpoint",
-      "stage",
+      "message",
       "history",
-      "message"
+      "git commit",
+      "commit changes",
+      "commit message",
+      "stage and commit",
+      "finalize changes"
     ],
     "level": "beginner",
-    "example": "git commit -m 'Add new feature'",
+    "example": "git commit -m 'Initial commit'",
     "related": [
       "git add",
       "git status",
       "git log",
-      "git commit --amend"
+      "git reset"
     ],
     "variations": [
       {
-        "command": "git commit -a",
-        "description": "Commit all changed (tracked) files without using git add",
+        "command": "git commit -m '<message>'",
+        "description": "Commit staged changes with a message in a single command.",
         "keywords": [
-          "commit all",
-          "auto stage",
-          "quick commit"
+          "message",
+          "commit message",
+          "quick commit",
+          "git commit -m"
         ],
         "level": "beginner",
-        "example": "git commit -a -m 'Quick fix'",
-        "related": [
-          "git commit",
-          "git add"
-        ],
-        "variations": [],
-        "id": "commits-1-var1",
-        "category": "commits"
-      },
-      {
-        "command": "git commit --interactive",
-        "description": "Interactively choose hunks to commit",
-        "keywords": [
-          "interactive commit",
-          "choose hunks",
-          "partial commit"
-        ],
-        "level": "advanced",
-        "example": "git commit --interactive",
-        "related": [
-          "git add --patch",
-          "git commit --patch"
-        ],
-        "variations": [],
-        "id": "commits-1-var2",
-        "category": "commits"
-      },
-      {
-        "command": "git commit --patch",
-        "description": "Select portions of files to commit (commit part of a file)",
-        "keywords": [
-          "patch commit",
-          "partial commit",
-          "commit part"
-        ],
-        "level": "advanced",
-        "example": "git commit --patch",
-        "related": [
-          "git add --patch",
-          "git commit --interactive"
-        ],
-        "variations": [],
-        "id": "commits-1-var3",
-        "category": "commits"
-      },
-      {
-        "command": "git commit -s",
-        "description": "Add Signed-off-by line (for DCO compliance)",
-        "keywords": [
-          "sign off",
-          "dco",
-          "signed commit"
-        ],
-        "level": "intermediate",
-        "example": "git commit -s -m 'Fix bug'",
+        "example": "git commit -m 'Update README'",
         "related": [
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-var4",
-        "category": "commits"
+        "category": "commits",
+        "id": "commits-1-var1"
       },
       {
         "command": "git commit --amend",
-        "description": "Modify the most recent commit (edit message or add changes)",
+        "description": "Modify the most recent commit (e.g., to fix the message or add files).",
         "keywords": [
           "amend",
           "edit last commit",
-          "change commit message",
-          "add to commit"
+          "fix commit",
+          "change message",
+          "add files",
+          "git commit --amend"
         ],
         "level": "intermediate",
-        "example": "git commit --amend -m 'Update commit message'",
+        "example": "git commit --amend -m 'Corrected message'",
         "related": [
-          "git rebase -i",
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-var5",
-        "category": "commits"
-      },
-      {
-        "command": "git commit --dry-run",
-        "description": "Show what would be committed without making a commit",
-        "keywords": [
-          "preview commit",
-          "dry run",
-          "test commit"
-        ],
-        "level": "beginner",
-        "example": "git commit --dry-run",
-        "related": [
-          "git status",
-          "git diff"
-        ],
-        "variations": [],
-        "id": "commits-1-var6",
-        "category": "commits"
-      },
-      {
-        "command": "git commit -m <msg>",
-        "description": "Commit with a message",
-        "keywords": [
-          "commit message",
-          "add message",
-          "save with message"
-        ],
-        "level": "beginner",
-        "example": "git commit -m 'Initial commit'",
-        "related": [
-          "git commit",
-          "git commit --amend"
-        ],
-        "variations": [],
-        "id": "commits-1-var7",
-        "category": "commits"
-      },
-      {
-        "command": "git commit -F <file>",
-        "description": "Commit using message from file",
-        "keywords": [
-          "commit from file",
-          "file message",
-          "external message"
-        ],
-        "level": "intermediate",
-        "example": "git commit -F message.txt",
-        "related": [
-          "git commit -m <msg>"
-        ],
-        "variations": [],
-        "id": "commits-1-var8",
-        "category": "commits"
+        "category": "commits",
+        "id": "commits-1-var2"
       },
       {
         "command": "git commit --allow-empty",
-        "description": "Create a commit with no changes",
+        "description": "Create a commit even if there are no staged changes.",
         "keywords": [
           "empty commit",
           "no changes",
-          "force commit"
+          "force commit",
+          "git commit --allow-empty"
         ],
         "level": "advanced",
         "example": "git commit --allow-empty -m 'Trigger build'",
@@ -178,16 +77,17 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-var9",
-        "category": "commits"
+        "category": "commits",
+        "id": "commits-1-var3"
       },
       {
         "command": "git commit --no-verify",
-        "description": "Bypass pre-commit and commit-msg hooks",
+        "description": "Bypass pre-commit and commit-msg hooks.",
         "keywords": [
-          "skip hooks",
           "no verify",
-          "bypass hooks"
+          "skip hooks",
+          "bypass hooks",
+          "git commit --no-verify"
         ],
         "level": "advanced",
         "example": "git commit --no-verify -m 'Quick fix'",
@@ -195,42 +95,8 @@
           "git commit"
         ],
         "variations": [],
-        "id": "commits-1-var10",
-        "category": "commits"
-      },
-      {
-        "command": "git commit --author=<author>",
-        "description": "Specify an explicit author for the commit",
-        "keywords": [
-          "set author",
-          "commit author",
-          "change author"
-        ],
-        "level": "advanced",
-        "example": "git commit --author='Jane <jane@example.com>' -m 'Update'",
-        "related": [
-          "git commit --date=<date>"
-        ],
-        "variations": [],
-        "id": "commits-1-var11",
-        "category": "commits"
-      },
-      {
-        "command": "git commit --date=<date>",
-        "description": "Override the author date for the commit",
-        "keywords": [
-          "set date",
-          "commit date",
-          "change date"
-        ],
-        "level": "advanced",
-        "example": "git commit --date='yesterday' -m 'Backdate commit'",
-        "related": [
-          "git commit --author=<author>"
-        ],
-        "variations": [],
-        "id": "commits-1-var12",
-        "category": "commits"
+        "category": "commits",
+        "id": "commits-1-var4"
       }
     ],
     "id": "commits-1",

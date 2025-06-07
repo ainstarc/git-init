@@ -351,5 +351,66 @@
     ],
     "id": "advancedTools-1",
     "category": "advancedTools"
+  },
+  {
+    "command": "git cherry-pick",
+    "description": "Apply the changes introduced by existing commits onto the current branch. Useful for copying individual commits from one branch to another.",
+    "keywords": [
+      "cherry-pick",
+      "copy commit",
+      "apply commit",
+      "select commit",
+      "move commit",
+      "git cherry-pick",
+      "pick commit",
+      "commit from branch"
+    ],
+    "level": "advanced",
+    "example": "git cherry-pick <commit>",
+    "related": [
+      "git rebase",
+      "git merge",
+      "git commit"
+    ],
+    "variations": [
+      {
+        "command": "git cherry-pick --edit <commit>",
+        "description": "Edit the commit message when cherry-picking.",
+        "keywords": [
+          "edit message",
+          "cherry-pick edit",
+          "change commit message",
+          "git cherry-pick --edit"
+        ],
+        "level": "advanced",
+        "example": "git cherry-pick --edit <commit>",
+        "related": [
+          "git cherry-pick"
+        ],
+        "variations": [],
+        "category": "advancedTools",
+        "id": "advancedTools-2-var1"
+      },
+      {
+        "command": "git cherry-pick --no-commit <commit>",
+        "description": "Apply the changes but do not create a commit automatically.",
+        "keywords": [
+          "no commit",
+          "stage changes",
+          "manual commit",
+          "git cherry-pick --no-commit"
+        ],
+        "level": "advanced",
+        "example": "git cherry-pick --no-commit <commit>",
+        "related": [
+          "git cherry-pick"
+        ],
+        "variations": [],
+        "category": "advancedTools",
+        "id": "advancedTools-2-var2"
+      }
+    ],
+    "category": "advancedTools",
+    "id": "advancedTools-2"
   }
 ]

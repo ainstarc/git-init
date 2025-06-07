@@ -1,14 +1,16 @@
 [
   {
-    "command": "git merge <commit>",
-    "description": "Merge changes from specified commit(s) into the current branch (combine branches or integrate changes)",
+    "command": "git merge",
+    "description": "Join two or more development histories together. Commonly used to combine feature branches into main.",
     "keywords": [
       "merge",
       "combine",
+      "join",
       "integrate",
-      "join branches",
+      "feature branch",
+      "main branch",
       "merge branch",
-      "merge commit",
+      "git merge",
       "resolve conflicts",
       "merge changes"
     ],
@@ -16,12 +18,47 @@
     "example": "git merge feature/login",
     "related": [
       "git rebase",
-      "git cherry-pick",
+      "git branch",
       "git pull",
-      "git merge --abort",
-      "git merge --squash"
+      "git commit"
     ],
     "variations": [
+      {
+        "command": "git merge --no-ff <branch>",
+        "description": "Create a merge commit even if the merge could be resolved as a fast-forward.",
+        "keywords": [
+          "no fast forward",
+          "merge commit",
+          "git merge --no-ff"
+        ],
+        "level": "intermediate",
+        "example": "git merge --no-ff feature/login",
+        "related": [
+          "git merge"
+        ],
+        "variations": [],
+        "category": "merging",
+        "id": "merging-1-var1"
+      },
+      {
+        "command": "git merge --squash <branch>",
+        "description": "Combine all changes from the branch into a single commit on the target branch.",
+        "keywords": [
+          "squash",
+          "single commit",
+          "combine commits",
+          "git merge --squash"
+        ],
+        "level": "advanced",
+        "example": "git merge --squash feature/login",
+        "related": [
+          "git merge",
+          "git rebase"
+        ],
+        "variations": [],
+        "category": "merging",
+        "id": "merging-1-var2"
+      },
       {
         "command": "git merge -n <commit>",
         "description": "Do not show a diffstat at the end of the merge",
@@ -30,7 +67,7 @@
         "example": "git merge -n <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var1",
+        "id": "merging-1-var3",
         "category": "merging"
       },
       {
@@ -41,7 +78,7 @@
         "example": "git merge --stat <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var2",
+        "id": "merging-1-var4",
         "category": "merging"
       },
       {
@@ -52,7 +89,7 @@
         "example": "git merge --no-commit <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var3",
+        "id": "merging-1-var5",
         "category": "merging"
       },
       {
@@ -63,7 +100,7 @@
         "example": "git merge --squash <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var4",
+        "id": "merging-1-var6",
         "category": "merging"
       },
       {
@@ -74,7 +111,7 @@
         "example": "git merge --edit <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var5",
+        "id": "merging-1-var7",
         "category": "merging"
       },
       {
@@ -85,7 +122,7 @@
         "example": "git merge --no-edit <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var6",
+        "id": "merging-1-var8",
         "category": "merging"
       },
       {
@@ -96,7 +133,7 @@
         "example": "git merge --no-verify <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var7",
+        "id": "merging-1-var9",
         "category": "merging"
       },
       {
@@ -107,7 +144,7 @@
         "example": "git merge -s <strategy> <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var8",
+        "id": "merging-1-var10",
         "category": "merging"
       },
       {
@@ -118,7 +155,7 @@
         "example": "git merge -X <strategy-option> <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var9",
+        "id": "merging-1-var11",
         "category": "merging"
       },
       {
@@ -129,7 +166,7 @@
         "example": "git merge -S <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var10",
+        "id": "merging-1-var12",
         "category": "merging"
       },
       {
@@ -140,7 +177,7 @@
         "example": "git merge --allow-unrelated-histories <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var11",
+        "id": "merging-1-var13",
         "category": "merging"
       },
       {
@@ -151,7 +188,7 @@
         "example": "git merge --no-allow-unrelated-histories <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var12",
+        "id": "merging-1-var14",
         "category": "merging"
       },
       {
@@ -162,7 +199,7 @@
         "example": "git merge --rerere-autoupdate <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var13",
+        "id": "merging-1-var15",
         "category": "merging"
       },
       {
@@ -173,7 +210,7 @@
         "example": "git merge --no-rerere-autoupdate <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var14",
+        "id": "merging-1-var16",
         "category": "merging"
       },
       {
@@ -184,7 +221,7 @@
         "example": "git merge -m \"<msg>\" <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var15",
+        "id": "merging-1-var17",
         "category": "merging"
       },
       {
@@ -195,7 +232,7 @@
         "example": "git merge -F <file> <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var16",
+        "id": "merging-1-var18",
         "category": "merging"
       },
       {
@@ -206,7 +243,7 @@
         "example": "git merge --into-name <branch> <commit>",
         "related": [],
         "variations": [],
-        "id": "merging-1-var17",
+        "id": "merging-1-var19",
         "category": "merging"
       },
       {
@@ -217,7 +254,7 @@
         "example": "git merge --continue",
         "related": [],
         "variations": [],
-        "id": "merging-1-var18",
+        "id": "merging-1-var20",
         "category": "merging"
       },
       {
@@ -228,7 +265,7 @@
         "example": "git merge --abort",
         "related": [],
         "variations": [],
-        "id": "merging-1-var19",
+        "id": "merging-1-var21",
         "category": "merging"
       },
       {
@@ -239,7 +276,7 @@
         "example": "git merge --quit",
         "related": [],
         "variations": [],
-        "id": "merging-1-var20",
+        "id": "merging-1-var22",
         "category": "merging"
       }
     ],

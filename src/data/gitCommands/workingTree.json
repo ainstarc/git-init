@@ -1,5 +1,67 @@
 [
   {
+    "command": "git init",
+    "description": "Create a new, empty Git repository or reinitialize an existing one. Sets up all necessary files and directories for version control.",
+    "keywords": [
+      "init",
+      "initialize",
+      "new repo",
+      "create repo",
+      "start project",
+      "git init",
+      "begin version control",
+      "setup repo",
+      "initialize repository"
+    ],
+    "level": "beginner",
+    "example": "git init",
+    "related": [
+      "git clone",
+      "git config"
+    ],
+    "variations": [
+      {
+        "command": "git init --bare",
+        "description": "Create a bare repository (no working directory). Used for remote repositories.",
+        "keywords": [
+          "bare",
+          "bare repo",
+          "no working directory",
+          "server repo",
+          "git init --bare"
+        ],
+        "level": "intermediate",
+        "example": "git init --bare",
+        "related": [
+          "git init"
+        ],
+        "variations": [],
+        "category": "workingTree",
+        "id": "workingTree-1-var1"
+      },
+      {
+        "command": "git init <directory>",
+        "description": "Create a new Git repository in a specified directory.",
+        "keywords": [
+          "directory",
+          "folder",
+          "custom location",
+          "git init <directory>"
+        ],
+        "level": "beginner",
+        "example": "git init my-project",
+        "related": [
+          "git init"
+        ],
+        "variations": [],
+        "category": "workingTree",
+        "id": "workingTree-1-var2"
+      }
+    ],
+    "id": "workingTree-1",
+    "category": "workingTree"
+  },
+  {
     "command": "git restore",
     "description": "Restore working tree files",
     "keywords": [],
@@ -15,7 +77,7 @@
         "example": "git restore [<options>] <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var1",
+        "id": "workingTree-2-var1",
         "category": "workingTree"
       },
       {
@@ -26,7 +88,7 @@
         "example": "git restore --source=<tree> <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var2",
+        "id": "workingTree-2-var2",
         "category": "workingTree"
       },
       {
@@ -37,7 +99,7 @@
         "example": "git restore --staged <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var3",
+        "id": "workingTree-2-var3",
         "category": "workingTree"
       },
       {
@@ -48,7 +110,7 @@
         "example": "git restore --worktree <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var4",
+        "id": "workingTree-2-var4",
         "category": "workingTree"
       },
       {
@@ -59,7 +121,7 @@
         "example": "git restore --pathspec-from-file=<file>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var5",
+        "id": "workingTree-2-var5",
         "category": "workingTree"
       },
       {
@@ -70,11 +132,11 @@
         "example": "git restore --patch <pathspec>",
         "related": [],
         "variations": [],
-        "id": "workingTree-1-var6",
+        "id": "workingTree-2-var6",
         "category": "workingTree"
       }
     ],
-    "id": "workingTree-1",
+    "id": "workingTree-2",
     "category": "workingTree"
   },
   {
@@ -113,7 +175,7 @@
           "git stash show"
         ],
         "variations": [],
-        "id": "workingTree-2-var1",
+        "id": "workingTree-3-var1",
         "category": "workingTree"
       },
       {
@@ -130,7 +192,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-var2",
+        "id": "workingTree-3-var2",
         "category": "workingTree"
       },
       {
@@ -147,7 +209,7 @@
           "git stash show"
         ],
         "variations": [],
-        "id": "workingTree-2-var3",
+        "id": "workingTree-3-var3",
         "category": "workingTree"
       },
       {
@@ -166,7 +228,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-var4",
+        "id": "workingTree-3-var4",
         "category": "workingTree"
       },
       {
@@ -185,7 +247,7 @@
           "git stash list"
         ],
         "variations": [],
-        "id": "workingTree-2-var5",
+        "id": "workingTree-3-var5",
         "category": "workingTree"
       },
       {
@@ -201,7 +263,7 @@
           "git stash apply"
         ],
         "variations": [],
-        "id": "workingTree-2-var6",
+        "id": "workingTree-3-var6",
         "category": "workingTree"
       },
       {
@@ -218,7 +280,7 @@
           "git stash clear"
         ],
         "variations": [],
-        "id": "workingTree-2-var7",
+        "id": "workingTree-3-var7",
         "category": "workingTree"
       },
       {
@@ -235,7 +297,7 @@
           "git stash drop"
         ],
         "variations": [],
-        "id": "workingTree-2-var8",
+        "id": "workingTree-3-var8",
         "category": "workingTree"
       },
       {
@@ -252,7 +314,7 @@
           "git stash push"
         ],
         "variations": [],
-        "id": "workingTree-2-var9",
+        "id": "workingTree-3-var9",
         "category": "workingTree"
       },
       {
@@ -268,7 +330,7 @@
           "git stash store"
         ],
         "variations": [],
-        "id": "workingTree-2-var10",
+        "id": "workingTree-3-var10",
         "category": "workingTree"
       },
       {
@@ -284,11 +346,11 @@
           "git stash create"
         ],
         "variations": [],
-        "id": "workingTree-2-var11",
+        "id": "workingTree-3-var11",
         "category": "workingTree"
       }
     ],
-    "id": "workingTree-2",
+    "id": "workingTree-3",
     "category": "workingTree"
   }
 ]
