@@ -1,21 +1,234 @@
 [
   {
-    "command": "git merge <branch>",
-    "description": "Join two or more development histories together",
-    "category": "merging",
-    "keywords": [
-      "merge",
-      "combine",
-      "branches"
+    "command": "git merge <commit>",
+    "description": "Merge changes from specified commit(s) into the current branch",
+    "keywords": [],
+    "level": "",
+    "example": "git merge <commit>",
+    "related": [],
+    "variations": [
+      {
+        "command": "git merge -n <commit>",
+        "description": "Do not show a diffstat at the end of the merge",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -n <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v1",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --stat <commit>",
+        "description": "Show a diffstat at the end of the merge",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --stat <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v2",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --no-commit <commit>",
+        "description": "Perform the merge but do not commit",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --no-commit <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v3",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --squash <commit>",
+        "description": "Merge changes, but record as a single commit",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --squash <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v4",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --edit <commit>",
+        "description": "Open editor to edit the merge commit message",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --edit <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v5",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --no-edit <commit>",
+        "description": "Use the default merge commit message without prompting",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --no-edit <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v6",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --no-verify <commit>",
+        "description": "Bypass pre-merge and commit-msg hooks",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --no-verify <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v7",
+        "category": "merging"
+      },
+      {
+        "command": "git merge -s <strategy> <commit>",
+        "description": "Use the specified merge strategy",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -s <strategy> <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v8",
+        "category": "merging"
+      },
+      {
+        "command": "git merge -X <strategy-option> <commit>",
+        "description": "Pass merge strategy-specific option",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -X <strategy-option> <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v9",
+        "category": "merging"
+      },
+      {
+        "command": "git merge -S <commit>",
+        "description": "GPG-sign the merge commit",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -S <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v10",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --allow-unrelated-histories <commit>",
+        "description": "Allow merging unrelated project histories",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --allow-unrelated-histories <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v11",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --no-allow-unrelated-histories <commit>",
+        "description": "Do not allow merging unrelated project histories",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --no-allow-unrelated-histories <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v12",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --rerere-autoupdate <commit>",
+        "description": "Allow rerere to update the merge result",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --rerere-autoupdate <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v13",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --no-rerere-autoupdate <commit>",
+        "description": "Disable rerere autoupdating",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --no-rerere-autoupdate <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v14",
+        "category": "merging"
+      },
+      {
+        "command": "git merge -m \"<msg>\" <commit>",
+        "description": "Provide a custom merge commit message",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -m \"<msg>\" <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v15",
+        "category": "merging"
+      },
+      {
+        "command": "git merge -F <file> <commit>",
+        "description": "Read commit message from a file",
+        "keywords": [],
+        "level": "",
+        "example": "git merge -F <file> <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v16",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --into-name <branch> <commit>",
+        "description": "Record the merge target branch name in the merge commit",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --into-name <branch> <commit>",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v17",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --continue",
+        "description": "Resume a merge process that was paused",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --continue",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v18",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --abort",
+        "description": "Abort the current merge and revert changes",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --abort",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v19",
+        "category": "merging"
+      },
+      {
+        "command": "git merge --quit",
+        "description": "Forget about the current merge, but keep changes in working tree",
+        "keywords": [],
+        "level": "",
+        "example": "git merge --quit",
+        "related": [],
+        "variations": [],
+        "id": "merging-1-v20",
+        "category": "merging"
+      }
     ],
-    "level": "advanced",
-    "example": "git merge feature-xyz",
-    "related": [
-      "git merge --no-ff <branch>",
-      "git merge --abort",
-      "git merge --continue"
-    ],
-    "variations": [],
-    "id": "merging-1"
+    "id": "merging-1",
+    "category": "merging"
   }
 ]

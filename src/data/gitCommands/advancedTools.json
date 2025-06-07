@@ -1,0 +1,340 @@
+[
+  {
+    "command": "git notes",
+    "description": "Add or inspect notes attached to objects",
+    "keywords": [],
+    "level": "",
+    "example": "git notes",
+    "related": [],
+    "variations": [
+      {
+        "command": "git notes list",
+        "description": "List notes, optionally for a specific object",
+        "keywords": [],
+        "level": "",
+        "example": "git notes list",
+        "related": [],
+        "variations": [],
+        "id": "advancedTools-1-v1",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes add",
+        "description": "Add a note to an object",
+        "keywords": [],
+        "level": "",
+        "example": "git notes add",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes add -f",
+            "description": "Overwrite existing note",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add -f",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          },
+          {
+            "command": "git notes add --allow-empty",
+            "description": "Allow adding empty notes",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add --allow-empty",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v2"
+          },
+          {
+            "command": "git notes add --separator=<paragraph-break>",
+            "description": "Specify paragraph separator",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add --separator=<paragraph-break>",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v3"
+          },
+          {
+            "command": "git notes add -m <msg>",
+            "description": "Add note with a message",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add -m <msg>",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v4"
+          },
+          {
+            "command": "git notes add -F <file>",
+            "description": "Add note using message from file",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add -F <file>",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v5"
+          },
+          {
+            "command": "git notes add -e",
+            "description": "Edit note message before adding",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes add -e",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v6"
+          }
+        ],
+        "id": "advancedTools-1-v2",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes copy",
+        "description": "Copy notes from one object to another",
+        "keywords": [],
+        "level": "",
+        "example": "git notes copy",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes copy --stdin",
+            "description": "Read from standard input",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes copy --stdin",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          }
+        ],
+        "id": "advancedTools-1-v3",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes append",
+        "description": "Append to existing notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes append",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes append --allow-empty",
+            "description": "Allow empty append",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes append --allow-empty",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          },
+          {
+            "command": "git notes append -m <msg>",
+            "description": "Append a message",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes append -m <msg>",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v2"
+          },
+          {
+            "command": "git notes append -F <file>",
+            "description": "Append message from a file",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes append -F <file>",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v3"
+          }
+        ],
+        "id": "advancedTools-1-v4",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes edit",
+        "description": "Edit notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes edit",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes edit --allow-empty",
+            "description": "Allow empty note",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes edit --allow-empty",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          }
+        ],
+        "id": "advancedTools-1-v5",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes show",
+        "description": "Show notes for an object",
+        "keywords": [],
+        "level": "",
+        "example": "git notes show",
+        "related": [],
+        "variations": [],
+        "id": "advancedTools-1-v6",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes merge",
+        "description": "Merge notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes merge",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes merge -v",
+            "description": "Verbose output",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes merge -v",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          },
+          {
+            "command": "git notes merge -q",
+            "description": "Quiet output",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes merge -q",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v2"
+          },
+          {
+            "command": "git notes merge --commit",
+            "description": "Commit merged notes",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes merge --commit",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v3"
+          },
+          {
+            "command": "git notes merge --abort",
+            "description": "Abort merge of notes",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes merge --abort",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v4"
+          }
+        ],
+        "id": "advancedTools-1-v7",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes remove",
+        "description": "Remove notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes remove",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes remove --ignore-missing",
+            "description": "Ignore if notes are missing",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes remove --ignore-missing",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          },
+          {
+            "command": "git notes remove --stdin",
+            "description": "Read notes to remove from stdin",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes remove --stdin",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v2"
+          }
+        ],
+        "id": "advancedTools-1-v8",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes prune",
+        "description": "Prune notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes prune",
+        "related": [],
+        "variations": [
+          {
+            "command": "git notes prune -n",
+            "description": "Dry run",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes prune -n",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v1"
+          },
+          {
+            "command": "git notes prune -v",
+            "description": "Verbose",
+            "category": "advancedTools",
+            "keywords": [],
+            "level": "",
+            "example": "git notes prune -v",
+            "related": [],
+            "variations": [],
+            "id": "advancedTools-1-v2"
+          }
+        ],
+        "id": "advancedTools-1-v9",
+        "category": "advancedTools"
+      },
+      {
+        "command": "git notes get-ref",
+        "description": "Show reference for notes",
+        "keywords": [],
+        "level": "",
+        "example": "git notes get-ref",
+        "related": [],
+        "variations": [],
+        "id": "advancedTools-1-v10",
+        "category": "advancedTools"
+      }
+    ],
+    "id": "advancedTools-1",
+    "category": "advancedTools"
+  }
+]

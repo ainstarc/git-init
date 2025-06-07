@@ -1,0 +1,777 @@
+[
+  {
+    "command": "git fetch",
+    "description": "Download objects and refs from another repository",
+    "keywords": [
+      "remote",
+      "update",
+      "download",
+      "refs"
+    ],
+    "level": "intermediate",
+    "example": "git fetch origin",
+    "related": [
+      "git pull",
+      "git remote",
+      "git push"
+    ],
+    "variations": [
+      {
+        "command": "git fetch <repository>",
+        "description": "Fetch from the specified remote repository",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch <repository>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v1",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch <repository> <refspec>",
+        "description": "Fetch specific branches or tags using refspec",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch <repository> <refspec>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v2",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch <group>",
+        "description": "Fetch from a configured remote group",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch <group>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v3",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch --multiple <repository>...",
+        "description": "Fetch from multiple repositories in one command",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch --multiple <repository>...",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v4",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch --all",
+        "description": "Fetch from all remotes",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch --all",
+        "related": [],
+        "variations": [
+          {
+            "command": "git fetch --all --prune",
+            "description": "Also remove any remote-tracking references that no longer exist on the remote",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git fetch --all --prune",
+            "related": [],
+            "variations": [],
+            "id": "remotes-1-v1"
+          },
+          {
+            "command": "git fetch --all --tags",
+            "description": "Fetch all tags from all remotes",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git fetch --all --tags",
+            "related": [],
+            "variations": [],
+            "id": "remotes-1-v2"
+          }
+        ],
+        "id": "remotes-1-v5",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch --depth <depth>",
+        "description": "Create a shallow clone with truncated history",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch --depth <depth>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v6",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch --prune",
+        "description": "Remove deleted branches from remotes",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch --prune",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v7",
+        "category": "remotes"
+      },
+      {
+        "command": "git fetch --dry-run",
+        "description": "Show what would be fetched without doing it",
+        "keywords": [],
+        "level": "",
+        "example": "git fetch --dry-run",
+        "related": [],
+        "variations": [],
+        "id": "remotes-1-v8",
+        "category": "remotes"
+      }
+    ],
+    "id": "remotes-1",
+    "category": "remotes"
+  },
+  {
+    "command": "git pull",
+    "description": "Fetch from a remote repository and immediately merge",
+    "keywords": [
+      "pull",
+      "merge",
+      "fetch",
+      "remote"
+    ],
+    "level": "intermediate",
+    "example": "git pull origin main",
+    "related": [
+      "git fetch",
+      "git merge",
+      "git rebase"
+    ],
+    "variations": [
+      {
+        "command": "git pull <repository>",
+        "description": "Pull from a specific remote",
+        "keywords": [],
+        "level": "",
+        "example": "git pull <repository>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v1",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull <repository> <refspec>",
+        "description": "Pull using a specific refspec",
+        "keywords": [],
+        "level": "",
+        "example": "git pull <repository> <refspec>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v2",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --rebase",
+        "description": "Rebase the current branch on top of the upstream branch after fetching",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --rebase",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v3",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --no-rebase",
+        "description": "Disable rebase if enabled in config",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --no-rebase",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v4",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --ff-only",
+        "description": "Refuse to merge and exit if the fast-forward is not possible",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --ff-only",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v5",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --no-commit",
+        "description": "Perform the merge but do not commit",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --no-commit",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v6",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --squash",
+        "description": "Create a single commit from all changes",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --squash",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v7",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --allow-unrelated-histories",
+        "description": "Allow merging unrelated histories",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --allow-unrelated-histories",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v8",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --depth <depth>",
+        "description": "Limit fetching to a specific commit depth",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --depth <depth>",
+        "related": [],
+        "variations": [
+          {
+            "command": "git pull --depth=1",
+            "description": "Fetch only the latest commit (shallow)",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git pull --depth=1",
+            "related": [],
+            "variations": [],
+            "id": "remotes-2-v1"
+          }
+        ],
+        "id": "remotes-2-v9",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --no-tags",
+        "description": "Do not fetch tags",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --no-tags",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v10",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --verbose",
+        "description": "Show more detailed output",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --verbose",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v11",
+        "category": "remotes"
+      },
+      {
+        "command": "git pull --quiet",
+        "description": "Suppress all output",
+        "keywords": [],
+        "level": "",
+        "example": "git pull --quiet",
+        "related": [],
+        "variations": [],
+        "id": "remotes-2-v12",
+        "category": "remotes"
+      }
+    ],
+    "id": "remotes-2",
+    "category": "remotes"
+  },
+  {
+    "command": "git push",
+    "description": "Update remote refs along with associated objects",
+    "keywords": [
+      "push",
+      "remote",
+      "upload",
+      "refs",
+      "branches",
+      "tags"
+    ],
+    "level": "intermediate",
+    "example": "git push origin main",
+    "related": [
+      "git fetch",
+      "git pull"
+    ],
+    "variations": [
+      {
+        "command": "git push <repository>",
+        "description": "Push to a specific remote repository",
+        "keywords": [],
+        "level": "",
+        "example": "git push <repository>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v1",
+        "category": "remotes"
+      },
+      {
+        "command": "git push <repository> <refspec>…​",
+        "description": "Push specific refs to remote",
+        "keywords": [],
+        "level": "",
+        "example": "git push <repository> <refspec>…​",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v2",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --all",
+        "description": "Push all branches",
+        "keywords": [],
+        "level": "",
+        "example": "git push --all",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v3",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --branches",
+        "description": "Push all branches (alias to --all)",
+        "keywords": [],
+        "level": "",
+        "example": "git push --branches",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v4",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --mirror",
+        "description": "Mirror all refs (branches, tags, etc.)",
+        "keywords": [],
+        "level": "",
+        "example": "git push --mirror",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v5",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --tags",
+        "description": "Push all tags",
+        "keywords": [],
+        "level": "",
+        "example": "git push --tags",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v6",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --follow-tags",
+        "description": "Push tags that are referenced by commits",
+        "keywords": [],
+        "level": "",
+        "example": "git push --follow-tags",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v7",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --atomic",
+        "description": "Push all refs or none",
+        "keywords": [],
+        "level": "",
+        "example": "git push --atomic",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v8",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --dry-run",
+        "description": "Simulate push without actually transferring",
+        "keywords": [],
+        "level": "",
+        "example": "git push --dry-run",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v9",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --receive-pack=<git-receive-pack>",
+        "description": "Specify the remote helper program",
+        "keywords": [],
+        "level": "",
+        "example": "git push --receive-pack=<git-receive-pack>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v10",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --repo=<repository>",
+        "description": "Push to an alternate repository",
+        "keywords": [],
+        "level": "",
+        "example": "git push --repo=<repository>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v11",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --force",
+        "description": "Force push (dangerous, overwrites remote history)",
+        "keywords": [],
+        "level": "",
+        "example": "git push --force",
+        "related": [],
+        "variations": [
+          {
+            "command": "git push --force-with-lease",
+            "description": "Force push only if the remote ref is as expected",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --force-with-lease",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v1"
+          },
+          {
+            "command": "git push --force-with-lease=<refname>[:<expect>]",
+            "description": "More precise force-with-lease targeting a specific ref and expected value",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --force-with-lease=<refname>[:<expect>]",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v2"
+          },
+          {
+            "command": "git push --force-if-includes",
+            "description": "Force push only if remote contains the commits",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --force-if-includes",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v3"
+          }
+        ],
+        "id": "remotes-3-v12",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --delete <branch>",
+        "description": "Delete a remote branch",
+        "keywords": [],
+        "level": "",
+        "example": "git push --delete <branch>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v13",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --prune",
+        "description": "Remove remote refs that no longer exist locally",
+        "keywords": [],
+        "level": "",
+        "example": "git push --prune",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v14",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --quiet",
+        "description": "Suppress output",
+        "keywords": [],
+        "level": "",
+        "example": "git push --quiet",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v15",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --verbose",
+        "description": "Show detailed output",
+        "keywords": [],
+        "level": "",
+        "example": "git push --verbose",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v16",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --set-upstream",
+        "description": "Set upstream (tracking) reference for the current branch",
+        "keywords": [],
+        "level": "",
+        "example": "git push --set-upstream",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v17",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --push-option=<string>",
+        "description": "Send push options to the remote",
+        "keywords": [],
+        "level": "",
+        "example": "git push --push-option=<string>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v18",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --signed",
+        "description": "GPG-sign the push",
+        "keywords": [],
+        "level": "",
+        "example": "git push --signed",
+        "related": [],
+        "variations": [
+          {
+            "command": "git push --signed=true",
+            "description": "Force signing",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --signed=true",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v1"
+          },
+          {
+            "command": "git push --signed=false",
+            "description": "Disable signing",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --signed=false",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v2"
+          },
+          {
+            "command": "git push --signed=if-asked",
+            "description": "Sign if requested",
+            "category": "remotes",
+            "keywords": [],
+            "level": "",
+            "example": "git push --signed=if-asked",
+            "related": [],
+            "variations": [],
+            "id": "remotes-3-v3"
+          }
+        ],
+        "id": "remotes-3-v19",
+        "category": "remotes"
+      },
+      {
+        "command": "git push --no-verify",
+        "description": "Bypass pre-push hooks",
+        "keywords": [],
+        "level": "",
+        "example": "git push --no-verify",
+        "related": [],
+        "variations": [],
+        "id": "remotes-3-v20",
+        "category": "remotes"
+      }
+    ],
+    "id": "remotes-3",
+    "category": "remotes"
+  },
+  {
+    "command": "git remote",
+    "description": "Manage set of tracked repositories",
+    "keywords": [
+      "remote",
+      "repository",
+      "add",
+      "remove",
+      "rename",
+      "url",
+      "fetch",
+      "prune"
+    ],
+    "level": "intermediate",
+    "example": "git remote -v",
+    "related": [
+      "git fetch",
+      "git push",
+      "git pull"
+    ],
+    "variations": [
+      {
+        "command": "git remote [-v | --verbose]",
+        "description": "List remote repositories with or without verbose information",
+        "keywords": [],
+        "level": "",
+        "example": "git remote [-v | --verbose]",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v1",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>",
+        "description": "Add a new remote with optional tracking and fetch options",
+        "keywords": [],
+        "level": "",
+        "example": "git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <URL>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v2",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote rename [--[no-]progress] <old> <new>",
+        "description": "Rename an existing remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote rename [--[no-]progress] <old> <new>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v3",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote remove <name>",
+        "description": "Remove a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote remove <name>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v4",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote set-head <name> (-a | --auto | -d | --delete | <branch>)",
+        "description": "Set or delete the default branch (HEAD) for a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote set-head <name> (-a | --auto | -d | --delete | <branch>)",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v5",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote set-branches [--add] <name> <branch>…​",
+        "description": "Change list of branches tracked by a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote set-branches [--add] <name> <branch>…​",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v6",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote get-url [--push] [--all] <name>",
+        "description": "Get URLs for a remote (fetch or push URLs)",
+        "keywords": [],
+        "level": "",
+        "example": "git remote get-url [--push] [--all] <name>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v7",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote set-url [--push] <name> <newurl> [<oldurl>]",
+        "description": "Change the URL of a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote set-url [--push] <name> <newurl> [<oldurl>]",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v8",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote set-url --add [--push] <name> <newurl>",
+        "description": "Add a new URL to a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote set-url --add [--push] <name> <newurl>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v9",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote set-url --delete [--push] <name> <URL>",
+        "description": "Delete a URL from a remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote set-url --delete [--push] <name> <URL>",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v10",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote [-v | --verbose] show [-n] <name>…​",
+        "description": "Show detailed information about remotes",
+        "keywords": [],
+        "level": "",
+        "example": "git remote [-v | --verbose] show [-n] <name>…​",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v11",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote prune [-n | --dry-run] <name>…​",
+        "description": "Prune stale tracking branches for the given remote",
+        "keywords": [],
+        "level": "",
+        "example": "git remote prune [-n | --dry-run] <name>…​",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v12",
+        "category": "remotes"
+      },
+      {
+        "command": "git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]",
+        "description": "Fetch updates from remotes, optionally pruning removed branches",
+        "keywords": [],
+        "level": "",
+        "example": "git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]",
+        "related": [],
+        "variations": [],
+        "id": "remotes-4-v13",
+        "category": "remotes"
+      }
+    ],
+    "id": "remotes-4",
+    "category": "remotes"
+  }
+]

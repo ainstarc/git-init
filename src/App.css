@@ -68,17 +68,27 @@
   text-align: center;
 }
 
+.report-issue-icon {
+  margin-left: 8px;
+  color: var(--danger-color, #f87171); /* red */
+  transition: opacity 0.2s ease;
+}
+
+.report-issue-icon:hover {
+  opacity: 0.8;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .app-container {
     padding: 1rem;
     margin: 1rem;
   }
-  
+
   .category-filters {
     gap: 0.25rem;
   }
-  
+
   .category-button {
     padding: 0.3rem 0.6rem;
     font-size: 0.8rem;

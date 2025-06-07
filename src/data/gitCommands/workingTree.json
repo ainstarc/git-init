@@ -1,20 +1,313 @@
 [
   {
-    "command": "git restore <file>",
-    "description": "Discard changes in the working directory",
-    "category": "workingTree",
-    "keywords": [
-      "restore",
-      "undo",
-      "discard"
+    "command": "git restore",
+    "description": "Restore working tree files",
+    "keywords": [],
+    "level": "",
+    "example": "git restore",
+    "related": [],
+    "variations": [
+      {
+        "command": "git restore [<options>] <pathspec>",
+        "description": "Restore files from the index or another tree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore [<options>] <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v1",
+        "category": "workingTree"
+      },
+      {
+        "command": "git restore --source=<tree> <pathspec>",
+        "description": "Restore files from a specific tree",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --source=<tree> <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v2",
+        "category": "workingTree"
+      },
+      {
+        "command": "git restore --staged <pathspec>",
+        "description": "Restore files in the index (unstage changes)",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --staged <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v3",
+        "category": "workingTree"
+      },
+      {
+        "command": "git restore --worktree <pathspec>",
+        "description": "Restore files in the working directory",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --worktree <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v4",
+        "category": "workingTree"
+      },
+      {
+        "command": "git restore --pathspec-from-file=<file>",
+        "description": "Read pathspec from a file",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --pathspec-from-file=<file>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v5",
+        "category": "workingTree"
+      },
+      {
+        "command": "git restore --patch <pathspec>",
+        "description": "Interactively select hunks of changes to restore",
+        "keywords": [],
+        "level": "",
+        "example": "git restore --patch <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-1-v6",
+        "category": "workingTree"
+      }
     ],
-    "level": "beginner",
-    "example": "git restore README.md",
-    "related": [
-      "git checkout -- <file>",
-      "git reset HEAD <file>"
+    "id": "workingTree-1",
+    "category": "workingTree"
+  },
+  {
+    "command": "git stash",
+    "description": "Stash the changes in a dirty working directory away",
+    "keywords": [],
+    "level": "",
+    "example": "git stash",
+    "related": [],
+    "variations": [
+      {
+        "command": "git stash list",
+        "description": "Show the list of stashed changes",
+        "keywords": [],
+        "level": "",
+        "example": "git stash list",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v1",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash show",
+        "description": "Show the changes recorded in the latest stash",
+        "keywords": [],
+        "level": "",
+        "example": "git stash show",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v2",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash show -u",
+        "description": "Include untracked files in the stash diff",
+        "keywords": [],
+        "level": "",
+        "example": "git stash show -u",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v3",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash pop",
+        "description": "Apply the latest stash and remove it",
+        "keywords": [],
+        "level": "",
+        "example": "git stash pop",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v4",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash apply",
+        "description": "Apply the latest stash without removing it",
+        "keywords": [],
+        "level": "",
+        "example": "git stash apply",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v5",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash apply --index",
+        "description": "Reinstate the staged changes too when applying",
+        "keywords": [],
+        "level": "",
+        "example": "git stash apply --index",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v6",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash drop",
+        "description": "Remove a single stash entry",
+        "keywords": [],
+        "level": "",
+        "example": "git stash drop",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v7",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash clear",
+        "description": "Remove all stash entries",
+        "keywords": [],
+        "level": "",
+        "example": "git stash clear",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v8",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash save <message>",
+        "description": "Legacy command to save changes with a message",
+        "keywords": [],
+        "level": "",
+        "example": "git stash save <message>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v9",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash create",
+        "description": "Create a stash object from the working directory but do not store it",
+        "keywords": [],
+        "level": "",
+        "example": "git stash create",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v10",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash store <commit>",
+        "description": "Store a given commit as a stash entry",
+        "keywords": [],
+        "level": "",
+        "example": "git stash store <commit>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v11",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash branch <branchname>",
+        "description": "Create and switch to a new branch based on a stash",
+        "keywords": [],
+        "level": "",
+        "example": "git stash branch <branchname>",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-2-v12",
+        "category": "workingTree"
+      },
+      {
+        "command": "git stash push",
+        "description": "Stash changes using the modern push syntax",
+        "keywords": [],
+        "level": "",
+        "example": "git stash push",
+        "related": [],
+        "variations": [
+          {
+            "command": "git stash push -u",
+            "description": "Include untracked files in the stash",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -u",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v1"
+          },
+          {
+            "command": "git stash push -a",
+            "description": "Include all ignored and untracked files",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -a",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v2"
+          },
+          {
+            "command": "git stash push -p",
+            "description": "Interactively select hunks to stash",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -p",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v3"
+          },
+          {
+            "command": "git stash push -k",
+            "description": "Keep the staged index intact",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -k",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v4"
+          },
+          {
+            "command": "git stash push -m <message>",
+            "description": "Add a message to the stash",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -m <message>",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v5"
+          },
+          {
+            "command": "git stash push --staged",
+            "description": "Only stash staged changes",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push --staged",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v6"
+          },
+          {
+            "command": "git stash push -- path/to/file",
+            "description": "Stash changes in specific paths",
+            "category": "workingTree",
+            "keywords": [],
+            "level": "",
+            "example": "git stash push -- path/to/file",
+            "related": [],
+            "variations": [],
+            "id": "workingTree-2-v7"
+          }
+        ],
+        "id": "workingTree-2-v13",
+        "category": "workingTree"
+      }
     ],
-    "variations": [],
-    "id": "workingTree-1"
+    "id": "workingTree-2",
+    "category": "workingTree"
   }
 ]

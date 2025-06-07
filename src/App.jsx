@@ -39,21 +39,25 @@ export default function App() {
   ];
 
   const flatCommands = useMemo(() => {
-    return gitCommands.flatMap((cmd) => {
-      const base = { ...cmd, isVariation: false };
-      const variations = (cmd.variations || []).map((variation) => ({
-        ...variation,
-        parentCommand: cmd.command,
-        isVariation: true,
-      }));
-      return [base, ...variations];
-    });
+    const flattenVariations = (cmd, parentCommand = null) => {
+      const base = {
+        ...cmd,
+        isVariation: !!parentCommand,
+        parentCommand: parentCommand || null,
+      };
+      const nestedVariations = (cmd.variations || []).flatMap((variation) =>
+        flattenVariations(variation, base.command)
+      );
+      return [base, ...nestedVariations];
+    };
+
+    return gitCommands.flatMap((cmd) => flattenVariations(cmd));
   }, []);
 
   const fuse = useMemo(() => {
     return new Fuse(flatCommands, {
       keys: [
-        { name: "command", weight: 1 },
+        { name: "command", weight: 2 },
         { name: "description", weight: 0.7 },
         { name: "keywords", weight: 0.9 },
         { name: "category", weight: 0.5 },
@@ -61,36 +65,43 @@ export default function App() {
       threshold: 0.4,
       includeScore: true,
     });
-  }, [flatCommands]); 
+  }, [flatCommands]);
 
   useEffect(() => {
-    let filteredResults;
+  // Filter commands by active category
+  const filteredCommands =
+    activeCategory === "all"
+      ? flatCommands
+      : flatCommands.filter((cmd) => cmd.category === activeCategory);
 
-    if (activeCategory === "all") {
-      filteredResults = flatCommands;
-    } else {
-      filteredResults = flatCommands.filter(
-        (cmd) => cmd.category === activeCategory
-      );
-    }
+  if (!query) {
+    // If no search query, show all filtered commands
+    setResults(filteredCommands);
+    return;
+  }
 
-    if (!query) {
-      setResults(filteredResults);
-    } else {
-      const searchResults = fuse.search(query);
+  // Create a new Fuse instance on filtered commands only
+  const fuseByCategory = new Fuse(filteredCommands, {
+    keys: [
+      { name: "command", weight: 2 },
+      { name: "description", weight: 0.7 },
+      { name: "keywords", weight: 0.9 },
+      { name: "category", weight: 0.5 },
+    ],
+    threshold: 0.4,
+    includeScore: true,
+  });
 
-      const finalResults = searchResults
-        .filter(
-          (result) =>
-            activeCategory === "all" || result.item.category === activeCategory
-        )
-        .map((result) => result.item);
+  // Perform fuzzy search on filtered commands
+  const searchResults = fuseByCategory.search(query);
 
-      setResults(finalResults);
-    }
+  // Map results to commands
+  setResults(searchResults.map((res) => res.item));
 
-    setFocusedIndex(-1);
-  }, [query, activeCategory, flatCommands, fuse]);
+  // Reset focused index
+  setFocusedIndex(-1);
+}, [query, activeCategory, flatCommands]);
+
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {

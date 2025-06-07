@@ -1,21 +1,303 @@
 [
   {
-    "command": "git add <file>",
-    "description": "Add file contents to the staging area (index)",
-    "category": "staging",
-    "keywords": [
-      "add",
-      "stage",
-      "index"
+    "command": "git add <pathspec>",
+    "description": "Add file contents to the index (staging area)",
+    "keywords": [],
+    "level": "",
+    "example": "git add <pathspec>",
+    "related": [],
+    "variations": [
+      {
+        "command": "git add --verbose <pathspec>",
+        "description": "Show files as they are added",
+        "keywords": [],
+        "level": "",
+        "example": "git add --verbose <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v1",
+        "category": "staging"
+      },
+      {
+        "command": "git add -v <pathspec>",
+        "description": "Shorthand for --verbose",
+        "keywords": [],
+        "level": "",
+        "example": "git add -v <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v2",
+        "category": "staging"
+      },
+      {
+        "command": "git add --dry-run <pathspec>",
+        "description": "Show what would be added, but don’t actually add",
+        "keywords": [],
+        "level": "",
+        "example": "git add --dry-run <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v3",
+        "category": "staging"
+      },
+      {
+        "command": "git add -n <pathspec>",
+        "description": "Shorthand for --dry-run",
+        "keywords": [],
+        "level": "",
+        "example": "git add -n <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v4",
+        "category": "staging"
+      },
+      {
+        "command": "git add --force <pathspec>",
+        "description": "Add files even if they are ignored",
+        "keywords": [],
+        "level": "",
+        "example": "git add --force <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v5",
+        "category": "staging"
+      },
+      {
+        "command": "git add -f <pathspec>",
+        "description": "Shorthand for --force",
+        "keywords": [],
+        "level": "",
+        "example": "git add -f <pathspec>",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v6",
+        "category": "staging"
+      },
+      {
+        "command": "git add --interactive",
+        "description": "Interactively choose patches to add",
+        "keywords": [],
+        "level": "",
+        "example": "git add --interactive",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v7",
+        "category": "staging"
+      },
+      {
+        "command": "git add -i",
+        "description": "Shorthand for --interactive",
+        "keywords": [],
+        "level": "",
+        "example": "git add -i",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v8",
+        "category": "staging"
+      },
+      {
+        "command": "git add --patch",
+        "description": "Interactively choose hunks of patch between the index and the work tree",
+        "keywords": [],
+        "level": "",
+        "example": "git add --patch",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v9",
+        "category": "staging"
+      },
+      {
+        "command": "git add -p",
+        "description": "Shorthand for --patch",
+        "keywords": [],
+        "level": "",
+        "example": "git add -p",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v10",
+        "category": "staging"
+      },
+      {
+        "command": "git add --edit",
+        "description": "Edit current patch before adding",
+        "keywords": [],
+        "level": "",
+        "example": "git add --edit",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v11",
+        "category": "staging"
+      },
+      {
+        "command": "git add -e",
+        "description": "Shorthand for --edit",
+        "keywords": [],
+        "level": "",
+        "example": "git add -e",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v12",
+        "category": "staging"
+      },
+      {
+        "command": "git add --all",
+        "description": "Add changes from all tracked and untracked files",
+        "keywords": [],
+        "level": "",
+        "example": "git add --all",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v13",
+        "category": "staging"
+      },
+      {
+        "command": "git add -A",
+        "description": "Shorthand for --all",
+        "keywords": [],
+        "level": "",
+        "example": "git add -A",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v14",
+        "category": "staging"
+      },
+      {
+        "command": "git add --update",
+        "description": "Add changes from tracked files only",
+        "keywords": [],
+        "level": "",
+        "example": "git add --update",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v15",
+        "category": "staging"
+      },
+      {
+        "command": "git add -u",
+        "description": "Shorthand for --update",
+        "keywords": [],
+        "level": "",
+        "example": "git add -u",
+        "related": [],
+        "variations": [],
+        "id": "staging-1-v16",
+        "category": "staging"
+      }
     ],
-    "level": "beginner",
-    "example": "git add README.md",
-    "related": [
-      "git add .",
-      "git add -A",
-      "git reset <file>"
+    "id": "staging-1",
+    "category": "staging"
+  },
+  {
+    "command": "git reset",
+    "description": "Reset current HEAD to the specified state, optionally modifying the index and working directory",
+    "keywords": [],
+    "level": "",
+    "example": "git reset",
+    "related": [],
+    "variations": [
+      {
+        "command": "git reset [<commit>]",
+        "description": "Reset HEAD to specified commit with default mixed mode",
+        "keywords": [],
+        "level": "",
+        "example": "git reset [<commit>]",
+        "related": [],
+        "variations": [
+          {
+            "command": "git reset --soft [<commit>]",
+            "description": "Reset HEAD only, leaving index and working tree unchanged",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset --soft [<commit>]",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v1"
+          },
+          {
+            "command": "git reset --mixed [<commit>]",
+            "description": "Reset HEAD and index, but not working tree (default)",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset --mixed [<commit>]",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v2"
+          },
+          {
+            "command": "git reset --hard [<commit>]",
+            "description": "Reset HEAD, index, and working tree to match commit",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset --hard [<commit>]",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v3"
+          },
+          {
+            "command": "git reset --merge [<commit>]",
+            "description": "Reset with merge conflict detection",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset --merge [<commit>]",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v4"
+          },
+          {
+            "command": "git reset --keep [<commit>]",
+            "description": "Reset but keep local changes",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset --keep [<commit>]",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v5"
+          }
+        ],
+        "id": "staging-2-v1",
+        "category": "staging"
+      },
+      {
+        "command": "git reset -q [<tree-ish>] [--] <pathspec>",
+        "description": "Quietly reset the index entries for specified paths to the state of <tree-ish>",
+        "keywords": [],
+        "level": "",
+        "example": "git reset -q [<tree-ish>] [--] <pathspec>",
+        "related": [],
+        "variations": [
+          {
+            "command": "git reset -q [--patch | -p] [<tree-ish>] [--] <pathspec>",
+            "description": "Interactively reset hunks of the index",
+            "category": "staging",
+            "keywords": [],
+            "level": "",
+            "example": "git reset -q [--patch | -p] [<tree-ish>] [--] <pathspec>",
+            "related": [],
+            "variations": [],
+            "id": "staging-2-v1"
+          }
+        ],
+        "id": "staging-2-v2",
+        "category": "staging"
+      },
+      {
+        "command": "git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]",
+        "description": "Reset paths specified in a file",
+        "keywords": [],
+        "level": "",
+        "example": "git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]",
+        "related": [],
+        "variations": [],
+        "id": "staging-2-v3",
+        "category": "staging"
+      }
     ],
-    "variations": [],
-    "id": "staging-1"
+    "id": "staging-2",
+    "category": "staging"
   }
 ]

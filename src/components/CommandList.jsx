@@ -11,9 +11,7 @@ export default function CommandList({
   if (results.length === 0) {
     return (
       <div className="no-results">
-        <p className="no-results-title">
-          No commands found.
-        </p>
+        <p className="no-results-title">No commands found.</p>
         <p className="no-results-subtitle">
           Try different keywords or check the spelling.
         </p>
@@ -24,9 +22,9 @@ export default function CommandList({
   return (
     <div className="command-list">
       <p className="results-count">
-        Found {results.length} command{results.length !== 1 ? 's' : ''}
+        Found {results.length} command{results.length !== 1 ? "s" : ""}
       </p>
-      
+
       <ul className="command-list-container">
         {results.map((command, index) => (
           <CommandItem
