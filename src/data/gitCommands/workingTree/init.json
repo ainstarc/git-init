@@ -1,0 +1,64 @@
+[
+  {
+    "command": "git init",
+    "description": "Create a new, empty Git repository or reinitialize an existing one. Sets up all necessary files and directories for version control.",
+    "keywords": [
+      "init",
+      "initialize",
+      "new repo",
+      "create repo",
+      "start project",
+      "git init",
+      "begin version control",
+      "setup repo",
+      "initialize repository"
+    ],
+    "level": "beginner",
+    "example": "git init",
+    "related": [
+      "git clone",
+      "git config"
+    ],
+    "variations": [
+      {
+        "command": "git init --bare",
+        "description": "Create a bare repository (no working directory). Used for remote repositories.",
+        "keywords": [
+          "bare",
+          "bare repo",
+          "no working directory",
+          "server repo",
+          "git init --bare"
+        ],
+        "level": "intermediate",
+        "example": "git init --bare",
+        "related": [
+          "git init"
+        ],
+        "variations": [],
+        "category": "workingTree",
+        "id": "workingTree-1-var1"
+      },
+      {
+        "command": "git init <directory>",
+        "description": "Create a new Git repository in a specified directory.",
+        "keywords": [
+          "directory",
+          "folder",
+          "custom location",
+          "git init <directory>"
+        ],
+        "level": "beginner",
+        "example": "git init my-project",
+        "related": [
+          "git init"
+        ],
+        "variations": [],
+        "category": "workingTree",
+        "id": "workingTree-1-var2"
+      }
+    ],
+    "id": "workingTree-1",
+    "category": "workingTree"
+  }
+]

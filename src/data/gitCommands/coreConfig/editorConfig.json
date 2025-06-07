@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git config --global core.editor 'vim'",
+    "description": "Set the default editor for Git globally to Vim.",
+    "keywords": ["editor", "core.editor", "set editor", "vim", "default editor", "git config editor"],
+    "level": "intermediate",
+    "example": "git config --global core.editor 'vim'",
+    "related": ["git config"],
+    "variations": []
+  },
+  {
+    "command": "git config --global core.editor 'code --wait'",
+    "description": "Set Visual Studio Code as the default editor for Git globally.",
+    "keywords": ["editor", "core.editor", "set editor", "vscode", "visual studio code", "git config editor"],
+    "level": "intermediate",
+    "example": "git config --global core.editor 'code --wait'",
+    "related": ["git config"],
+    "variations": []
+  }
+]

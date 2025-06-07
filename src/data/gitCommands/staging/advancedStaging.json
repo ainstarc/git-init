@@ -1,0 +1,23 @@
+[
+  {
+    "command": "git add --patch",
+    "description": "Interactively choose hunks of changes to stage (partial staging).",
+    "keywords": [
+      "patch",
+      "interactive",
+      "partial",
+      "hunk",
+      "choose changes",
+      "git add --patch"
+    ],
+    "level": "advanced",
+    "example": "git add --patch",
+    "related": [
+      "git add",
+      "git diff"
+    ],
+    "variations": [],
+    "category": "staging",
+    "id": "staging-1-var21"
+  }
+]

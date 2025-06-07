@@ -8,157 +8,41 @@ import UpdateNotification from "./components/UpdateNotification";
 import { useThemeContext } from "./context/ThemeContext";
 import FaviconSwitcher from "./components/FaviconSwitcher";
 
-import gitCommands from "./data/gitCommands";
+import coreConfig from "./data/gitCommands/coreConfig";
+import staging from "./data/gitCommands/staging";
+import commits from "./data/gitCommands/commits";
+import branching from "./data/gitCommands/branching";
+import remotes from "./data/gitCommands/remotes";
+import merging from "./data/gitCommands/merging";
+import tagging from "./data/gitCommands/tagging";
+import workingTree from "./data/gitCommands/workingTree";
+import inspection from "./data/gitCommands/inspection";
+import advancedTools from "./data/gitCommands/advancedTools";
 import phrases from "./data/gitCommands/phrases.json";
+import { CATEGORIES } from "./constants/themes";
+import {
+  cleanQuery,
+  expandWithSynonyms,
+  findPhraseMatches,
+  getHighlightTerms,
+} from "./utils/searchUtils";
+import styles from "./App.module.css";
+
 import "./styles/themes.css";
-import "./App.css";
 
-const STOP_WORDS = new Set([
-  "the",
-  "a",
-  "an",
-  "to",
-  "for",
-  "of",
-  "on",
-  "in",
-  "with",
-  "and",
-  "or",
-  "by",
-  "from",
-  "at",
-  "as",
-  "is",
-  "are",
-  "be",
-  "this",
-  "that",
-  "it",
-  "my",
-  "your",
-  "their",
-  "our",
-  "was",
-  "were",
-  "can",
-  "will",
-  "should",
-  "do",
-  "does",
-  "did",
-  "but",
-  "if",
-  "so",
-  "just",
-  "about",
-  "into",
-  "out",
-  "up",
-  "down",
-  "over",
-  "under",
-  "then",
-  "than",
-  "after",
-  "before",
-  "when",
-  "while",
-  "which",
-  "who",
-  "whom",
-  "whose",
-  "how",
-  "what",
-  "why",
-  "where",
-  "all",
-  "any",
-  "each",
-  "few",
-  "more",
-  "most",
-  "other",
-  "some",
-  "such",
-  "no",
-  "nor",
-  "not",
-  "only",
-  "own",
-  "same",
-  "too",
-  "very",
-  "s",
-  "t",
-  "can",
-  "will",
-  "don",
-  "should",
-  "now",
-]);
-
-function cleanQuery(query) {
-  return query
-    .toLowerCase()
-    .split(/\s+/)
-    .filter((word) => !STOP_WORDS.has(word))
-    .join(" ");
-}
-
-// Synonym map for expansion (add more as needed)
-const SYNONYMS = {
-  repo: ["repository", "project"],
-  commit: ["save", "record", "snapshot"],
-  push: ["upload", "send"],
-  pull: ["fetch", "download", "sync"],
-  branch: ["switch", "checkout", "change"],
-  revert: ["undo", "reset"],
-  status: ["changed", "unstaged", "staged"],
-  history: ["log"],
-  add: ["stage", "track"],
-  file: ["files"],
-};
-
-function expandWithSynonyms(query) {
-  const words = query.split(/\s+/);
-  let expanded = [...words];
-  for (const word of words) {
-    for (const [key, syns] of Object.entries(SYNONYMS)) {
-      if (word === key || syns.includes(word)) {
-        expanded.push(key, ...syns);
-      }
-    }
-  }
-  // Remove duplicates
-  return Array.from(new Set(expanded)).join(" ");
-}
-
-// Helper: Find phrase matches for a query
-function findPhraseMatches(query) {
-  const cleaned = cleanQuery(query);
-  if (!cleaned) return [];
-  const queryTokens = new Set(cleaned.split(/\s+/));
-  return phrases.filter((phraseObj) => {
-    // Tokenize phrase and keywords
-    const phraseTokens = phraseObj.phrase.toLowerCase().split(/\s+/);
-    const keywordTokens = (phraseObj.keywords || []).flatMap((k) =>
-      k.toLowerCase().split(/\s+/)
-    );
-    // If any phrase/keyword token is in the query, consider it a match
-    return [...phraseTokens, ...keywordTokens].some((token) =>
-      queryTokens.has(token)
-    );
-  });
-}
-
-// Get highlight terms from query
-function getHighlightTerms(query) {
-  // Remove stop words, expand synonyms, split to terms
-  let cleaned = cleanQuery(query);
-  cleaned = expandWithSynonyms(cleaned);
-  return cleaned.split(/\s+/).filter(Boolean);
-}
+// Combine all commands modularly
+const gitCommands = [
+  ...coreConfig,
+  ...staging,
+  ...commits,
+  ...branching,
+  ...remotes,
+  ...merging,
+  ...tagging,
+  ...workingTree,
+  ...inspection,
+  ...advancedTools,
+];
 
 export default function App() {
   const [query, setQuery] = useState("");
@@ -169,21 +53,6 @@ export default function App() {
   const [showAll, setShowAll] = useState(false);
 
   useThemeContext();
-
-  // Define all categories
-  const categories = [
-    { id: "all", name: "All Commands" },
-    { id: "coreConfig", name: "Core Config" },
-    { id: "staging", name: "Staging" },
-    { id: "commits", name: "Commits" },
-    { id: "branching", name: "Branching" },
-    { id: "remotes", name: "Remotes" },
-    { id: "merging", name: "Merging" },
-    { id: "tagging", name: "Tagging" },
-    { id: "inspection", name: "Inspection" },
-    { id: "workingTree", name: "Working Tree" },
-    { id: "advancedTools", name: "Advanced Tools" },
-  ];
 
   // Flatten commands + their variations for search
   const flatCommands = useMemo(() => {
@@ -199,7 +68,7 @@ export default function App() {
       return [base, ...nested];
     };
     return gitCommands.flatMap((cmd) => flattenVariations(cmd));
-  }, []);
+  }, [gitCommands]);
 
   // Initialize Fuse with full command list
   const fuse = useMemo(() => {
@@ -227,9 +96,12 @@ export default function App() {
     let phraseMatches = findPhraseMatches(query);
     let phraseCommands = [];
     if (phraseMatches.length > 0) {
-      // Try to find the actual command object(s) for each phrase's suggestedCommand
       phraseCommands = phraseMatches
-        .map((pm) => flatCommands.find((cmd) => cmd.command === pm.suggestedCommand))
+        .map((pm) =>
+          flatCommands.find((cmd) =>
+            cmd.command && pm.suggestedCommand && cmd.command.startsWith(pm.suggestedCommand)
+          )
+        )
         .filter(Boolean);
     }
     let searchResults = [];
@@ -239,12 +111,19 @@ export default function App() {
           ? flatCommands
           : flatCommands.filter((cmd) => cmd.category === activeCategory);
     } else {
+      // Prefer exact command matches first, then fuzzy
+      const exactMatches = flatCommands.filter(cmd =>
+        cmd.command.toLowerCase() === cleaned
+      );
       const fuseResults = fuse.search(cleaned);
       const filtered =
         activeCategory === "all"
           ? fuseResults
           : fuseResults.filter((res) => res.item.category === activeCategory);
-      searchResults = filtered.map((res) => res.item);
+      searchResults = [
+        ...exactMatches,
+        ...filtered.map((res) => res.item).filter(cmd => !exactMatches.includes(cmd))
+      ];
     }
     // Merge phraseCommands at the top, dedupe
     const merged = [
@@ -281,15 +160,15 @@ export default function App() {
   const MAX_RESULTS = 12;
 
   return (
-    <div className="app-container">
+    <div className={styles.appContainer}>
       <FaviconSwitcher />
 
-      <header className="app-header">
+      <header className={styles.appHeader}>
         <h1>git-init</h1>
         <ThemeSelector />
       </header>
 
-      <p className="app-description">
+      <p className={styles.appDescription}>
         Search for Git commands using natural language – try "start a repo",
         "undo commit", or "switch branch"
       </p>
@@ -297,16 +176,16 @@ export default function App() {
       <SearchBar query={query} setQuery={setQuery} onKeyDown={handleKeyDown} />
 
       <div
-        className="category-filters"
+        className={styles.categoryFilters}
         role="tablist"
         aria-label="Command categories"
       >
-        {categories.map((category) => (
+        {CATEGORIES.map((category) => (
           <button
             key={category.id}
             onClick={() => setActiveCategory(category.id)}
-            className={`category-button ${
-              activeCategory === category.id ? "active" : ""
+            className={`${styles.categoryButton} ${
+              activeCategory === category.id ? styles.active : ""
             }`}
             aria-pressed={activeCategory === category.id}
             aria-label={`Filter by ${category.name}`}
@@ -324,16 +203,16 @@ export default function App() {
         highlightTerms={getHighlightTerms(query)}
       />
       {results.length > MAX_RESULTS && !showAll && (
-        <div className="show-more-container">
-          <button className="show-more-btn" onClick={() => setShowAll(true)}>
+        <div className={styles.showMoreContainer}>
+          <button className={styles.showMoreBtn} onClick={() => setShowAll(true)}>
             Show More ({results.length - MAX_RESULTS} more)
           </button>
         </div>
       )}
 
-      <footer className="app-footer">
+      <footer className={styles.appFooter}>
         <p>Find the perfect Git command for any task</p>
-        <p className="keyboard-hint">Use ↑ ↓ and Enter to copy quickly</p>
+        <p className={styles.keyboardHint}>Use ↑ ↓ and Enter to copy quickly</p>
       </footer>
 
       <UpdateNotification />

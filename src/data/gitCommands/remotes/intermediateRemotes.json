@@ -1,0 +1,30 @@
+[
+  {
+    "command": "git remote show <name>",
+    "description": "Display detailed information about a specific remote, including fetch/push URLs and tracking branches.",
+    "keywords": [
+      "show remote",
+      "remote info",
+      "display remote",
+      "git remote show"
+    ],
+    "level": "intermediate",
+    "example": "git remote show origin",
+    "related": [
+      "git remote",
+      "git fetch"
+    ],
+    "variations": [],
+    "category": "remotes",
+    "id": "remotes-4-var5"
+  },
+  {
+    "command": "git remote set-url <name> <newurl>",
+    "description": "Change the URL of an existing remote repository.",
+    "keywords": ["set url", "change url", "update remote url", "git remote set-url"],
+    "level": "intermediate",
+    "example": "git remote set-url origin https://github.com/user/newrepo.git",
+    "related": ["git remote"],
+    "variations": []
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "command": "git clean",
+    "description": "Remove untracked files from the working tree.",
+    "keywords": [
+      "clean",
+      "remove untracked",
+      "delete files",
+      "git clean"
+    ],
+    "level": "intermediate",
+    "example": "git clean -fd",
+    "related": [
+      "git status"
+    ],
+    "variations": [
+      {
+        "command": "git clean -f",
+        "description": "Force removal of untracked files.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -f",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var1",
+        "category": "workingTree"
+      },
+      {
+        "command": "git clean -fd",
+        "description": "Force removal of untracked files and directories.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -fd",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var2",
+        "category": "workingTree"
+      },
+      {
+        "command": "git clean -n",
+        "description": "Show what would be removed without actually removing.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -n",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var3",
+        "category": "workingTree"
+      }
+    ],
+    "id": "workingTree-4",
+    "category": "workingTree"
+  }
+]

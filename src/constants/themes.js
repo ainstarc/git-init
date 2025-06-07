@@ -23,3 +23,18 @@ export const CATEGORY_COLORS = {
   workingTree: "#00cec9",
   advancedTools: "#b2bec3",
 };
+
+// Category definitions
+export const CATEGORIES = [
+  { id: "all", name: "All Commands" },
+  { id: "coreConfig", name: "Core Config" },
+  { id: "staging", name: "Staging" },
+  { id: "commits", name: "Commits" },
+  { id: "branching", name: "Branching" },
+  { id: "remotes", name: "Remotes" },
+  { id: "merging", name: "Merging" },
+  { id: "tagging", name: "Tagging" },
+  { id: "inspection", name: "Inspection" },
+  { id: "workingTree", name: "Working Tree" },
+  { id: "advancedTools", name: "Advanced Tools" },
+];

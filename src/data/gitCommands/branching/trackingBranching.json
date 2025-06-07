@@ -1,0 +1,81 @@
+[
+  {
+    "command": "git branch --track",
+    "description": "Set up a new branch to track a remote branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --track",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --track feature origin/feature",
+        "description": "Create and track branch 'feature' from remote",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --track feature origin/feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var15-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch --no-track feature",
+        "description": "Create branch 'feature' without tracking",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --no-track feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var15-var2",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var15",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --set-upstream-to",
+    "description": "Set upstream for branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --set-upstream-to",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --set-upstream-to=origin/main feature",
+        "description": "Set 'feature' branch to track 'origin/main'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --set-upstream-to=origin/main feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var18-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch -u origin/main feature",
+        "description": "Shorter syntax to set upstream",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -u origin/main feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var18-var2",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var18",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --unset-upstream",
+    "description": "Unset upstream tracking branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --unset-upstream",
+    "related": [],
+    "variations": [],
+    "id": "branching-1-var19",
+    "category": "branching"
+  }
+]

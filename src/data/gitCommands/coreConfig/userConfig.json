@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git config --global user.name '<name>'",
+    "description": "Set the global user name for all repositories.",
+    "keywords": ["user name", "global", "set name", "git config --global user.name"],
+    "level": "beginner",
+    "example": "git config --global user.name 'Alice'",
+    "related": ["git config"],
+    "variations": []
+  },
+  {
+    "command": "git config --global user.email '<email>'",
+    "description": "Set the global user email for all repositories.",
+    "keywords": ["user email", "global", "set email", "git config --global user.email"],
+    "level": "beginner",
+    "example": "git config --global user.email 'alice@example.com'",
+    "related": ["git config"],
+    "variations": []
+  }
+]

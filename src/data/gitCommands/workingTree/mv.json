@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git mv",
+    "description": "Move or rename a file, a directory, or a symlink.",
+    "keywords": [
+      "move",
+      "rename",
+      "git mv"
+    ],
+    "level": "beginner",
+    "example": "git mv oldname.txt newname.txt",
+    "related": [
+      "git add",
+      "git rm"
+    ],
+    "variations": [],
+    "id": "workingTree-5",
+    "category": "workingTree"
+  }
+]

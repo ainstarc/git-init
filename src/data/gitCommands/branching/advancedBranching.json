@@ -1,0 +1,162 @@
+[
+  {
+    "command": "git branch --merged",
+    "description": "List branches merged into current HEAD",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --merged",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --merged develop",
+        "description": "List branches merged into 'develop'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --merged develop",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var6-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var6",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --no-merged",
+    "description": "List branches not merged into current HEAD",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --no-merged",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --no-merged feature-xyz",
+        "description": "List branches not merged into 'feature-xyz'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --no-merged feature-xyz",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var7-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var7",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --contains",
+    "description": "List branches containing a commit",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --contains",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --contains abc1234",
+        "description": "List branches containing commit abc1234",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --contains abc1234",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var8-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var8",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --no-contains",
+    "description": "List branches not containing a commit",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --no-contains",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --no-contains abc1234",
+        "description": "List branches not containing commit abc1234",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --no-contains abc1234",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var9-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var9",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --points-at",
+    "description": "List branches pointing at a specific object",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --points-at",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --points-at HEAD",
+        "description": "List branches pointing at HEAD",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --points-at HEAD",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var10-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var10",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --format",
+    "description": "Format branch output",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --format",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --format='%(refname:short)'",
+        "description": "Show short branch names only",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --format='%(refname:short)'",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var11-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var11",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --recurse-submodules",
+    "description": "Recurse into submodules when listing branches",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --recurse-submodules",
+    "related": [],
+    "variations": [],
+    "id": "branching-1-var17",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --edit-description",
+    "description": "Edit the description of a branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --edit-description",
+    "related": [],
+    "variations": [],
+    "id": "branching-1-var23",
+    "category": "branching"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "command": "git commit --allow-empty",
+    "description": "Create a commit even if there are no staged changes.",
+    "keywords": [
+      "empty commit",
+      "no changes",
+      "force commit",
+      "git commit --allow-empty"
+    ],
+    "level": "advanced",
+    "example": "git commit --allow-empty -m 'Trigger build'",
+    "related": [
+      "git commit"
+    ],
+    "variations": [],
+    "category": "commits",
+    "id": "commits-1-var3"
+  },
+  {
+    "command": "git commit --no-verify",
+    "description": "Bypass pre-commit and commit-msg hooks.",
+    "keywords": [
+      "no verify",
+      "skip hooks",
+      "bypass hooks",
+      "git commit --no-verify"
+    ],
+    "level": "advanced",
+    "example": "git commit --no-verify -m 'Quick fix'",
+    "related": [
+      "git commit"
+    ],
+    "variations": [],
+    "category": "commits",
+    "id": "commits-1-var4"
+  }
+]

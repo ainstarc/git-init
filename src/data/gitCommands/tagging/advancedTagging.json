@@ -1,0 +1,38 @@
+[
+  {
+    "command": "git tag -s <tag> -m '<message>'",
+    "description": "Create a GPG-signed tag with a message.",
+    "keywords": [
+      "signed tag",
+      "gpg tag",
+      "secure tag",
+      "git tag -s"
+    ],
+    "level": "advanced",
+    "example": "git tag -s v1.0 -m 'Signed release 1.0'",
+    "related": [
+      "git tag",
+      "git push"
+    ],
+    "variations": [],
+    "category": "tagging",
+    "id": "tagging-adv-1"
+  },
+  {
+    "command": "git tag -f <tag>",
+    "description": "Replace an existing tag with a new one.",
+    "keywords": [
+      "force tag",
+      "replace tag",
+      "git tag -f"
+    ],
+    "level": "advanced",
+    "example": "git tag -f v1.0",
+    "related": [
+      "git tag"
+    ],
+    "variations": [],
+    "category": "tagging",
+    "id": "tagging-adv-2"
+  }
+]

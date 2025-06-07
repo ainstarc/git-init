@@ -4,16 +4,26 @@ const path = require("path");
 const commandsDir = path.resolve(__dirname, "../src/data/gitCommands");
 const indexFile = path.join(commandsDir, "index.js");
 
-const jsonFiles = fs
-  .readdirSync(commandsDir)
-  .filter(file => file.endsWith(".json") && file !== "index.js");
+function getAllJsonFiles(dir) {
+  let files = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const fullPath = path.join(dir, entry);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files = files.concat(getAllJsonFiles(fullPath));
+    } else if (entry.endsWith(".json") && entry !== "phrases.json") {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
+const jsonFiles = getAllJsonFiles(commandsDir);
 
 const validJsonFiles = [];
 
 for (const file of jsonFiles) {
-  const filePath = path.join(commandsDir, file);
   try {
-    const content = fs.readFileSync(filePath, "utf-8").trim();
+    const content = fs.readFileSync(file, "utf-8").trim();
     if (!content) {
       console.warn(`⚠️ Skipping empty file: ${file}`);
       continue;
@@ -35,7 +45,10 @@ if (validJsonFiles.length === 0) {
 }
 
 const imports = validJsonFiles
-  .map((file, i) => `import data${i} from "./${file}";`)
+  .map((file, i) => {
+    const relPath = "./" + path.relative(commandsDir, file).replace(/\\/g, "/");
+    return `import data${i} from "${relPath}";`;
+  })
   .join("\n");
 
 const exportsArray = validJsonFiles

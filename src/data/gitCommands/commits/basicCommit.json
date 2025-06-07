@@ -1,0 +1,40 @@
+[
+  {
+    "command": "git commit -m '<message>'",
+    "description": "Commit staged changes with a message in a single command.",
+    "keywords": [
+      "message",
+      "commit message",
+      "quick commit",
+      "git commit -m"
+    ],
+    "level": "beginner",
+    "example": "git commit -m 'Update README'",
+    "related": [
+      "git commit"
+    ],
+    "variations": [],
+    "category": "commits",
+    "id": "commits-1-var1"
+  },
+  {
+    "command": "git commit --amend",
+    "description": "Modify the most recent commit (e.g., to fix the message or add files).",
+    "keywords": [
+      "amend",
+      "edit last commit",
+      "fix commit",
+      "change message",
+      "add files",
+      "git commit --amend"
+    ],
+    "level": "intermediate",
+    "example": "git commit --amend -m 'Corrected message'",
+    "related": [
+      "git commit"
+    ],
+    "variations": [],
+    "category": "commits",
+    "id": "commits-1-var2"
+  }
+]

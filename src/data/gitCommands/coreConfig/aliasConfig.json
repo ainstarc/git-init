@@ -1,0 +1,20 @@
+[
+  {
+    "command": "git config --global alias.co 'checkout'",
+    "description": "Create a global alias 'co' for the 'checkout' command.",
+    "keywords": ["alias", "global alias", "shortcut", "git config alias", "checkout alias"],
+    "level": "intermediate",
+    "example": "git config --global alias.co 'checkout'",
+    "related": ["git config", "git checkout"],
+    "variations": []
+  },
+  {
+    "command": "git config --global alias.st 'status'",
+    "description": "Create a global alias 'st' for the 'status' command.",
+    "keywords": ["alias", "global alias", "shortcut", "git config alias", "status alias"],
+    "level": "intermediate",
+    "example": "git config --global alias.st 'status'",
+    "related": ["git config", "git status"],
+    "variations": []
+  }
+]

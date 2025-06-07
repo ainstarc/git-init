@@ -1,0 +1,104 @@
+[
+  {
+    "command": "git branch -d",
+    "description": "Delete a branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch -d",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch -d feature",
+        "description": "Delete branch 'feature'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -d feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var22-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch -D feature",
+        "description": "Force delete branch 'feature'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -D feature",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var22-var2",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var22",
+    "category": "branching"
+  },
+  {
+    "command": "git branch -m",
+    "description": "Rename branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch -m",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch -m oldbranch newbranch",
+        "description": "Rename 'oldbranch' to 'newbranch'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -m oldbranch newbranch",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var20-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch -M oldbranch newbranch",
+        "description": "Force rename 'oldbranch' to 'newbranch'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -M oldbranch newbranch",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var20-var2",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var20",
+    "category": "branching"
+  },
+  {
+    "command": "git branch -c",
+    "description": "Copy branch",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch -c",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch -c oldbranch newbranch",
+        "description": "Copy 'oldbranch' to 'newbranch'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -c oldbranch newbranch",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var21-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch -C oldbranch newbranch",
+        "description": "Force copy 'oldbranch' to 'newbranch'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -C oldbranch newbranch",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var21-var2",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var21",
+    "category": "branching"
+  }
+]

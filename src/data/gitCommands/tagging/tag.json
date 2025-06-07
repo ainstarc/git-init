@@ -1,0 +1,226 @@
+[
+  {
+    "command": "git tag",
+    "description": "Create, list, or delete tags. Tags are used to mark specific points in history as important (e.g., releases).",
+    "keywords": [
+      "tag",
+      "tags",
+      "create tag",
+      "delete tag",
+      "list tags",
+      "git tag",
+      "annotated tag",
+      "lightweight tag",
+      "release tag",
+      "mark version"
+    ],
+    "level": "beginner",
+    "example": "git tag",
+    "related": [
+      "git show",
+      "git push",
+      "git checkout"
+    ],
+    "variations": [
+      {
+        "command": "git tag -a <tag> -m '<message>'",
+        "description": "Create an annotated tag with a message.",
+        "keywords": [
+          "annotated tag",
+          "message",
+          "create tag",
+          "git tag -a"
+        ],
+        "level": "beginner",
+        "example": "git tag -a v1.0 -m 'Release 1.0'",
+        "related": [
+          "git tag",
+          "git push"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var1"
+      },
+      {
+        "command": "git tag <tag>",
+        "description": "Create a lightweight tag at the current commit.",
+        "keywords": [
+          "lightweight tag",
+          "create tag",
+          "git tag"
+        ],
+        "level": "beginner",
+        "example": "git tag v1.0",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var2"
+      },
+      {
+        "command": "git tag -d <tag>",
+        "description": "Delete a tag by name.",
+        "keywords": [
+          "delete tag",
+          "remove tag",
+          "git tag -d"
+        ],
+        "level": "beginner",
+        "example": "git tag -d v1.0",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var3"
+      },
+      {
+        "command": "git tag -l <pattern>",
+        "description": "List tags matching a pattern.",
+        "keywords": [
+          "list tags",
+          "pattern",
+          "search tags",
+          "git tag -l"
+        ],
+        "level": "intermediate",
+        "example": "git tag -l 'v1.*'",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var4"
+      },
+      {
+        "command": "git tag -n",
+        "description": "List tags with annotation messages.",
+        "keywords": [
+          "list tags",
+          "annotation",
+          "show message",
+          "git tag -n"
+        ],
+        "level": "intermediate",
+        "example": "git tag -n",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var5"
+      },
+      {
+        "command": "git tag -f <tag>",
+        "description": "Replace an existing tag with a new one at the current commit.",
+        "keywords": [
+          "force tag",
+          "replace tag",
+          "git tag -f"
+        ],
+        "level": "advanced",
+        "example": "git tag -f v1.0",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var6"
+      },
+      {
+        "command": "git tag -s <tag> -m '<message>'",
+        "description": "Create a GPG-signed tag with a message.",
+        "keywords": [
+          "signed tag",
+          "GPG",
+          "create tag",
+          "git tag -s"
+        ],
+        "level": "advanced",
+        "example": "git tag -s v1.0 -m 'Signed release'",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var7"
+      },
+      {
+        "command": "git tag -v <tag>",
+        "description": "Verify a GPG-signed tag.",
+        "keywords": [
+          "verify tag",
+          "signed tag",
+          "GPG",
+          "git tag -v"
+        ],
+        "level": "advanced",
+        "example": "git tag -v v1.0",
+        "related": [
+          "git tag"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-1-var8"
+      }
+    ],
+    "id": "tagging-1",
+    "category": "tagging"
+  },
+  {
+    "command": "git push origin <tag>",
+    "description": "Push a local tag to the remote repository.",
+    "keywords": [
+      "push tag",
+      "upload tag",
+      "remote tag",
+      "git push tag"
+    ],
+    "level": "beginner",
+    "example": "git push origin v1.0",
+    "related": [
+      "git tag",
+      "git push --tags"
+    ],
+    "variations": [
+      {
+        "command": "git push origin --tags",
+        "description": "Push all local tags to the remote repository.",
+        "keywords": [
+          "push all tags",
+          "upload tags",
+          "git push --tags"
+        ],
+        "level": "beginner",
+        "example": "git push origin --tags",
+        "related": [
+          "git push"
+        ],
+        "variations": [],
+        "category": "tagging",
+        "id": "tagging-2-var1"
+      }
+    ],
+    "id": "tagging-2",
+    "category": "tagging"
+  },
+  {
+    "command": "git show <tag>",
+    "description": "Show information about a tag, including the commit it points to and the tag message.",
+    "keywords": [
+      "show tag",
+      "tag info",
+      "tag details",
+      "git show tag"
+    ],
+    "level": "beginner",
+    "example": "git show v1.0",
+    "related": [
+      "git tag"
+    ],
+    "variations": [],
+    "id": "tagging-3",
+    "category": "tagging"
+  }
+]

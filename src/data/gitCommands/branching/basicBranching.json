@@ -1,0 +1,195 @@
+[
+  {
+    "command": "git branch",
+    "description": "List, create, or delete branches. Useful for managing parallel lines of development.",
+    "keywords": ["branch", "branches", "create branch", "delete branch", "list branches", "git branch", "manage branches", "feature branch", "main branch", "switch branch"],
+    "level": "beginner",
+    "example": "git branch",
+    "related": ["git checkout", "git switch", "git merge", "git rebase"],
+    "variations": [
+      {
+        "command": "git branch --color",
+        "description": "Show branch list with color highlighting",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --color",
+        "related": [],
+        "variations": [
+          {
+            "command": "git branch --color=always",
+            "description": "Always show color",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch --color=always",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var1-var1",
+            "category": "branching"
+          },
+          {
+            "command": "git branch --color=auto",
+            "description": "Show color when output is a terminal",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch --color=auto",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var1-var2",
+            "category": "branching"
+          },
+          {
+            "command": "git branch --no-color",
+            "description": "Disable color output",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch --no-color",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var1-var3",
+            "category": "branching"
+          }
+        ],
+        "id": "branching-1-var1",
+        "category": "branching"
+      },
+      {
+        "command": "git branch --show-current",
+        "description": "Show the current branch name",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --show-current",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var2",
+        "category": "branching"
+      },
+      {
+        "command": "git branch -v",
+        "description": "Show branches with last commit info",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch -v",
+        "related": [],
+        "variations": [
+          {
+            "command": "git branch -v --abbrev=7",
+            "description": "Show abbreviated commit SHA with 7 characters",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch -v --abbrev=7",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var3-var1",
+            "category": "branching"
+          },
+          {
+            "command": "git branch -v --no-abbrev",
+            "description": "Show full commit SHA",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch -v --no-abbrev",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var3-var2",
+            "category": "branching"
+          }
+        ],
+        "id": "branching-1-var3",
+        "category": "branching"
+      },
+      {
+        "command": "git branch --column",
+        "description": "Display output in columns",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --column",
+        "related": [],
+        "variations": [
+          {
+            "command": "git branch --no-column",
+            "description": "Disable column output",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch --no-column",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var4-var1",
+            "category": "branching"
+          }
+        ],
+        "id": "branching-1-var4",
+        "category": "branching"
+      },
+      {
+        "command": "git branch --sort",
+        "description": "Sort branch list by key",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --sort",
+        "related": [],
+        "variations": [
+          {
+            "command": "git branch --sort=-committerdate",
+            "description": "Sort branches by latest commit date descending",
+            "keywords": [],
+            "level": "basic",
+            "example": "git branch --sort=-committerdate",
+            "related": [],
+            "variations": [],
+            "id": "branching-1-var5-var1",
+            "category": "branching"
+          }
+        ],
+        "id": "branching-1-var5",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1",
+    "category": "branching"
+  },
+  {
+    "command": "git branch -r",
+    "description": "List remote-tracking branches",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch -r",
+    "related": [],
+    "variations": [],
+    "id": "branching-1-var12",
+    "category": "branching"
+  },
+  {
+    "command": "git branch -a",
+    "description": "List all branches (local + remote)",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch -a",
+    "related": [],
+    "variations": [],
+    "id": "branching-1-var13",
+    "category": "branching"
+  },
+  {
+    "command": "git branch --list",
+    "description": "List branches matching pattern",
+    "keywords": [],
+    "level": "basic",
+    "example": "git branch --list",
+    "related": [],
+    "variations": [
+      {
+        "command": "git branch --list 'feature/*'",
+        "description": "List branches with names matching 'feature/*'",
+        "keywords": [],
+        "level": "basic",
+        "example": "git branch --list 'feature/*'",
+        "related": [],
+        "variations": [],
+        "id": "branching-1-var14-var1",
+        "category": "branching"
+      }
+    ],
+    "id": "branching-1-var14",
+    "category": "branching"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "command": "git remote add <name> <url>",
+    "description": "Add a new remote repository with a given name and URL.",
+    "keywords": [
+      "add remote",
+      "new remote",
+      "remote url",
+      "git remote add"
+    ],
+    "level": "beginner",
+    "example": "git remote add origin https://github.com/user/repo.git",
+    "related": [
+      "git remote",
+      "git push"
+    ],
+    "variations": [],
+    "category": "remotes",
+    "id": "remotes-4-var1"
+  },
+  {
+    "command": "git remote remove <name>",
+    "description": "Remove a remote repository by name.",
+    "keywords": [
+      "remove remote",
+      "delete remote",
+      "git remote remove"
+    ],
+    "level": "beginner",
+    "example": "git remote remove origin",
+    "related": [
+      "git remote"
+    ],
+    "variations": [],
+    "category": "remotes",
+    "id": "remotes-4-var2"
+  }
+]

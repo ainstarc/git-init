@@ -352,5 +352,105 @@
     ],
     "id": "workingTree-3",
     "category": "workingTree"
+  },
+  {
+    "command": "git clean",
+    "description": "Remove untracked files from the working tree.",
+    "keywords": [
+      "clean",
+      "remove untracked",
+      "delete files",
+      "git clean"
+    ],
+    "level": "intermediate",
+    "example": "git clean -fd",
+    "related": [
+      "git status"
+    ],
+    "variations": [
+      {
+        "command": "git clean -f",
+        "description": "Force removal of untracked files.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -f",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var1",
+        "category": "workingTree"
+      },
+      {
+        "command": "git clean -fd",
+        "description": "Force removal of untracked files and directories.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -fd",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var2",
+        "category": "workingTree"
+      },
+      {
+        "command": "git clean -n",
+        "description": "Show what would be removed without actually removing.",
+        "keywords": [],
+        "level": "intermediate",
+        "example": "git clean -n",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-4-var3",
+        "category": "workingTree"
+      }
+    ],
+    "id": "workingTree-4",
+    "category": "workingTree"
+  },
+  {
+    "command": "git mv",
+    "description": "Move or rename a file, a directory, or a symlink.",
+    "keywords": [
+      "move",
+      "rename",
+      "git mv"
+    ],
+    "level": "beginner",
+    "example": "git mv oldname.txt newname.txt",
+    "related": [
+      "git add",
+      "git rm"
+    ],
+    "variations": [],
+    "id": "workingTree-5",
+    "category": "workingTree"
+  },
+  {
+    "command": "git rm",
+    "description": "Remove files from the working tree and from the index.",
+    "keywords": [
+      "remove",
+      "delete",
+      "rm",
+      "git rm"
+    ],
+    "level": "beginner",
+    "example": "git rm file.txt",
+    "related": [
+      "git add"
+    ],
+    "variations": [
+      {
+        "command": "git rm --cached <file>",
+        "description": "Remove file from index but keep in working directory.",
+        "keywords": [],
+        "level": "beginner",
+        "example": "git rm --cached file.txt",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-6-var1",
+        "category": "workingTree"
+      }
+    ],
+    "id": "workingTree-6",
+    "category": "workingTree"
   }
 ]

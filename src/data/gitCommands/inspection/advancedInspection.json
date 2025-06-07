@@ -1,0 +1,38 @@
+[
+  {
+    "command": "git blame <file>",
+    "description": "Show what revision and author last modified each line of a file.",
+    "keywords": [
+      "blame",
+      "line history",
+      "author",
+      "git blame"
+    ],
+    "level": "advanced",
+    "example": "git blame src/App.jsx",
+    "related": [
+      "git log"
+    ],
+    "variations": [],
+    "category": "inspection",
+    "id": "inspection-adv-1"
+  },
+  {
+    "command": "git reflog",
+    "description": "Show the history of HEAD and branch references.",
+    "keywords": [
+      "reflog",
+      "reference log",
+      "history",
+      "git reflog"
+    ],
+    "level": "advanced",
+    "example": "git reflog",
+    "related": [
+      "git log"
+    ],
+    "variations": [],
+    "category": "inspection",
+    "id": "inspection-adv-2"
+  }
+]

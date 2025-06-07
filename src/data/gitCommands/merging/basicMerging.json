@@ -1,0 +1,46 @@
+[
+  {
+    "command": "git merge",
+    "description": "Join two or more development histories together. Commonly used to combine feature branches into main.",
+    "keywords": ["merge", "combine", "join", "integrate", "feature branch", "main branch", "merge branch", "git merge", "resolve conflicts", "merge changes"],
+    "level": "intermediate",
+    "example": "git merge feature/login",
+    "related": ["git rebase", "git branch", "git pull", "git commit"],
+    "variations": [],
+    "id": "merging-1",
+    "category": "merging"
+  },
+  {
+    "command": "git merge --continue",
+    "description": "Resume a merge process that was paused",
+    "keywords": [],
+    "level": "basic",
+    "example": "git merge --continue",
+    "related": [],
+    "variations": [],
+    "id": "merging-1-var20",
+    "category": "merging"
+  },
+  {
+    "command": "git merge --abort",
+    "description": "Abort the current merge and revert changes",
+    "keywords": [],
+    "level": "basic",
+    "example": "git merge --abort",
+    "related": [],
+    "variations": [],
+    "id": "merging-1-var21",
+    "category": "merging"
+  },
+  {
+    "command": "git merge --quit",
+    "description": "Forget about the current merge, but keep changes in working tree",
+    "keywords": [],
+    "level": "basic",
+    "example": "git merge --quit",
+    "related": [],
+    "variations": [],
+    "id": "merging-1-var22",
+    "category": "merging"
+  }
+]

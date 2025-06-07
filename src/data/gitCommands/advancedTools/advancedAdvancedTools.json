@@ -1,0 +1,37 @@
+[
+  {
+    "command": "git bisect",
+    "description": "Use binary search to find the commit that introduced a bug.",
+    "keywords": [
+      "bisect",
+      "find bug",
+      "binary search",
+      "git bisect"
+    ],
+    "level": "advanced",
+    "example": "git bisect start",
+    "related": [
+      "git log"
+    ],
+    "variations": [],
+    "category": "advancedTools",
+    "id": "advancedTools-adv-1"
+  },
+  {
+    "command": "git filter-branch",
+    "description": "Rewrite branches by filtering the commit history.",
+    "keywords": [
+      "filter branch",
+      "rewrite history",
+      "git filter-branch"
+    ],
+    "level": "advanced",
+    "example": "git filter-branch --tree-filter 'rm filename' HEAD",
+    "related": [
+      "git rebase"
+    ],
+    "variations": [],
+    "category": "advancedTools",
+    "id": "advancedTools-adv-2"
+  }
+]

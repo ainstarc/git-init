@@ -1,0 +1,56 @@
+[
+  {
+    "command": "git worktree add <path> [<branch>]",
+    "description": "Add a new working tree linked to the repository, optionally on a new branch.",
+    "keywords": [
+      "worktree",
+      "add worktree",
+      "multiple working trees",
+      "git worktree add"
+    ],
+    "level": "advanced",
+    "example": "git worktree add ../feature feature-branch",
+    "related": [
+      "git worktree list",
+      "git branch"
+    ],
+    "variations": [],
+    "category": "workingTree",
+    "id": "workingTree-adv-1"
+  },
+  {
+    "command": "git worktree list",
+    "description": "List all working trees attached to the repository.",
+    "keywords": [
+      "worktree",
+      "list worktrees",
+      "git worktree list"
+    ],
+    "level": "advanced",
+    "example": "git worktree list",
+    "related": [
+      "git worktree add"
+    ],
+    "variations": [],
+    "category": "workingTree",
+    "id": "workingTree-adv-2"
+  },
+  {
+    "command": "git worktree remove <path>",
+    "description": "Remove a working tree.",
+    "keywords": [
+      "worktree",
+      "remove worktree",
+      "delete worktree",
+      "git worktree remove"
+    ],
+    "level": "advanced",
+    "example": "git worktree remove ../feature",
+    "related": [
+      "git worktree list"
+    ],
+    "variations": [],
+    "category": "workingTree",
+    "id": "workingTree-adv-3"
+  }
+]

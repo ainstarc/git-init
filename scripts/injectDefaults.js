@@ -3,6 +3,19 @@ const path = require("path");
 
 const commandsDir = path.resolve(__dirname, "../src/data/gitCommands");
 
+function getAllJsonFiles(dir) {
+  let files = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const fullPath = path.join(dir, entry);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files = files.concat(getAllJsonFiles(fullPath));
+    } else if (entry.endsWith(".json") && entry !== "phrases.json") {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
 function countAllCommands(commands) {
   let count = 0;
   function countRecursive(cmdList) {
@@ -61,11 +74,9 @@ function injectDefaultsToFile(filePath) {
   }
 }
 
-fs.readdirSync(commandsDir)
-  .filter((file) => file.endsWith(".json") && file !== "phrases.json")
-  .forEach((file) => {
-    injectDefaultsToFile(path.join(commandsDir, file));
-  });
+getAllJsonFiles(commandsDir).forEach((file) => {
+  injectDefaultsToFile(file);
+});
 
 console.log(`\n🧮 Grand Total Commands (with all variations): ${grandTotal}`);
 if (grandTotal === 0) {

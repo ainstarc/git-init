@@ -1,0 +1,32 @@
+[
+  {
+    "command": "git rm",
+    "description": "Remove files from the working tree and from the index.",
+    "keywords": [
+      "remove",
+      "delete",
+      "rm",
+      "git rm"
+    ],
+    "level": "beginner",
+    "example": "git rm file.txt",
+    "related": [
+      "git add"
+    ],
+    "variations": [
+      {
+        "command": "git rm --cached <file>",
+        "description": "Remove file from index but keep in working directory.",
+        "keywords": [],
+        "level": "beginner",
+        "example": "git rm --cached file.txt",
+        "related": [],
+        "variations": [],
+        "id": "workingTree-6-var1",
+        "category": "workingTree"
+      }
+    ],
+    "id": "workingTree-6",
+    "category": "workingTree"
+  }
+]

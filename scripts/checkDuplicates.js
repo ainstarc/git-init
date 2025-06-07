@@ -3,6 +3,19 @@ const path = require("path");
 
 const commandsDir = path.resolve(__dirname, "../src/data/gitCommands");
 
+function getAllJsonFiles(dir) {
+  let files = [];
+  for (const entry of fs.readdirSync(dir)) {
+    const fullPath = path.join(dir, entry);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files = files.concat(getAllJsonFiles(fullPath));
+    } else if (entry.endsWith(".json") && entry !== "phrases.json") {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
 const seen = new Map();
 const duplicates = [];
 
@@ -29,20 +42,17 @@ function collectCommands(commands, sourceFile, parentId = null) {
   }
 }
 
-fs.readdirSync(commandsDir)
-  .filter((file) => file.endsWith(".json") && file !== "phrases.json")
-  .forEach((file) => {
-    const filePath = path.join(commandsDir, file);
-    try {
-      const content = fs.readFileSync(filePath, "utf-8").trim();
-      if (!content) return;
+getAllJsonFiles(commandsDir).forEach((file) => {
+  try {
+    const content = fs.readFileSync(file, "utf-8").trim();
+    if (!content) return;
 
-      const commands = JSON.parse(content);
-      collectCommands(commands, file);
-    } catch (err) {
-      console.error(`❌ Failed to read ${file}:`, err.message);
-    }
-  });
+    const commands = JSON.parse(content);
+    collectCommands(commands, file);
+  } catch (err) {
+    console.error(`❌ Failed to read ${file}:`, err.message);
+  }
+});
 
 if (duplicates.length === 0) {
   console.log("✅ No duplicate commands found.");
