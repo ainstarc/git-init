@@ -10,6 +10,8 @@ const expectedFields = {
   level: "",
   example: null, // fallback to command
   related: [],
+  variations: [],
+  id: "", // will be set later
 };
 
 function applyDefaults(command, index, filename) {
@@ -21,9 +23,8 @@ function applyDefaults(command, index, filename) {
 
   for (const key in expectedFields) {
     if (command[key] === undefined || command[key] === null || command[key] === "") {
-      // If the field is missing, inject the default value
+
       if (key === "category") {
-        // Inject category based on filename if missing
         injected[key] = filename;
       } else if (key === "example") {
         injected[key] = command.command;
@@ -35,10 +36,36 @@ function applyDefaults(command, index, filename) {
     }
   }
 
+  // Inject into variations if they exist
+  if (Array.isArray(command.variations)) {
+    injected.variations = command.variations.map((variation, vIndex) => {
+      const vInjected = { command: variation.command };
+
+      for (const key in expectedFields) {
+        if (variation[key] === undefined || variation[key] === null) {
+          if (key === "category") {
+            vInjected[key] = filename;
+          } else if (key === "example") {
+            vInjected[key] = variation.command;
+          } else {
+            vInjected[key] = expectedFields[key];
+          }
+        } else {
+          vInjected[key] = variation[key];
+        }
+      }
+
+      vInjected.id = `${filename}-${index + 1}-v${vIndex + 1}`;
+
+      return vInjected;
+    });
+  }
+
   injected.id = `${filename}-${index + 1}`;
 
   return injected;
 }
+
 
 function injectDefaultsToFile(filePath) {
   const fileName = path.basename(filePath, ".json");

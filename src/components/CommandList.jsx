@@ -37,6 +37,8 @@ export default function CommandList({
             keywords={command.keywords}
             category={command.category}
             isFocused={index === focusedIndex}
+            isVariation={!!command.variations}
+            parentCommand={command.parentCommand}
             onCopy={onCopy}
             copied={copiedCommand === command.command}
           />

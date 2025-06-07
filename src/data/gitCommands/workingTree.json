@@ -14,6 +14,7 @@
       "git checkout -- <file>",
       "git reset HEAD <file>"
     ],
+    "variations": [],
     "id": "workingTree-1"
   }
 ]

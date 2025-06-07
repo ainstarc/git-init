@@ -14,6 +14,7 @@
     "related": [
       "git clone <repository-url>"
     ],
+    "variations": [],
     "id": "coreConfig-1"
   }
 ]

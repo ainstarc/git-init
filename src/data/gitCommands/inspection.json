@@ -3,16 +3,22 @@
     "command": "git log",
     "description": "Show commit logs to see project history",
     "category": "inspection",
-    "keywords": [
-      "log",
-      "history",
-      "commits"
-    ],
+    "keywords": ["log", "history", "commits"],
     "level": "beginner",
     "example": "git log --oneline",
-    "related": [
-      "git log --graph",
-      "git log --stat"
+    "related": ["git log --graph", "git log --stat"],
+    "variations": [
+      {
+        "command": "git log --oneline",
+        "description": "Show commit logs in a condensed format with one line per commit",
+        "category": "inspection",
+        "keywords": ["log", "history", "commits", "oneline"],
+        "level": "beginner",
+        "example": "git log --oneline",
+        "related": ["git log --oneline --graph", "git log --oneline --stat"],
+        "variations": [],
+        "id": "inspection-1-v1"
+      }
     ],
     "id": "inspection-1"
   },
@@ -20,34 +26,22 @@
     "command": "git diff",
     "description": "Show changes between working directory and index or commits",
     "category": "inspection",
-    "keywords": [
-      "diff",
-      "changes",
-      "compare"
-    ],
+    "keywords": ["diff", "changes", "compare"],
     "level": "beginner",
     "example": "git diff",
-    "related": [
-      "git diff --cached",
-      "git diff HEAD"
-    ],
+    "related": ["git diff --cached", "git diff HEAD"],
+    "variations": [],
     "id": "inspection-2"
   },
   {
     "command": "git status",
     "description": "Show the working tree status",
     "category": "inspection",
-    "keywords": [
-      "status",
-      "working tree",
-      "changes"
-    ],
+    "keywords": ["status", "working tree", "changes"],
     "level": "beginner",
     "example": "git status",
-    "related": [
-      "git status -s",
-      "git status --short"
-    ],
+    "related": ["git status -s", "git status --short"],
+    "variations": [],
     "id": "inspection-3"
   }
 ]

@@ -15,6 +15,7 @@
       "git merge --abort",
       "git merge --continue"
     ],
+    "variations": [],
     "id": "merging-1"
   }
 ]

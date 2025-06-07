@@ -14,6 +14,7 @@
       "git commit -a -m \"message\"",
       "git commit --amend"
     ],
+    "variations": [],
     "id": "commits-1"
   }
 ]
