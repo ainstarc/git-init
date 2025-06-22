@@ -1,18 +1,15 @@
 import { useState } from "react"
-import { fetchQueryResponse } from "../utils/api"
-import { QueryResult } from "../types"
 
 interface Props {
-    onResult: (result: QueryResult) => void
+    onSearch: (query: string) => void
 }
 
-export default function SearchInput({ onResult }: Props) {
+export default function SearchInput({ onSearch }: Props) {
     const [query, setQuery] = useState("")
 
-    const handleSearch = async () => {
+    const handleClick = () => {
         if (!query.trim()) return
-        const result = await fetchQueryResponse(query)
-        onResult(result)
+        onSearch(query)
     }
 
     return (
@@ -24,7 +21,7 @@ export default function SearchInput({ onResult }: Props) {
                 placeholder="Search Git command..."
                 style={{ width: "70%", padding: "0.5rem", marginRight: "0.5rem" }}
             />
-            <button onClick={handleSearch}>Search</button>
+            <button onClick={handleClick}>Search</button>
         </div>
     )
 }

@@ -1,13 +1,17 @@
-import { QueryResult } from "../types";
+import { QueryResult } from "../types"
+
+const API_URL = import.meta.env.VITE_API_URL
 
 export async function fetchQueryResponse(query: string): Promise<QueryResult> {
-  // Simulate delay
-  await new Promise((r) => setTimeout(r, 500));
+  const response = await fetch(`${API_URL}/query`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query }),
+  })
 
-  // Mock response
-  return {
-    command: "git reset --soft HEAD~1",
-    description: "Undo the last commit but keep changes staged",
-    source: "mock-db",
-  };
+  if (!response.ok) {
+    throw new Error("API request failed")
+  }
+
+  return await response.json()
 }
