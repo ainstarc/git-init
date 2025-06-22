@@ -1,43 +1,57 @@
+import "./styles/searchInput.css";
+
 type Props = {
-    value: string
-    onChange: (value: string) => void
-    onSearch: () => void
-    loading?: boolean
+  value: string
+  onChange: (value: string) => void
+  onSearch: () => void
+  loading?: boolean
+  suggestions: string[]
+  onSuggestionClick: (q: string) => void
+  onClear?: () => void
 }
 
-export default function SearchInput({ value, onChange, onSearch, loading }: Props) {
-    return (
-        <div style={{ display: "flex", gap: "1rem" }}>
-            <input
-                type="text"
-                value={value}
-                onChange={(e) => onChange(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && onSearch()}
-                placeholder="e.g., how to check current branch"
-                style={{
-                    flex: 1,
-                    padding: "0.5rem 1rem",
-                    borderRadius: "6px",
-                    border: "1px solid #ccc",
-                    fontSize: "1rem"
-                }}
-                disabled={loading}
-            />
-            <button
-                onClick={onSearch}
-                disabled={loading}
-                style={{
-                    padding: "0.5rem 1rem",
-                    fontSize: "1rem",
-                    background: "#007bff",
-                    color: "#fff",
-                    border: "none",
-                    borderRadius: "6px",
-                    cursor: "pointer"
-                }}
-            >
-                {loading ? "Searching..." : "Search"}
+export default function SearchInput({
+  value,
+  onChange,
+  onSearch,
+  loading,
+  suggestions,
+  onSuggestionClick,
+  onClear
+}: Props) {
+  return (
+    <div className="search-section">
+      <div className="search-input-group">
+        <input
+          type="text"
+          className="search-input"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && onSearch()}
+          placeholder="e.g., how to rebase"
+        />
+        <button className="search-button" onClick={onSearch} disabled={loading}>
+          {loading ? "Searching..." : "Search"}
+        </button>
+      </div>
+
+      {suggestions.length > 0 && (
+        <div className="suggestions">
+          <p className="suggestions-title">Recent:</p>
+          <ul className="suggestions-list">
+            {suggestions.map((q, i) => (
+              <li key={i} onClick={() => onSuggestionClick(q)}>
+                {q}
+              </li>
+            ))}
+          </ul>
+          {onClear && (
+            <button className="clear-btn" onClick={onClear}>
+              Clear History
             </button>
+          )}
         </div>
-    )
+      )}
+    </div>
+  )
 }

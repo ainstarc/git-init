@@ -1,0 +1,8 @@
+.result-section {
+  margin-top: 2rem;
+}
+
+.error-text {
+  color: #dc3545;
+  font-weight: bold;
+}
