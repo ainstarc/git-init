@@ -1,0 +1,15 @@
+name: Auto-add issue/PR to Project 4
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  add_to_project:
+    uses: ainstarc/.github/.github/workflows/add-to-project.yml@master
+    with:
+      project-url: https://github.com/users/ainstarc/projects/4
+    secrets:
+      project-token: ${{ secrets.PROJECT_TOKEN }}
