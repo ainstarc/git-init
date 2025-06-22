@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div style={{ padding: "2rem", maxWidth: "600px", margin: "auto" }}>
-      <h1>🔍 GitBot</h1>
+      <h1>🔍 GitInit</h1>
       <SearchInput onSearch={onSearch} />
       {loading && <p>⏳ Searching...</p>}
       {error && <p style={{ color: "crimson" }}>{error}</p>}
