@@ -1,17 +1,22 @@
 import { QueryResult } from "../types"
+import { motion } from "framer-motion"
 
-interface Props {
-    data: QueryResult | null
-}
-
-export default function ResultCard({ data }: Props) {
-    if (!data) return null
-
+export default function ResultCard({ result }: { result: QueryResult }) {
     return (
-        <div style={{ marginTop: "1rem", padding: "1rem", border: "1px solid #ccc" }}>
-            <p><strong>Command:</strong> <code>{data.command}</code></p>
-            <p><strong>Description:</strong> {data.description}</p>
-            {data.source && <p style={{ fontSize: "0.85rem", color: "gray" }}>Source: {data.source}</p>}
-        </div>
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+                padding: "1rem",
+                border: "1px solid #ddd",
+                borderRadius: "8px",
+                background: "#f9f9f9"
+            }}
+        >
+            <h2 style={{ marginBottom: "0.5rem" }}>{result.command}</h2>
+            <p style={{ marginBottom: "0.5rem" }}>{result.description}</p>
+            <small style={{ color: "#555" }}>Source: {result.source}</small>
+        </motion.div>
     )
 }

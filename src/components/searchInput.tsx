@@ -1,27 +1,43 @@
-import { useState } from "react"
-
-interface Props {
-    onSearch: (query: string) => void
+type Props = {
+    value: string
+    onChange: (value: string) => void
+    onSearch: () => void
+    loading?: boolean
 }
 
-export default function SearchInput({ onSearch }: Props) {
-    const [query, setQuery] = useState("")
-
-    const handleClick = () => {
-        if (!query.trim()) return
-        onSearch(query)
-    }
-
+export default function SearchInput({ value, onChange, onSearch, loading }: Props) {
     return (
-        <div>
+        <div style={{ display: "flex", gap: "1rem" }}>
             <input
                 type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search Git command..."
-                style={{ width: "70%", padding: "0.5rem", marginRight: "0.5rem" }}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && onSearch()}
+                placeholder="e.g., how to check current branch"
+                style={{
+                    flex: 1,
+                    padding: "0.5rem 1rem",
+                    borderRadius: "6px",
+                    border: "1px solid #ccc",
+                    fontSize: "1rem"
+                }}
+                disabled={loading}
             />
-            <button onClick={handleClick}>Search</button>
+            <button
+                onClick={onSearch}
+                disabled={loading}
+                style={{
+                    padding: "0.5rem 1rem",
+                    fontSize: "1rem",
+                    background: "#007bff",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "6px",
+                    cursor: "pointer"
+                }}
+            >
+                {loading ? "Searching..." : "Search"}
+            </button>
         </div>
     )
 }

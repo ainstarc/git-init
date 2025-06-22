@@ -1,29 +1,52 @@
 import { useState } from "react"
-import SearchInput from "./components/searchInput"
-import ResultCard from "./components/resultCard"
+import { fetchQueryResponse } from "./utils/api"
 import { QueryResult } from "./types"
-import { handleSearch } from "./utils/handleSearch"
+import ResultCard from "./components/resultCard"
+import SearchInput from "./components/searchInput"
 
-function App() {
+export default function App() {
+  const [query, setQuery] = useState("")
   const [result, setResult] = useState<QueryResult | null>(null)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
+  const [error, setError] = useState<string | null>(null)
 
-  const onSearch = (query: string) => {
+  const handleSearch = async (searchQuery: string) => {
+    if (!searchQuery.trim()) return
+
+    setLoading(true)
+    setError(null)
     setResult(null)
-    setError("")
-    handleSearch(query, setResult, setError, setLoading)
+
+    try {
+      const response = await fetchQueryResponse(searchQuery)
+      setResult(response)
+    } catch (err) {
+      console.error("Search error:", err)
+      setError("❌ Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "600px", margin: "auto" }}>
-      <h1>🔍 GitInit</h1>
-      <SearchInput onSearch={onSearch} />
-      {loading && <p>⏳ Searching...</p>}
-      {error && <p style={{ color: "crimson" }}>{error}</p>}
-      {result && <ResultCard data={result} />}
+    <div className="container" style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+      <h1>🔍 Git Init</h1>
+      <SearchInput
+        value={query}
+        onChange={setQuery}
+        onSearch={() => handleSearch(query)}
+        loading={loading}
+      />
+
+      <div style={{ marginTop: "2rem" }}>
+        {loading && <p>⏳ Searching Git wisdom...</p>}
+
+        {error && <p style={{ color: "red" }}>{error}</p>}
+
+        {!loading && !error && result && <ResultCard result={result} />}
+
+        {!loading && !error && !result && <p>Start by typing a Git-related question above.</p>}
+      </div>
     </div>
   )
 }
-
-export default App
