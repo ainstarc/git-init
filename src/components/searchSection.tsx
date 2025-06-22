@@ -1,6 +1,4 @@
 import SearchInput from "./searchInput"
-import "./styles/searchSection.css"
-
 
 type Props = {
   query: string
@@ -8,33 +6,28 @@ type Props = {
   loading: boolean
   filteredHistory: string[]
   onSearch: () => void
+  onSuggestionClick: (q: string) => void
   onClearHistory: () => void
 }
 
 export default function SearchSection({
   query,
   setQuery,
-  loading,  
+  loading,
   filteredHistory,
   onSearch,
+  onSuggestionClick,
   onClearHistory
 }: Props) {
-  const handleSuggestionClick = (q: string) => {
-    setQuery(q)
-    onSearch()
-  }
-
   return (
-    <div className="search-section">
-      <SearchInput
-        value={query}
-        onChange={setQuery}
-        onSearch={onSearch}
-        loading={loading}
-        suggestions={filteredHistory}
-        onSuggestionClick={handleSuggestionClick}
-        onClear={onClearHistory}
-      />
-    </div>
+    <SearchInput
+      value={query}
+      onChange={setQuery}
+      onSearch={onSearch}
+      loading={loading}
+      suggestions={filteredHistory}
+      onSuggestionClick={onSuggestionClick}
+      onClear={onClearHistory}
+    />
   )
 }

@@ -1,4 +1,4 @@
-import "./styles/searchInput.css";
+import "./styles/searchInput.css"
 
 type Props = {
   value: string
@@ -14,13 +14,14 @@ export default function SearchInput({
   value,
   onChange,
   onSearch,
-  loading,
+  loading = false,
   suggestions,
   onSuggestionClick,
   onClear
 }: Props) {
   return (
     <div className="search-section">
+      {/* Input + button row */}
       <div className="search-input-group">
         <input
           type="text"
@@ -35,23 +36,29 @@ export default function SearchInput({
         </button>
       </div>
 
+      {/* Suggestions and Clear History */}
       {suggestions.length > 0 && (
         <div className="suggestions">
           <p className="suggestions-title">Recent:</p>
           <ul className="suggestions-list">
             {suggestions.map((q, i) => (
-              <li key={i} onClick={() => onSuggestionClick(q)}>
+              <li className="suggestion-item" key={i} onClick={() => onSuggestionClick(q)}>
                 {q}
               </li>
             ))}
           </ul>
+
+          {/* Move Clear History to the right under suggestions */}
           {onClear && (
-            <button className="clear-btn" onClick={onClear}>
-              Clear History
-            </button>
+            <div className="clear-btn-container">
+              <button className="clear-btn" onClick={onClear}>
+                Clear History
+              </button>
+            </div>
           )}
         </div>
       )}
     </div>
+
   )
 }

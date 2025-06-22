@@ -9,12 +9,14 @@ type Props = {
 }
 
 export default function ResultSection({ result, loading, error }: Props) {
-  const renderContent = () => {
-    if (loading) return <p>⏳ Searching Git wisdom...</p>
-    if (error) return <p className="error-text">{error}</p>
-    if (result) return <ResultCard result={result} />
-    return <p>Start by typing a Git-related question above.</p>
-  }
-
-  return <div className="result-section">{renderContent()}</div>
+  return (
+    <div className="result-section">
+      {loading && <p>⏳ Searching Git wisdom...</p>}
+      {error && <p className="error-text">{error}</p>}
+      {!loading && !error && result && <ResultCard result={result} />}
+      {!loading && !error && !result && (
+        <p>Start by typing a Git-related question above.</p>
+      )}
+    </div>
+  )
 }

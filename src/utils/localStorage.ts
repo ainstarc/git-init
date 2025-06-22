@@ -1,16 +1,32 @@
-const KEY = "recent_git_searches";
+const HISTORY_KEY = "search_history";
+const CACHE_KEY = "search_cache";
 
 export function getSearchHistory(): string[] {
-  const data = localStorage.getItem(KEY);
-  return data ? JSON.parse(data) : [];
+  return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
 }
 
 export function addToSearchHistory(query: string) {
-  const existing = getSearchHistory();
-  const updated = [query, ...existing.filter((q) => q !== query)].slice(0, 5); // max 5
-  localStorage.setItem(KEY, JSON.stringify(updated));
+  const history = getSearchHistory();
+  if (!history.includes(query)) {
+    const updated = [query, ...history].slice(0, 20); // cap at 20 entries
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(updated));
+    console.log("Search History updated for {}", query);
+  }
 }
 
 export function clearSearchHistory() {
-  localStorage.removeItem(KEY);
+  localStorage.removeItem(HISTORY_KEY);
+  localStorage.removeItem(CACHE_KEY);
+  console.log("Cleared History and Cache");
+}
+
+export function saveToCache(query: string, result: any) {
+  const cache = JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
+  cache[query.toLowerCase()] = result;
+  localStorage.setItem(CACHE_KEY, JSON.stringify(cache));
+  console.log("Cache updated for {}", query);
+}
+
+export function getCache(): Record<string, any> {
+  return JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
 }

@@ -1,24 +1,21 @@
 .result-card {
   padding: 1rem;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.result-command {
+.result-card h2 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  font-weight: 600;
 }
 
-.result-description {
+.result-card p {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #333;
 }
 
-.result-source {
-  color: #666;
-  font-size: 0.85rem;
+.result-card small {
+  color: #555;
+  font-style: italic;
 }
