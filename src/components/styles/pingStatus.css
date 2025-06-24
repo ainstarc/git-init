@@ -1,0 +1,36 @@
+.pingStatus {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  width: fit-content;
+  border: 1px solid;
+  padding: 2px;
+}
+
+.pingStatus.good {
+  color: #00ff88;
+  border-color: color;
+}
+
+.pingStatus.average {
+  color: #ffcc00;
+  border-color: color;
+}
+
+.pingStatus.bad {
+  color: #ff5555;
+  border-color: color;
+}
+
+.pingStatus.fail {
+  color: #999999;
+  border-color: color;
+}
+
+.pingStatusContainer {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+}

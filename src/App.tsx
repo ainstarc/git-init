@@ -4,6 +4,7 @@ import {
   addToSearchHistory,
   clearSearchHistory, getCache, saveToCache
 } from "./utils/localStorage"
+import PingStatus from "./components/pingStatus"
 import { fetchQueryResponse } from "./utils/api"
 import { QueryResult } from "./types"
 import SearchSection from "./components/searchSection"
@@ -85,18 +86,21 @@ export default function App() {
   }
 
   return (
-    <div className="app-container">
-      <h1 className="app-title">🔍 Git Init</h1>
-      <SearchSection
-        query={query}
-        setQuery={setQuery}
-        loading={loading}
-        filteredHistory={filteredHistory}
-        onSearch={() => handleSearch(query)}
-        onSuggestionClick={handleSuggestionClick}
-        onClearHistory={handleClearHistory}
-      />
-      <ResultSection result={result} loading={loading} error={error} />
-    </div>
+    <>
+      <PingStatus />
+      <div className="app-container">
+        <h1 className="app-title">🔍 Git Init</h1>
+        <SearchSection
+          query={query}
+          setQuery={setQuery}
+          loading={loading}
+          filteredHistory={filteredHistory}
+          onSearch={() => handleSearch(query)}
+          onSuggestionClick={handleSuggestionClick}
+          onClearHistory={handleClearHistory}
+        />
+        <ResultSection result={result} loading={loading} error={error} />
+      </div>
+    </>
   )
 }
